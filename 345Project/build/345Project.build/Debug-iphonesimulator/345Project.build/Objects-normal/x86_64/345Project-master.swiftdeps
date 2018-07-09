@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "734a476fb1ef5054cd9e0c64180e2ce3"
+build_time: [1531104671, 742264000]
+inputs:
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/ViewController.swift": [1531104529, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AppDelegate.swift": [1531104529, 0]
