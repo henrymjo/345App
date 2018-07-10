@@ -14,6 +14,8 @@
 		35BBBBB420F30004004C3AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BBBBB220F30004004C3AF5 /* LaunchScreen.storyboard */; };
 		35BBBBBF20F30004004C3AF5 /* _45ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBBBE20F30004004C3AF5 /* _45ProjectTests.swift */; };
 		35BBBBCA20F30005004C3AF5 /* _45ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBBC920F30005004C3AF5 /* _45ProjectUITests.swift */; };
+		4F60040420F469D800A36ED9 /* NewItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040320F469D800A36ED9 /* NewItemController.swift */; };
+		4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040820F46D7000A36ED9 /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		35BBBBC520F30004004C3AF5 /* 345ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 345ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BBBBC920F30005004C3AF5 /* _45ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _45ProjectUITests.swift; sourceTree = "<group>"; };
 		35BBBBCB20F30005004C3AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F60040320F469D800A36ED9 /* NewItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemController.swift; sourceTree = "<group>"; };
+		4F60040820F46D7000A36ED9 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				35BBBBA920F30002004C3AF5 /* AppDelegate.swift */,
+				4F60040320F469D800A36ED9 /* NewItemController.swift */,
 				35BBBBAB20F30002004C3AF5 /* ViewController.swift */,
+				4F60040820F46D7000A36ED9 /* TaskManager.swift */,
 				35BBBBAD20F30002004C3AF5 /* Main.storyboard */,
 				35BBBBB020F30004004C3AF5 /* Assets.xcassets */,
 				35BBBBB220F30004004C3AF5 /* LaunchScreen.storyboard */,
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					35BBBBA520F30002004C3AF5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					35BBBBB920F30004004C3AF5 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -257,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BBBBAC20F30002004C3AF5 /* ViewController.swift in Sources */,
+				4F60040420F469D800A36ED9 /* NewItemController.swift in Sources */,
+				4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */,
 				35BBBBAA20F30002004C3AF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 345Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-45.-45Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 345Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
