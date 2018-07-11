@@ -14,13 +14,21 @@ struct task{
     var name = "name"
     var reminder = false
     var repeating = 0
-    var date = NSDate()
 }
 
 class TaskManager: NSObject {
     var tasks = [task]()
     
-    func addTask(name: String, reminder: Bool, repeating: Int, date: Date){
-        tasks.append(task(name: name, reminder: reminder, repeating: repeating, date: date as NSDate))
+    func addTask(name: String, reminder: Bool, repeating: Int){
+        tasks.append(task(name: name, reminder: reminder, repeating: repeating))
+        
+        for index in 0..<tasks.count{
+            tableTasks[index] = tasks[index].name
+        }
     }
+    
+    func removeTask(indextoRemove: Int){
+        tasks.remove(at: indextoRemove)
+    }
+    
 }

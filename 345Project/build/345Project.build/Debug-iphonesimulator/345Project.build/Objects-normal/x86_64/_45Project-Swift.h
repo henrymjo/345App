@@ -197,11 +197,27 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextField;
+@class UIDatePicker;
+@class UISwitch;
+@class UISegmentedControl;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC10_45Project17NewItemController")
 @interface NewItemController : UIViewController
+- (IBAction)desc:(UITextField * _Nonnull)sender;
+- (IBAction)datePicker:(UIDatePicker * _Nonnull)sender;
+- (IBAction)reminder:(UISwitch * _Nonnull)sender;
+- (IBAction)taskRepeats:(UISegmentedControl * _Nonnull)sender;
+/// Task is to be added now. Take all variables, create a new Task instance.
+/// Use the task instance to fill out cell contents.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
+- (IBAction)addTask:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -214,9 +230,12 @@ SWIFT_CLASS("_TtC10_45Project11TaskManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITableView;
 
 SWIFT_CLASS("_TtC10_45Project14ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
