@@ -165,6 +165,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import ObjectiveC;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -207,10 +208,10 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 
 SWIFT_CLASS("_TtC10_45Project17NewItemController")
 @interface NewItemController : UIViewController
-- (IBAction)desc:(UITextField * _Nonnull)sender;
-- (IBAction)datePicker:(UIDatePicker * _Nonnull)sender;
-- (IBAction)reminder:(UISwitch * _Nonnull)sender;
-- (IBAction)taskRepeats:(UISegmentedControl * _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified input;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified reminderSwitch;
+@property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified repeatTask;
 /// Task is to be added now. Take all variables, create a new Task instance.
 /// Use the task instance to fill out cell contents.
 /// <ul>
@@ -231,10 +232,14 @@ SWIFT_CLASS("_TtC10_45Project11TaskManager")
 @end
 
 @class UITableView;
+@class UITableViewCell;
 
 SWIFT_CLASS("_TtC10_45Project14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;

@@ -8,40 +8,39 @@
 
 import UIKit
 
-var tableTasks: [String] = []
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var list = ["Buy milk", "Pick up Peter", "Eat Ass"]
+
     
     @IBOutlet weak var myTableView: UITableView!
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return (tableTasks.count)
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (taskMgr.getTaskLength())
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = tableTasks[indexPath.row]
+        cell.textLabel?.text = taskMgr.getTaskName(index: indexPath.row)
         
-        return(cell)
+        return cell
     }
-    /** removes a task from the table. Needs to get sent to TaskManager.
-        Use indexPath.row to get the index of the task to be removed.
-     **/
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         
-        if editingStyle == UITableViewCellEditingStyle.delete
-        {
-            tableTasks.remove(at: indexPath.row)
+        if(editingStyle == UITableViewCellEditingStyle.delete){
             taskMgr.removeTask(indextoRemove: indexPath.row)
             myTableView.reloadData()
         }
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool){
+        print("Reloading data")
         myTableView.reloadData()
     }
     

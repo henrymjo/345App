@@ -13,33 +13,25 @@ class NewItemController: UIViewController {
     var taskDescription = ""
     var remindersOn = false
     var repeats = 0
+    
 
-    @IBAction func desc(_ sender: UITextField) {
-        taskDescription = sender.text!
-    }
-    
-    @IBAction func datePicker(_ sender: UIDatePicker) {
-    }
-    
-    
-    
-    @IBAction func reminder(_ sender: UISwitch) {
-        remindersOn = sender.isOn
-    }
-    
-    @IBAction func taskRepeats(_ sender: UISegmentedControl) {
-        repeats = sender.selectedSegmentIndex
-    }
+    @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var reminderSwitch: UISwitch!
+    @IBOutlet weak var repeatTask: UISegmentedControl!
     
     /** Task is to be added now. Take all variables, create a new Task instance.
         Use the task instance to fill out cell contents.
     **/
+
     @IBAction func addTask(_ sender: UIButton) {
+    if(input.text != ""){
+        taskDescription = input.text!
+        remindersOn = reminderSwitch.isOn
+        repeats = repeatTask.selectedSegmentIndex
         taskMgr.addTask(name: taskDescription, reminder: remindersOn, repeating: repeats)
+        }
     }
-    
-    
-    
     
     
     override func viewDidLoad() {

@@ -1,6 +1,7 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "taskMgr"
+- "tasks"
 - "task"
 - "TaskManager"
 provides-nominal:
@@ -11,8 +12,9 @@ provides-member:
 - ["10_45Project11TaskManagerC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "-"
 - !private "..<"
-- "AssignmentPrecedence"
+- !private ">="
 - "Bool"
 - "BooleanLiteralType"
 - "Int"
@@ -20,9 +22,10 @@ depends-top-level:
 - "String"
 - "StringLiteralType"
 - "TaskManager"
-- !private "tableTasks"
+- !private "print"
 - "task"
 - "taskMgr"
+- "tasks"
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
@@ -36,14 +39,17 @@ depends-member:
 - !private ["s23BidirectionalCollectionP", "name"]
 - !private ["s23BidirectionalCollectionP", "remove"]
 - !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "count"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "newTask"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "subscript"]
-- !private ["s7CVarArgP", "tableTasks"]
-- ["s7CVarArgP", "task"]
+- !private ["s7CVarArgP", "task"]
 - !private ["s7CVarArgP", "tasks"]
 - !private ["s10CollectionP", "append"]
 - !private ["s10CollectionP", "count"]
@@ -57,12 +63,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "newTask"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
-- !private ["s28CustomDebugStringConvertibleP", "tableTasks"]
-- ["s28CustomDebugStringConvertibleP", "task"]
+- !private ["s28CustomDebugStringConvertibleP", "task"]
 - !private ["s28CustomDebugStringConvertibleP", "tasks"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "count"]
 - ["s17CustomReflectableP", "init"]
@@ -70,34 +79,40 @@ depends-member:
 - !private ["s17CustomReflectableP", "remove"]
 - !private ["s17CustomReflectableP", "subscript"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "newTask"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "tableTasks"]
-- ["s23CustomStringConvertibleP", "task"]
+- !private ["s23CustomStringConvertibleP", "task"]
 - !private ["s23CustomStringConvertibleP", "tasks"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "append"]
 - !private ["s9DecodableP", "count"]
 - ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "remove"]
 - !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "append"]
 - !private ["s9EncodableP", "count"]
 - ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "remove"]
 - !private ["s9EncodableP", "subscript"]
 - ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "append"]
 - !private ["s9EquatableP", "count"]
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "newTask"]
+- !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "remove"]
 - !private ["s9EquatableP", "subscript"]
-- !private ["s9EquatableP", "tableTasks"]
-- ["s9EquatableP", "task"]
+- !private ["s9EquatableP", "task"]
 - !private ["s9EquatableP", "tasks"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
@@ -105,14 +120,18 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "name"]
 - !private ["s25ExpressibleByArrayLiteralP", "remove"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - ["s8HashableP", "init"]
-- !private ["s8HashableP", "tableTasks"]
-- ["s8HashableP", "task"]
+- !private ["s8HashableP", "newTask"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "task"]
 - !private ["s8HashableP", "tasks"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "append"]
@@ -126,15 +145,20 @@ depends-member:
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "addTask"]
+- ["So8NSObjectC", "getTaskLength"]
+- ["So8NSObjectC", "getTaskName"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "newTask"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "printTasks"]
 - ["So8NSObjectC", "removeTask"]
-- !private ["So8NSObjectC", "tableTasks"]
 - ["So8NSObjectC", "task"]
-- ["So8NSObjectC", "tasks"]
+- !private ["So8NSObjectC", "tasks"]
 - ["So16NSObjectProtocolP", ""]
 - ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "tableTasks"]
-- ["So16NSObjectProtocolP", "task"]
+- !private ["So16NSObjectProtocolP", "newTask"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "task"]
 - !private ["So16NSObjectProtocolP", "tasks"]
 - !private ["s22RandomAccessCollectionP", "append"]
 - !private ["s22RandomAccessCollectionP", "count"]
@@ -161,11 +185,15 @@ depends-member:
 - ["10_45Project11TaskManagerC", "String"]
 - ["10_45Project11TaskManagerC", "addTask"]
 - ["10_45Project11TaskManagerC", "deinit"]
+- ["10_45Project11TaskManagerC", "getTaskLength"]
+- ["10_45Project11TaskManagerC", "getTaskName"]
 - ["10_45Project11TaskManagerC", "init"]
+- ["10_45Project11TaskManagerC", "newTask"]
+- !private ["10_45Project11TaskManagerC", "print"]
+- ["10_45Project11TaskManagerC", "printTasks"]
 - ["10_45Project11TaskManagerC", "removeTask"]
-- !private ["10_45Project11TaskManagerC", "tableTasks"]
 - ["10_45Project11TaskManagerC", "task"]
-- ["10_45Project11TaskManagerC", "tasks"]
+- !private ["10_45Project11TaskManagerC", "tasks"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["s14_ArrayProtocolP", "append"]
@@ -180,6 +208,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "name"]
 - !private ["s24_DestructorSafeContainerP", "remove"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -187,9 +216,11 @@ depends-member:
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "tableTasks"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "task"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "newTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "task"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tasks"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - ["s21_ObjectiveCBridgeableP", "init"]
@@ -204,6 +235,7 @@ depends-nominal:
 - "Sa"
 - !private "s10ArraySliceV"
 - "s23BidirectionalCollectionP"
+- !private "Sb"
 - "s7CVarArgP"
 - "s10CollectionP"
 - "s10ComparableP"
@@ -215,6 +247,7 @@ depends-nominal:
 - "s9EncodableP"
 - "s9EquatableP"
 - "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
@@ -234,6 +267,7 @@ depends-nominal:
 - "s20TextOutputStreamableP"
 - "s14_ArrayProtocolP"
 - "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -268,4 +302,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "82a3f8fe5bd9ffb774d917bbde6c7be0"
+interface-hash: "4e9cc59271cf7967f220511043d6e6a0"

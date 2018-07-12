@@ -1,6 +1,7 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "taskMgr"
+- "tasks"
 - "task"
 - "TaskManager"
 provides-nominal:
@@ -11,6 +12,9 @@ provides-member:
 - ["10_45Project11TaskManagerC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "-"
+- !private "..<"
+- !private ">="
 - "Bool"
 - "BooleanLiteralType"
 - "Int"
@@ -18,74 +22,162 @@ depends-top-level:
 - "String"
 - "StringLiteralType"
 - "TaskManager"
+- !private "print"
 - "task"
 - "taskMgr"
+- "tasks"
 depends-member:
 - !private ["Sa", "append"]
+- !private ["Sa", "count"]
 - ["Sa", "init"]
+- !private ["Sa", "remove"]
+- !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "name"]
 - !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "count"]
 - ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "name"]
+- !private ["s23BidirectionalCollectionP", "remove"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "count"]
 - ["s7CVarArgP", "init"]
-- ["s7CVarArgP", "task"]
+- !private ["s7CVarArgP", "newTask"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "task"]
 - !private ["s7CVarArgP", "tasks"]
 - !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "count"]
 - ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "name"]
+- !private ["s10CollectionP", "remove"]
+- !private ["s10CollectionP", "subscript"]
 - ["s10ComparableP", "init"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "task"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "newTask"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "task"]
 - !private ["s28CustomDebugStringConvertibleP", "tasks"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "name"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "subscript"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "task"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "newTask"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "task"]
 - !private ["s23CustomStringConvertibleP", "tasks"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "count"]
 - ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "remove"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "count"]
 - ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "remove"]
+- !private ["s9EncodableP", "subscript"]
 - ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "count"]
 - ["s9EquatableP", "init"]
-- ["s9EquatableP", "task"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "newTask"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "remove"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "task"]
 - !private ["s9EquatableP", "tasks"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "name"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - ["s8HashableP", "init"]
-- ["s8HashableP", "task"]
+- !private ["s8HashableP", "newTask"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "task"]
 - !private ["s8HashableP", "tasks"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "count"]
 - ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "name"]
+- !private ["s17MutableCollectionP", "remove"]
+- !private ["s17MutableCollectionP", "subscript"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "addTask"]
+- ["So8NSObjectC", "getTaskLength"]
+- ["So8NSObjectC", "getTaskName"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "newTask"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "printTasks"]
+- ["So8NSObjectC", "removeTask"]
 - ["So8NSObjectC", "task"]
-- ["So8NSObjectC", "tasks"]
+- !private ["So8NSObjectC", "tasks"]
 - ["So16NSObjectProtocolP", ""]
 - ["So16NSObjectProtocolP", "init"]
-- ["So16NSObjectProtocolP", "task"]
+- !private ["So16NSObjectProtocolP", "newTask"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "task"]
 - !private ["So16NSObjectProtocolP", "tasks"]
 - !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "count"]
 - ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "name"]
+- !private ["s22RandomAccessCollectionP", "remove"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
 - ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "name"]
+- !private ["s26RangeReplaceableCollectionP", "remove"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "count"]
 - ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "name"]
+- !private ["s8SequenceP", "remove"]
+- !private ["s8SequenceP", "subscript"]
 - ["SS", "init"]
 - ["s14StringProtocolP", "init"]
 - ["10_45Project11TaskManagerC", "Bool"]
@@ -93,15 +185,30 @@ depends-member:
 - ["10_45Project11TaskManagerC", "String"]
 - ["10_45Project11TaskManagerC", "addTask"]
 - ["10_45Project11TaskManagerC", "deinit"]
+- ["10_45Project11TaskManagerC", "getTaskLength"]
+- ["10_45Project11TaskManagerC", "getTaskName"]
 - ["10_45Project11TaskManagerC", "init"]
+- ["10_45Project11TaskManagerC", "newTask"]
+- !private ["10_45Project11TaskManagerC", "print"]
+- ["10_45Project11TaskManagerC", "printTasks"]
+- ["10_45Project11TaskManagerC", "removeTask"]
 - ["10_45Project11TaskManagerC", "task"]
-- ["10_45Project11TaskManagerC", "tasks"]
+- !private ["10_45Project11TaskManagerC", "tasks"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
 - ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "name"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
 - ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "name"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -109,10 +216,16 @@ depends-member:
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "task"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "newTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "task"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tasks"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - ["s16_SwiftStringViewP", "init"]
 - ["10_45Project4taskV", "init"]
 - ["10_45Project4taskV", "name"]
@@ -120,7 +233,9 @@ depends-member:
 - ["10_45Project4taskV", "repeating"]
 depends-nominal:
 - "Sa"
+- !private "s10ArraySliceV"
 - "s23BidirectionalCollectionP"
+- !private "Sb"
 - "s7CVarArgP"
 - "s10CollectionP"
 - "s10ComparableP"
@@ -132,6 +247,7 @@ depends-nominal:
 - "s9EncodableP"
 - "s9EquatableP"
 - "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
@@ -151,6 +267,7 @@ depends-nominal:
 - "s20TextOutputStreamableP"
 - "s14_ArrayProtocolP"
 - "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -185,4 +302,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "6b1062371e7719dcb21ee96de6bf7369"
+interface-hash: "4e9cc59271cf7967f220511043d6e6a0"
