@@ -225,6 +225,20 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
+
+SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
+@interface TaskEditViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Nullable taskName;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified InitialReminder;
+@property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified InitialRepeat;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC10_45Project11TaskManager")
 @interface TaskManager : NSObject
@@ -233,6 +247,7 @@ SWIFT_CLASS("_TtC10_45Project11TaskManager")
 
 @class UITableView;
 @class UITableViewCell;
+@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10_45Project14ViewController")
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
@@ -240,6 +255,14 @@ SWIFT_CLASS("_TtC10_45Project14ViewController")
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+/// Called when a cell is tapped.
+/// reference using indexPath.row to give the index of the task in the TaskManager array.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;

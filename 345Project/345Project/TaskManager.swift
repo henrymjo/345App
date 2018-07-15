@@ -52,6 +52,23 @@ class TaskManager: NSObject {
         }
     }
     
+    func getTaskReminder(index: Int) -> Bool{
+        if tasks.count >= index-1{
+            return tasks[index].reminder
+        } else {
+            return false
+        }
+        
+    }
+    
+    func getTaskRepeats(index: Int) -> Int{
+        if tasks.count >= index-1{
+            return tasks[index].repeating
+        } else {
+            return 0
+        }
+    }
+    
     func getTaskLength() -> Int{
         return tasks.count
     }

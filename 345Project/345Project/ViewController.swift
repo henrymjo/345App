@@ -13,7 +13,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var list = ["Buy milk", "Pick up Peter", "Eat Ass"]
-
+    var tapped = 0
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -37,6 +37,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    /** Called when a cell is tapped.
+        reference using indexPath.row to give the index of the task in the TaskManager array.
+    **/
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        //print(taskMgr.getTaskName(index: indexPath.row))  prints name of task tapped.
+        tapped = indexPath.row
+        let taskName = taskMgr.getTaskName(index: indexPath.row)
+        let editController = TaskEditViewController()
+        editController.taskEditName = taskName
+        print(taskName)
+        
+        performSegue(withIdentifier: "editTask", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "editTask" {
+            
+        
+        let editController = segue.destination as? TaskEditViewController
+        let taskName = taskMgr.getTaskName(index: tapped)
+            print("Tapped index: \(tapped)")
+        editController?.taskName?.text = taskName
+        editController?.taskEditName = taskName
+        editController?.taskIndex = tapped
+        }
+    }
     
     
     override func viewDidAppear(_ animated: Bool){
