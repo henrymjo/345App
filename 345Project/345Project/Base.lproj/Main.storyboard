@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -154,7 +153,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27n-de-bbD">
                                 <rect key="frame" x="16" y="20" width="91" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.24242829623287671" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="zKH-T0-QW2" kind="show" identifier="Back" id="3Ip-XA-ny7"/>
@@ -279,6 +277,6 @@
         <image name="Image-1" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cnR-K3-xSk"/>
+        <segue reference="3Ip-XA-ny7"/>
     </inferredMetricsTieBreakers>
 </document>
