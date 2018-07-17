@@ -16,6 +16,7 @@
 		35BBBBCA20F30005004C3AF5 /* _45ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBBC920F30005004C3AF5 /* _45ProjectUITests.swift */; };
 		4F60040420F469D800A36ED9 /* NewItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040320F469D800A36ED9 /* NewItemController.swift */; };
 		4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040820F46D7000A36ED9 /* TaskManager.swift */; };
+		4FE512BE20FB0FB500CB7012 /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		35BBBBCB20F30005004C3AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F60040320F469D800A36ED9 /* NewItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemController.swift; sourceTree = "<group>"; };
 		4F60040820F46D7000A36ED9 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskEditViewController.swift; path = 345Project/TaskEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		35BBBB9D20F30001004C3AF5 = {
 			isa = PBXGroup;
 			children = (
+				4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */,
 				35BBBBA820F30002004C3AF5 /* 345Project */,
 				35BBBBBD20F30004004C3AF5 /* 345ProjectTests */,
 				35BBBBC820F30004004C3AF5 /* 345ProjectUITests */,
@@ -267,6 +270,7 @@
 				4F60040420F469D800A36ED9 /* NewItemController.swift in Sources */,
 				4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */,
 				35BBBBAA20F30002004C3AF5 /* AppDelegate.swift in Sources */,
+				4FE512BE20FB0FB500CB7012 /* TaskEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
