@@ -198,6 +198,7 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
 @class UITextField;
 @class UIDatePicker;
 @class UISwitch;
@@ -208,6 +209,7 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 
 SWIFT_CLASS("_TtC10_45Project17NewItemController")
 @interface NewItemController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified displayDateChosen;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified input;
 @property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified reminderSwitch;
@@ -218,14 +220,16 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 ///   <li>
 ///   </li>
 /// </ul>
+- (IBAction)myDateView:(UIDatePicker * _Nonnull)sender;
+- (IBAction)remindersToggled:(id _Nonnull)sender;
 - (IBAction)addTask:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
 
 SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 @interface TaskEditViewController : UIViewController

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKH-T0-QW2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKH-T0-QW2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,6 +113,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-yh-NlH">
                                 <rect key="frame" x="164" y="318" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="remindersToggled:" destination="O0f-GP-Qpk" eventType="valueChanged" id="M3d-I3-SVL"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-nW-s68">
                                 <rect key="frame" x="16" y="320" width="134" height="26"/>
@@ -164,13 +167,24 @@
                                 <date key="date" timeIntervalSinceReferenceDate="552888958.63832796">
                                     <!--2018-07-10 04:15:58 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="myDateView:" destination="O0f-GP-Qpk" eventType="valueChanged" id="oEs-rQ-BTA"/>
+                                </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuC-9K-SOj">
+                                <rect key="frame" x="16" y="354" width="326" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="YTY-eV-adM"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="A5i-zc-RY9" id="O6Y-OH-S5d"/>
+                        <outlet property="displayDateChosen" destination="yuC-9K-SOj" id="Pcw-8P-CdB"/>
                         <outlet property="input" destination="zti-jY-Ugi" id="lQn-Yd-kuh"/>
                         <outlet property="reminderSwitch" destination="8pC-yh-NlH" id="Lu7-30-Dyb"/>
                         <outlet property="repeatTask" destination="Km7-UQ-WAf" id="RuR-bt-jj6"/>
@@ -179,7 +193,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbM-Af-S2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tHm-yl-Mr0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="111" y="-977"/>
+            <point key="canvasLocation" x="109.59999999999999" y="-977.36131934032994"/>
         </scene>
         <!--Edit Task-->
         <scene sceneID="W5t-1K-bmP">
@@ -248,6 +262,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="552888958.63832796">
                                     <!--2018-07-10 04:15:58 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="myDateView:" destination="28U-qF-Z3Y" eventType="valueChanged" id="vKh-4P-sY1"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJA-5Q-N6l">
                                 <rect key="frame" x="16" y="76" width="343" height="40"/>
@@ -277,6 +294,6 @@
         <image name="Image-1" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Ip-XA-ny7"/>
+        <segue reference="cnR-K3-xSk"/>
     </inferredMetricsTieBreakers>
 </document>

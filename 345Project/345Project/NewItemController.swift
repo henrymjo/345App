@@ -14,7 +14,8 @@ class NewItemController: UIViewController {
     var remindersOn = false
     var repeats = 0
     
-
+    
+    @IBOutlet weak var displayDateChosen: UILabel!
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var reminderSwitch: UISwitch!
@@ -23,7 +24,36 @@ class NewItemController: UIViewController {
     /** Task is to be added now. Take all variables, create a new Task instance.
         Use the task instance to fill out cell contents.
     **/
-
+    @IBAction func myDateView(_ sender: UIDatePicker) {
+        print("MydateViewMethod")
+        let strDate = myDateFormatter(date: datePicker.date)
+        if(reminderSwitch.isOn){
+            displayDateChosen.text = ("Reminder for: \(strDate)")
+        } else {
+            displayDateChosen.text = ""
+        }
+    }
+    
+    @IBAction func remindersToggled(_ sender: Any) {
+        if(reminderSwitch.isOn){
+            let dateStr = myDateFormatter(date: datePicker.date)
+            displayDateChosen.text = ("Reminder for: \(dateStr)")
+            
+        } else {
+            displayDateChosen.text = ""
+        }
+    }
+    
+    func myDateFormatter(date: Date) -> String{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyy HH:mm"
+        let strDate = dateFormatter.string(from: datePicker.date)
+        
+        return strDate
+    }
+    
+    
     @IBAction func addTask(_ sender: UIButton) {
     if(input.text != ""){
         taskDescription = input.text!
@@ -36,13 +66,21 @@ class NewItemController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        datePicker.datePickerMode = UIDatePickerMode.dateAndTime
+        let currentDate = NSDate()
+        datePicker.minimumDate = currentDate as Date
+        datePicker.date = currentDate as Date
     }
     
 
