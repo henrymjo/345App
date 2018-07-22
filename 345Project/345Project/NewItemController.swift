@@ -13,6 +13,7 @@ class NewItemController: UIViewController {
     var taskDescription = ""
     var remindersOn = false
     var repeats = 0
+    var date = Date()
     
     
     @IBOutlet weak var displayDateChosen: UILabel!
@@ -48,7 +49,7 @@ class NewItemController: UIViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyy HH:mm"
-        let strDate = dateFormatter.string(from: datePicker.date)
+        let strDate = dateFormatter.string(from: date)
         
         return strDate
     }
@@ -59,7 +60,8 @@ class NewItemController: UIViewController {
         taskDescription = input.text!
         remindersOn = reminderSwitch.isOn
         repeats = repeatTask.selectedSegmentIndex
-        taskMgr.addTask(name: taskDescription, reminder: remindersOn, repeating: repeats)
+        date = datePicker.date
+        taskMgr.addTask(name: taskDescription, reminder: remindersOn, repeating: repeats, date: date)
         }
     }
     

@@ -14,6 +14,7 @@
 		35BBBBB420F30004004C3AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BBBBB220F30004004C3AF5 /* LaunchScreen.storyboard */; };
 		35BBBBBF20F30004004C3AF5 /* _45ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBBBE20F30004004C3AF5 /* _45ProjectTests.swift */; };
 		35BBBBCA20F30005004C3AF5 /* _45ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBBBC920F30005004C3AF5 /* _45ProjectUITests.swift */; };
+		4F1C37C7210482B2007A09FA /* AlertCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1C37C6210482B2007A09FA /* AlertCenter.swift */; };
 		4F60040420F469D800A36ED9 /* NewItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040320F469D800A36ED9 /* NewItemController.swift */; };
 		4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040820F46D7000A36ED9 /* TaskManager.swift */; };
 		4FE512BE20FB0FB500CB7012 /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */; };
@@ -50,9 +51,10 @@
 		35BBBBC520F30004004C3AF5 /* 345ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 345ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BBBBC920F30005004C3AF5 /* _45ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _45ProjectUITests.swift; sourceTree = "<group>"; };
 		35BBBBCB20F30005004C3AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F1C37C6210482B2007A09FA /* AlertCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCenter.swift; sourceTree = "<group>"; };
 		4F60040320F469D800A36ED9 /* NewItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemController.swift; sourceTree = "<group>"; };
 		4F60040820F46D7000A36ED9 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskEditViewController.swift; path = 345Project/TaskEditViewController.swift; sourceTree = "<group>"; };
+		4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,6 @@
 		35BBBB9D20F30001004C3AF5 = {
 			isa = PBXGroup;
 			children = (
-				4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */,
 				35BBBBA820F30002004C3AF5 /* 345Project */,
 				35BBBBBD20F30004004C3AF5 /* 345ProjectTests */,
 				35BBBBC820F30004004C3AF5 /* 345ProjectUITests */,
@@ -105,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				35BBBBA920F30002004C3AF5 /* AppDelegate.swift */,
+				4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */,
+				4F1C37C6210482B2007A09FA /* AlertCenter.swift */,
 				4F60040320F469D800A36ED9 /* NewItemController.swift */,
 				35BBBBAB20F30002004C3AF5 /* ViewController.swift */,
 				4F60040820F46D7000A36ED9 /* TaskManager.swift */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BBBBAC20F30002004C3AF5 /* ViewController.swift in Sources */,
+				4F1C37C7210482B2007A09FA /* AlertCenter.swift in Sources */,
 				4F60040420F469D800A36ED9 /* NewItemController.swift in Sources */,
 				4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */,
 				35BBBBAA20F30002004C3AF5 /* AppDelegate.swift in Sources */,

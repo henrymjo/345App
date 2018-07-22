@@ -32,8 +32,10 @@ depends-top-level:
 - "UIViewController"
 - "ViewController"
 - !private "print"
+- !private "requestAlerts"
 - !private "taskMgr"
 depends-member:
+- !private ["10_45Project11AlertCenterC", "requestAlerts"]
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s23BidirectionalCollectionP", "row"]
 - !private ["Sb", "_getBuiltinLogicValue"]
@@ -62,6 +64,7 @@ depends-member:
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "reloadData"]
 - !private ["s7CVarArgP", "removeTask"]
+- !private ["s7CVarArgP", "requestAlerts"]
 - ["s7CVarArgP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s7CVarArgP", "scrollViewDidEndDecelerating"]
 - ["s7CVarArgP", "scrollViewDidEndDragging"]
@@ -112,6 +115,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadData"]
 - !private ["s28CustomDebugStringConvertibleP", "removeTask"]
+- !private ["s28CustomDebugStringConvertibleP", "requestAlerts"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewDidEndDecelerating"]
@@ -165,6 +169,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "reloadData"]
 - !private ["s23CustomStringConvertibleP", "removeTask"]
+- !private ["s23CustomStringConvertibleP", "requestAlerts"]
 - !private ["s23CustomStringConvertibleP", "row"]
 - ["s23CustomStringConvertibleP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s23CustomStringConvertibleP", "scrollViewDidEndDecelerating"]
@@ -221,6 +226,7 @@ depends-member:
 - !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "reloadData"]
 - !private ["s9EquatableP", "removeTask"]
+- !private ["s9EquatableP", "requestAlerts"]
 - !private ["s9EquatableP", "row"]
 - ["s9EquatableP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s9EquatableP", "scrollViewDidEndDecelerating"]
@@ -276,6 +282,7 @@ depends-member:
 - !private ["s8HashableP", "print"]
 - !private ["s8HashableP", "reloadData"]
 - !private ["s8HashableP", "removeTask"]
+- !private ["s8HashableP", "requestAlerts"]
 - !private ["s8HashableP", "row"]
 - ["s8HashableP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s8HashableP", "scrollViewDidEndDecelerating"]
@@ -323,6 +330,7 @@ depends-member:
 - !private ["So8NSCodingP", "performSegue"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "reloadData"]
+- !private ["So8NSCodingP", "requestAlerts"]
 - ["So8NSCodingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSCodingP", "scrollViewDidEndDecelerating"]
 - ["So8NSCodingP", "scrollViewDidEndDragging"]
@@ -363,6 +371,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "numberOfSectionsInTableView"]
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "requestAlerts"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDecelerating"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDragging"]
@@ -413,6 +422,7 @@ depends-member:
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "reloadData"]
 - !private ["So8NSObjectC", "removeTask"]
+- !private ["So8NSObjectC", "requestAlerts"]
 - ["So8NSObjectC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSObjectC", "scrollViewDidEndDecelerating"]
 - ["So8NSObjectC", "scrollViewDidEndDragging"]
@@ -460,6 +470,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "print"]
 - !private ["So16NSObjectProtocolP", "reloadData"]
 - !private ["So16NSObjectProtocolP", "removeTask"]
+- !private ["So16NSObjectProtocolP", "requestAlerts"]
 - ["So16NSObjectProtocolP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16NSObjectProtocolP", "scrollViewDidEndDecelerating"]
 - ["So16NSObjectProtocolP", "scrollViewDidEndDragging"]
@@ -527,6 +538,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "performSegue"]
 - !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "reloadData"]
+- !private ["So21UIAppearanceContainerP", "requestAlerts"]
 - ["So21UIAppearanceContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So21UIAppearanceContainerP", "scrollViewDidEndDecelerating"]
 - ["So21UIAppearanceContainerP", "scrollViewDidEndDragging"]
@@ -567,6 +579,7 @@ depends-member:
 - ["So18UIContentContainerP", "numberOfSectionsInTableView"]
 - !private ["So18UIContentContainerP", "performSegue"]
 - !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "requestAlerts"]
 - ["So18UIContentContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIContentContainerP", "scrollViewDidEndDecelerating"]
 - ["So18UIContentContainerP", "scrollViewDidEndDragging"]
@@ -616,6 +629,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
 - !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "reloadData"]
+- !private ["So18UIFocusEnvironmentP", "requestAlerts"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidEndDecelerating"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidEndDragging"]
@@ -664,6 +678,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
+- !private ["So30UIPasteConfigurationSupportingP", "requestAlerts"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidEndDecelerating"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidEndDragging"]
@@ -711,6 +726,7 @@ depends-member:
 - ["So11UIResponderC", "prepare"]
 - !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "reloadData"]
+- !private ["So11UIResponderC", "requestAlerts"]
 - ["So11UIResponderC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So11UIResponderC", "scrollViewDidEndDecelerating"]
 - ["So11UIResponderC", "scrollViewDidEndDragging"]
@@ -753,6 +769,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "performSegue"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "reloadData"]
+- !private ["So30UIResponderStandardEditActionsP", "requestAlerts"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidEndDecelerating"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidEndDragging"]
@@ -792,6 +809,7 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "numberOfSectionsInTableView"]
 - !private ["So20UIScrollViewDelegateP", "performSegue"]
 - !private ["So20UIScrollViewDelegateP", "print"]
+- !private ["So20UIScrollViewDelegateP", "requestAlerts"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidEndDecelerating"]
 - ["So20UIScrollViewDelegateP", "scrollViewDidEndDragging"]
@@ -827,6 +845,7 @@ depends-member:
 - ["So16UIStateRestoringP", "numberOfSectionsInTableView"]
 - !private ["So16UIStateRestoringP", "performSegue"]
 - !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "requestAlerts"]
 - ["So16UIStateRestoringP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDecelerating"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDragging"]
@@ -870,6 +889,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", "numberOfSectionsInTableView"]
 - !private ["So21UITableViewDataSourceP", "performSegue"]
 - !private ["So21UITableViewDataSourceP", "print"]
+- !private ["So21UITableViewDataSourceP", "requestAlerts"]
 - ["So21UITableViewDataSourceP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So21UITableViewDataSourceP", "scrollViewDidEndDecelerating"]
 - ["So21UITableViewDataSourceP", "scrollViewDidEndDragging"]
@@ -902,6 +922,7 @@ depends-member:
 - ["So19UITableViewDelegateP", "numberOfSectionsInTableView"]
 - !private ["So19UITableViewDelegateP", "performSegue"]
 - !private ["So19UITableViewDelegateP", "print"]
+- !private ["So19UITableViewDelegateP", "requestAlerts"]
 - ["So19UITableViewDelegateP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So19UITableViewDelegateP", "scrollViewDidEndDecelerating"]
 - ["So19UITableViewDelegateP", "scrollViewDidEndDragging"]
@@ -937,6 +958,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "performSegue"]
 - !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "reloadData"]
+- !private ["So18UITraitEnvironmentP", "requestAlerts"]
 - ["So18UITraitEnvironmentP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UITraitEnvironmentP", "scrollViewDidEndDecelerating"]
 - ["So18UITraitEnvironmentP", "scrollViewDidEndDragging"]
@@ -988,6 +1010,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "performSegue"]
 - ["So16UIViewControllerC", "prepare"]
 - !private ["So16UIViewControllerC", "print"]
+- !private ["So16UIViewControllerC", "requestAlerts"]
 - ["So16UIViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIViewControllerC", "scrollViewDidEndDecelerating"]
 - ["So16UIViewControllerC", "scrollViewDidEndDragging"]
@@ -1034,6 +1057,7 @@ depends-member:
 - !private ["10_45Project14ViewControllerC", "performSegue"]
 - ["10_45Project14ViewControllerC", "prepare"]
 - !private ["10_45Project14ViewControllerC", "print"]
+- !private ["10_45Project14ViewControllerC", "requestAlerts"]
 - ["10_45Project14ViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["10_45Project14ViewControllerC", "scrollViewDidEndDecelerating"]
 - ["10_45Project14ViewControllerC", "scrollViewDidEndDragging"]
@@ -1086,6 +1110,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requestAlerts"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidEndDecelerating"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidEndDragging"]
@@ -1117,6 +1142,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "10_45Project11AlertCenterC"
 - "s23BidirectionalCollectionP"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
@@ -1218,6 +1244,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 interface-hash: "e4d00bded8fdd5b9f5fe933e817c24ae"

@@ -13,6 +13,9 @@ class TaskEditViewController: UIViewController {
     @IBOutlet weak var taskName: UILabel?
     @IBOutlet weak var InitialReminder: UISwitch!
     @IBOutlet weak var InitialRepeat: UISegmentedControl!
+    @IBOutlet weak var datePicked: UIDatePicker!
+    
+    var anythingDidChange = false
     
     var taskEditName = ""
     var taskIndex = 0
@@ -23,6 +26,31 @@ class TaskEditViewController: UIViewController {
         taskEditName = task
     
     }
+    
+    @IBAction func datePicker(_ sender: UIDatePicker) {
+        anythingDidChange = true
+        
+    }
+    
+    @IBAction func reminderSwitch(_ sender: Any) {
+        anythingDidChange = true
+    }
+    
+    @IBAction func repeatSelector(_ sender: UISegmentedControl) {
+        anythingDidChange = true;
+    }
+    
+    @IBAction func editTask(_ sender: UIButton) {
+        
+        if(anythingDidChange){
+            var currentTask = tasks[taskIndex]
+            currentTask.name = (taskName?.text)!
+            currentTask.reminder = InitialReminder.isOn
+            currentTask.repeating = InitialRepeat.selectedSegmentIndex
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

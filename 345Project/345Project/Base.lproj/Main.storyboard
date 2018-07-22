@@ -213,6 +213,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-JN-M0K">
                                 <rect key="frame" x="164" y="318" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="reminderSwitch:" destination="qXG-Qw-ysw" eventType="valueChanged" id="j19-9P-gLL"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ya-km-IrG">
                                 <rect key="frame" x="16" y="320" width="134" height="26"/>
@@ -232,6 +235,7 @@
                                 <connections>
                                     <action selector="repeat:" destination="28U-qF-Z3Y" eventType="valueChanged" id="A1O-O1-Xj0"/>
                                     <action selector="repeat:" destination="tHm-yl-Mr0" eventType="valueChanged" id="HvE-an-PGe"/>
+                                    <action selector="repeatSelector:" destination="qXG-Qw-ysw" eventType="valueChanged" id="8Ny-Ez-NWz"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITB-sr-O17">
@@ -247,6 +251,7 @@
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.29328981160000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Edit Task"/>
                                 <connections>
+                                    <action selector="editTask:" destination="qXG-Qw-ysw" eventType="touchUpInside" id="uxJ-qv-mYp"/>
                                     <segue destination="zKH-T0-QW2" kind="show" id="cnR-K3-xSk"/>
                                 </connections>
                             </button>
@@ -263,6 +268,7 @@
                                     <!--2018-07-10 04:15:58 +0000-->
                                 </date>
                                 <connections>
+                                    <action selector="datePicker:" destination="qXG-Qw-ysw" eventType="valueChanged" id="mGD-M6-cMC"/>
                                     <action selector="myDateView:" destination="28U-qF-Z3Y" eventType="valueChanged" id="vKh-4P-sY1"/>
                                 </connections>
                             </datePicker>
@@ -280,6 +286,7 @@
                     <connections>
                         <outlet property="InitialReminder" destination="Alv-JN-M0K" id="fyW-d7-fHF"/>
                         <outlet property="InitialRepeat" destination="sBn-il-uc7" id="C60-xx-z6J"/>
+                        <outlet property="datePicked" destination="rsB-Ia-uOU" id="LUP-t2-hvv"/>
                         <outlet property="taskName" destination="MJA-5Q-N6l" id="djH-SQ-DpC"/>
                     </connections>
                 </viewController>

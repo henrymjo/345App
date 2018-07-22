@@ -11,12 +11,11 @@ import UIKit
 var taskMgr: TaskManager = TaskManager()
 var tasks = [task]()
 
-
-
 struct task{
     var name = "name"
     var reminder = false
     var repeating = 0
+    var date = Date()
 }
 
 class TaskManager: NSObject {
@@ -28,14 +27,19 @@ class TaskManager: NSObject {
         print("Done!")
     }
     
-    func newTask(name: String, reminder: Bool, repeating: Int) -> task{
-        let task1 = task(name: name, reminder: reminder, repeating: repeating)
+    func newTask(name: String, reminder: Bool, repeating: Int, date: Date) -> task{
+        let task1 = task(name: name, reminder: reminder, repeating: repeating, date: date)
         return task1
     }
     
-    func addTask(name: String, reminder: Bool, repeating: Int){
+    func addTask(name: String, reminder: Bool, repeating: Int, date: Date){
         print("addTask method")
-        tasks.append(newTask(name: name, reminder: reminder, repeating: repeating))
+        tasks.append(newTask(name: name, reminder: reminder, repeating: repeating, date: date))
+        
+        if(reminder){
+            requestAlerts.createAlert(title: name, subtitle: "subtitle", body: "body", date: date, repeats: repeating)
+        }
+        
         
     }
     
@@ -72,6 +76,23 @@ class TaskManager: NSObject {
     func getTaskLength() -> Int{
         return tasks.count
     }
+    
+    
+    func getDate(index: Int) -> String{
+        let dateStr = myDateFormatter(date: tasks[index].date)
+        return dateStr
+    }
+    
+    func myDateFormatter(date: Date) -> String{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyy HH:mm"
+        let strDate = dateFormatter.string(from: date)
+        
+        return strDate
+    }
+    
+    
     
     
     

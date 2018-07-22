@@ -163,8 +163,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import UIKit;
 @import ObjectiveC;
+@import UIKit;
 @import Foundation;
 #endif
 
@@ -182,6 +182,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="_45Project",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+SWIFT_CLASS("_TtC10_45Project11AlertCenter")
+@interface AlertCenter : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @class UIWindow;
 @class UIApplication;
@@ -236,6 +242,11 @@ SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Nullable taskName;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified InitialReminder;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified InitialRepeat;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicked;
+- (IBAction)datePicker:(UIDatePicker * _Nonnull)sender;
+- (IBAction)reminderSwitch:(id _Nonnull)sender;
+- (IBAction)repeatSelector:(UISegmentedControl * _Nonnull)sender;
+- (IBAction)editTask:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)viewDidAppear:(BOOL)animated;
