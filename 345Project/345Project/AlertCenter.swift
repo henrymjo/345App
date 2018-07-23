@@ -14,6 +14,10 @@ let center = UNUserNotificationCenter.current()
 
 class AlertCenter: NSObject{
 
+    func toggleAlerts(){
+        
+    }
+
 func requestAlerts(){
     center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
     })
@@ -55,5 +59,6 @@ func addAlert(trigger: UNCalendarNotificationTrigger, content: UNMutableNotifica
         }
     })
 }
+
 }
 
