@@ -1,0 +1,10 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "29dfd4234ac912d7e0fe2d319c6d0263"
+build_time: [1532480716, 290165000]
+inputs:
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/ViewController.swift": !dirty [1532253158, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AlertCenter.swift": !dirty [1532480665, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/NewItemController.swift": !dirty [1532250877, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/TaskManager.swift": !dirty [1532252976, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AppDelegate.swift": !dirty [1531971496, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/TaskEditViewController.swift": !dirty [1532249868, 0]
