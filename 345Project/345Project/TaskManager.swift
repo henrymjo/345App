@@ -40,7 +40,13 @@ class TaskManager: NSObject {
             requestAlerts.createAlert(title: name, subtitle: "subtitle", body: "body", date: date, repeats: repeating)
         }
         
-        
+    }
+    
+    func editTask(name: String, reminder: Bool, repeating: Int, date: Date, index: Int){
+        tasks[index].name = name
+        tasks[index].reminder = reminder
+        tasks[index].repeating = repeating
+        tasks[index].date = date
     }
     
     func removeTask(indextoRemove: Int){
@@ -78,9 +84,13 @@ class TaskManager: NSObject {
     }
     
     
-    func getDate(index: Int) -> String{
+    func getDateString(index: Int) -> String{
         let dateStr = myDateFormatter(date: tasks[index].date)
         return dateStr
+    }
+    
+    func getDateAsDate(index: Int) -> Date{
+        return tasks[index].date;
     }
     
     func myDateFormatter(date: Date) -> String{

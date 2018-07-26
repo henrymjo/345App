@@ -55,14 +55,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "editTask" {
-            
         
-        let editController = segue.destination as? TaskEditViewController
-        let taskName = taskMgr.getTaskName(index: tapped)
+        
+            let editController = segue.destination as? TaskEditViewController
+            let taskName = taskMgr.getTaskName(index: tapped)
             print("Tapped index: \(tapped)")
-        editController?.taskName?.text = taskName
-        editController?.taskEditName = taskName
-        editController?.taskIndex = tapped
+        
+            
+            editController?.date = taskMgr.getDateAsDate(index: tapped)
+            editController?.taskEditName = taskName
+            editController?.remindersOn = taskMgr.getTaskReminder(index: tapped)
+            editController?.repeats = taskMgr.getTaskRepeats(index: tapped)
+            editController?.taskIndex = tapped
         
         }
     }

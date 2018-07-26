@@ -224,7 +224,8 @@ depends-member:
 - ["So8NSObjectC", "addTask"]
 - !private ["So8NSObjectC", "createAlert"]
 - !private ["So8NSObjectC", "dateFormat"]
-- ["So8NSObjectC", "getDate"]
+- ["So8NSObjectC", "getDateAsDate"]
+- ["So8NSObjectC", "getDateString"]
 - ["So8NSObjectC", "getTaskLength"]
 - ["So8NSObjectC", "getTaskName"]
 - ["So8NSObjectC", "getTaskReminder"]
@@ -288,7 +289,8 @@ depends-member:
 - ["10_45Project11TaskManagerC", "String"]
 - ["10_45Project11TaskManagerC", "addTask"]
 - ["10_45Project11TaskManagerC", "deinit"]
-- ["10_45Project11TaskManagerC", "getDate"]
+- ["10_45Project11TaskManagerC", "getDateAsDate"]
+- ["10_45Project11TaskManagerC", "getDateString"]
 - ["10_45Project11TaskManagerC", "getTaskLength"]
 - ["10_45Project11TaskManagerC", "getTaskName"]
 - ["10_45Project11TaskManagerC", "getTaskReminder"]
@@ -432,4 +434,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "37305a56751312f4b03dace5c1d89cff"
+interface-hash: "3ccbed4614d25ca40cb9ff22eafa2655"

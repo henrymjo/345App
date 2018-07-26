@@ -122,16 +122,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-yh-NlH">
-                                <rect key="frame" x="164" y="318" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="toggle to turn reminders on for this task" label="Reminder on or off switch"/>
-                                <connections>
-                                    <action selector="remindersToggled:" destination="O0f-GP-Qpk" eventType="valueChanged" id="M3d-I3-SVL"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-nW-s68">
-                                <rect key="frame" x="16" y="320" width="134" height="26"/>
+                                <rect key="frame" x="16" y="377" width="134" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Reminder label"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -139,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Km7-UQ-WAf">
-                                <rect key="frame" x="16" y="437" width="307" height="29"/>
+                                <rect key="frame" x="16" y="505" width="307" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Once"/>
@@ -151,7 +143,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBY-9v-HPL">
-                                <rect key="frame" x="16" y="391" width="134" height="26"/>
+                                <rect key="frame" x="16" y="458" width="134" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Repeat label"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -159,7 +151,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEX-aO-iLh">
-                                <rect key="frame" x="85" y="527" width="189" height="83"/>
+                                <rect key="frame" x="85" y="564" width="189" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.29328981164383561" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Tap to finalise this task and add to task list" label="Add task to task list"/>
@@ -180,7 +172,7 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuC-9K-SOj">
-                                <rect key="frame" x="16" y="354" width="326" height="29"/>
+                                <rect key="frame" x="16" y="411" width="326" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -195,11 +187,28 @@
                                     <segue destination="zKH-T0-QW2" kind="show" identifier="Back" id="3Ip-XA-ny7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-bj-PXV">
+                                <rect key="frame" x="16" y="308" width="326" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Time and Date currently chosen"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-yh-NlH">
+                                <rect key="frame" x="212" y="375" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" hint="toggle to turn reminders on for this task" label="Reminder on or off switch"/>
+                                <connections>
+                                    <action selector="remindersToggled:" destination="O0f-GP-Qpk" eventType="valueChanged" id="M3d-I3-SVL"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="YTY-eV-adM"/>
                     </view>
                     <connections>
+                        <outlet property="ShowDateSelected" destination="yLo-bj-PXV" id="yon-P0-7iT"/>
                         <outlet property="datePicker" destination="A5i-zc-RY9" id="O6Y-OH-S5d"/>
                         <outlet property="displayDateChosen" destination="yuC-9K-SOj" id="Pcw-8P-CdB"/>
                         <outlet property="input" destination="zti-jY-Ugi" id="lQn-Yd-kuh"/>
@@ -289,16 +298,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-JN-M0K">
-                                <rect key="frame" x="164" y="318" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="Toggle this switch to turn reminders on or off" label="Reminders on or off switch"/>
-                                <connections>
-                                    <action selector="reminderSwitch:" destination="qXG-Qw-ysw" eventType="valueChanged" id="j19-9P-gLL"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ya-km-IrG">
-                                <rect key="frame" x="16" y="320" width="134" height="26"/>
+                                <rect key="frame" x="16" y="395" width="134" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Reminder label"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -306,7 +307,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sBn-il-uc7">
-                                <rect key="frame" x="16" y="437" width="307" height="29"/>
+                                <rect key="frame" x="16" y="505" width="307" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Once"/>
@@ -320,7 +321,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITB-sr-O17">
-                                <rect key="frame" x="16" y="391" width="134" height="26"/>
+                                <rect key="frame" x="16" y="462" width="134" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Repeat label"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -328,7 +329,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY7-9l-n9T">
-                                <rect key="frame" x="85" y="527" width="189" height="83"/>
+                                <rect key="frame" x="85" y="564" width="189" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.29328981160000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Tap this button to confirm the edits to your task and return to task list" label="Confirm task edit button"/>
@@ -363,6 +364,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0N-4v-pIO">
+                                <rect key="frame" x="16" y="308" width="326" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Date and Time currently selected"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Alv-JN-M0K">
+                                <rect key="frame" x="164" y="393" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" hint="Toggle this switch to turn reminders on or off" label="Reminders on or off switch"/>
+                                <connections>
+                                    <action selector="reminderSwitch:" destination="qXG-Qw-ysw" eventType="valueChanged" id="j19-9P-gLL"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="QWl-Hj-tsO"/>
@@ -371,6 +388,7 @@
                         <outlet property="InitialReminder" destination="Alv-JN-M0K" id="fyW-d7-fHF"/>
                         <outlet property="InitialRepeat" destination="sBn-il-uc7" id="C60-xx-z6J"/>
                         <outlet property="datePicked" destination="rsB-Ia-uOU" id="LUP-t2-hvv"/>
+                        <outlet property="showDateSelected" destination="x0N-4v-pIO" id="9l7-Bt-5Se"/>
                         <outlet property="taskName" destination="MJA-5Q-N6l" id="djH-SQ-DpC"/>
                     </connections>
                 </viewController>

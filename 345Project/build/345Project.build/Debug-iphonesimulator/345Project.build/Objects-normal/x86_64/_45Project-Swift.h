@@ -220,6 +220,7 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 @property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified reminderSwitch;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified repeatTask;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified ShowDateSelected;
 /// Task is to be added now. Take all variables, create a new Task instance.
 /// Use the task instance to fill out cell contents.
 /// <ul>
@@ -243,6 +244,7 @@ SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified InitialReminder;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified InitialRepeat;
 @property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicked;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified showDateSelected;
 - (IBAction)datePicker:(UIDatePicker * _Nonnull)sender;
 - (IBAction)reminderSwitch:(id _Nonnull)sender;
 - (IBAction)repeatSelector:(UISegmentedControl * _Nonnull)sender;

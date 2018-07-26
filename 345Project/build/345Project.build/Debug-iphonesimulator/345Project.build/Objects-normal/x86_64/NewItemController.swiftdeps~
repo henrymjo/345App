@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["10_45Project17NewItemControllerC", ""]
 provides-dynamic-lookup:
+- "ShowDateSelected"
 - "addTask"
 - "datePicker"
 - "didReceiveMemoryWarning"
@@ -51,6 +52,7 @@ depends-member:
 - ["s7CVarArgP", "Date"]
 - !private ["s7CVarArgP", "DateFormatter"]
 - !private ["s7CVarArgP", "NSDate"]
+- !private ["s7CVarArgP", "ShowDateSelected"]
 - !private ["s7CVarArgP", "UIDatePickerMode"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
@@ -82,6 +84,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "Date"]
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "NSDate"]
+- !private ["s28CustomDebugStringConvertibleP", "ShowDateSelected"]
 - !private ["s28CustomDebugStringConvertibleP", "UIDatePickerMode"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addTask"]
@@ -114,6 +117,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "Date"]
 - !private ["s23CustomStringConvertibleP", "DateFormatter"]
 - !private ["s23CustomStringConvertibleP", "NSDate"]
+- !private ["s23CustomStringConvertibleP", "ShowDateSelected"]
 - !private ["s23CustomStringConvertibleP", "UIDatePickerMode"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
@@ -151,6 +155,7 @@ depends-member:
 - ["s9EquatableP", "Date"]
 - !private ["s9EquatableP", "DateFormatter"]
 - !private ["s9EquatableP", "NSDate"]
+- !private ["s9EquatableP", "ShowDateSelected"]
 - !private ["s9EquatableP", "UIDatePickerMode"]
 - ["s9EquatableP", ""]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
@@ -188,6 +193,7 @@ depends-member:
 - ["s8HashableP", "Date"]
 - !private ["s8HashableP", "DateFormatter"]
 - !private ["s8HashableP", "NSDate"]
+- !private ["s8HashableP", "ShowDateSelected"]
 - !private ["s8HashableP", "UIDatePickerMode"]
 - ["s8HashableP", ""]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
@@ -221,6 +227,7 @@ depends-member:
 - ["So8NSCodingP", "Date"]
 - !private ["So8NSCodingP", "DateFormatter"]
 - !private ["So8NSCodingP", "NSDate"]
+- !private ["So8NSCodingP", "ShowDateSelected"]
 - !private ["So8NSCodingP", "UIDatePickerMode"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "date"]
@@ -252,6 +259,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "Date"]
 - !private ["So26NSExtensionRequestHandlingP", "DateFormatter"]
 - !private ["So26NSExtensionRequestHandlingP", "NSDate"]
+- !private ["So26NSExtensionRequestHandlingP", "ShowDateSelected"]
 - !private ["So26NSExtensionRequestHandlingP", "UIDatePickerMode"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "date"]
@@ -273,6 +281,7 @@ depends-member:
 - ["So8NSObjectC", "Date"]
 - !private ["So8NSObjectC", "DateFormatter"]
 - !private ["So8NSObjectC", "NSDate"]
+- ["So8NSObjectC", "ShowDateSelected"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UIDatePicker"]
@@ -310,6 +319,7 @@ depends-member:
 - ["So16NSObjectProtocolP", "Date"]
 - !private ["So16NSObjectProtocolP", "DateFormatter"]
 - !private ["So16NSObjectProtocolP", "NSDate"]
+- !private ["So16NSObjectProtocolP", "ShowDateSelected"]
 - !private ["So16NSObjectProtocolP", "UIDatePickerMode"]
 - ["So16NSObjectProtocolP", ""]
 - !private ["So16NSObjectProtocolP", "addTask"]
@@ -340,6 +350,7 @@ depends-member:
 - ["10_45Project17NewItemControllerC", "Date"]
 - !private ["10_45Project17NewItemControllerC", "DateFormatter"]
 - !private ["10_45Project17NewItemControllerC", "NSDate"]
+- ["10_45Project17NewItemControllerC", "ShowDateSelected"]
 - ["10_45Project17NewItemControllerC", "String"]
 - ["10_45Project17NewItemControllerC", "UIButton"]
 - ["10_45Project17NewItemControllerC", "UIDatePicker"]
@@ -392,6 +403,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "Date"]
 - !private ["So21UIAppearanceContainerP", "DateFormatter"]
 - !private ["So21UIAppearanceContainerP", "NSDate"]
+- !private ["So21UIAppearanceContainerP", "ShowDateSelected"]
 - !private ["So21UIAppearanceContainerP", "UIDatePickerMode"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "date"]
@@ -417,6 +429,7 @@ depends-member:
 - ["So18UIContentContainerP", "Date"]
 - !private ["So18UIContentContainerP", "DateFormatter"]
 - !private ["So18UIContentContainerP", "NSDate"]
+- !private ["So18UIContentContainerP", "ShowDateSelected"]
 - !private ["So18UIContentContainerP", "UIDatePickerMode"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "date"]
@@ -460,6 +473,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "Date"]
 - !private ["So18UIFocusEnvironmentP", "DateFormatter"]
 - !private ["So18UIFocusEnvironmentP", "NSDate"]
+- !private ["So18UIFocusEnvironmentP", "ShowDateSelected"]
 - !private ["So18UIFocusEnvironmentP", "UIDatePickerMode"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "date"]
@@ -493,6 +507,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "Date"]
 - !private ["So30UIPasteConfigurationSupportingP", "DateFormatter"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSDate"]
+- !private ["So30UIPasteConfigurationSupportingP", "ShowDateSelected"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIDatePickerMode"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "date"]
@@ -519,6 +534,7 @@ depends-member:
 - ["So11UIResponderC", "Date"]
 - !private ["So11UIResponderC", "DateFormatter"]
 - !private ["So11UIResponderC", "NSDate"]
+- ["So11UIResponderC", "ShowDateSelected"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UIDatePicker"]
@@ -554,6 +570,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "Date"]
 - !private ["So30UIResponderStandardEditActionsP", "DateFormatter"]
 - !private ["So30UIResponderStandardEditActionsP", "NSDate"]
+- !private ["So30UIResponderStandardEditActionsP", "ShowDateSelected"]
 - !private ["So30UIResponderStandardEditActionsP", "UIDatePickerMode"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "date"]
@@ -581,6 +598,7 @@ depends-member:
 - ["So16UIStateRestoringP", "Date"]
 - !private ["So16UIStateRestoringP", "DateFormatter"]
 - !private ["So16UIStateRestoringP", "NSDate"]
+- !private ["So16UIStateRestoringP", "ShowDateSelected"]
 - !private ["So16UIStateRestoringP", "UIDatePickerMode"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "date"]
@@ -608,6 +626,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "Date"]
 - !private ["So18UITraitEnvironmentP", "DateFormatter"]
 - !private ["So18UITraitEnvironmentP", "NSDate"]
+- !private ["So18UITraitEnvironmentP", "ShowDateSelected"]
 - !private ["So18UITraitEnvironmentP", "UIDatePickerMode"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "date"]
@@ -640,6 +659,7 @@ depends-member:
 - ["So16UIViewControllerC", "Date"]
 - !private ["So16UIViewControllerC", "DateFormatter"]
 - !private ["So16UIViewControllerC", "NSDate"]
+- ["So16UIViewControllerC", "ShowDateSelected"]
 - ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UIButton"]
 - ["So16UIViewControllerC", "UIDatePicker"]
@@ -684,6 +704,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ShowDateSelected"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIDatePickerMode"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addTask"]
@@ -817,6 +838,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "356d6d12e84654879963fad5851bf052"
+interface-hash: "0d84c79830438b2734afa25b51ddca83"

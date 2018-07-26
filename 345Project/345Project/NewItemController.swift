@@ -21,6 +21,7 @@ class NewItemController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var reminderSwitch: UISwitch!
     @IBOutlet weak var repeatTask: UISegmentedControl!
+    @IBOutlet weak var ShowDateSelected: UILabel!
     
     /** Task is to be added now. Take all variables, create a new Task instance.
         Use the task instance to fill out cell contents.
@@ -28,6 +29,8 @@ class NewItemController: UIViewController {
     @IBAction func myDateView(_ sender: UIDatePicker) {
         print("MydateViewMethod")
         let strDate = myDateFormatter(date: datePicker.date)
+        date = datePicker.date
+        ShowDateSelected.text = strDate
         if(reminderSwitch.isOn){
             displayDateChosen.text = ("Reminder for: \(strDate)")
         } else {
@@ -83,6 +86,7 @@ class NewItemController: UIViewController {
         let currentDate = NSDate()
         datePicker.minimumDate = currentDate as Date
         datePicker.date = currentDate as Date
+        ShowDateSelected.text = myDateFormatter(date: date)
     }
     
 
