@@ -245,9 +245,30 @@ SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified InitialRepeat;
 @property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicked;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified showDateSelected;
+/// Called if the date in the date picker wheel is changed.
+/// Updates the date variable and shows the current current date chosen below the picker
+/// (For disability purposes)
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)datePicker:(UIDatePicker * _Nonnull)sender;
+/// Called if reminders switch is toggled
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)reminderSwitch:(id _Nonnull)sender;
+/// Called if the repeats selector (Once, daily, weekly) is changed
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)repeatSelector:(UISegmentedControl * _Nonnull)sender;
+/// Called when “Edit task” button is pressed,
+/// tests to see if any details have changed,
+/// if yes then update them and segue back to task list
+/// *
 - (IBAction)editTask:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
