@@ -32,6 +32,7 @@ class TaskManager: NSObject {
         return task1
     }
     
+    //change to implement core data here.
     func addTask(name: String, reminder: Bool, repeating: Int, date: Date){
         print("addTask method")
         tasks.append(newTask(name: name, reminder: reminder, repeating: repeating, date: date))
