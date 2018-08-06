@@ -19,6 +19,7 @@
 		4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040820F46D7000A36ED9 /* TaskManager.swift */; };
 		4FE512BE20FB0FB500CB7012 /* TaskEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */; };
 		BA941D96210EBFB2009006A0 /* 345App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA941D94210EBFB2009006A0 /* 345App.xcdatamodeld */; };
+		BAF18EDB2118D559005F7DE5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF18EDA2118D559005F7DE5 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4F60040820F46D7000A36ED9 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditViewController.swift; sourceTree = "<group>"; };
 		BA941D95210EBFB2009006A0 /* 345App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 345App.xcdatamodel; sourceTree = "<group>"; };
+		BAF18EDA2118D559005F7DE5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		35BBBBA820F30002004C3AF5 /* 345Project */ = {
 			isa = PBXGroup;
 			children = (
+				BAF18ED92118D530005F7DE5 /* CoreData */,
 				35BBBBA920F30002004C3AF5 /* AppDelegate.swift */,
 				4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */,
 				4F1C37C6210482B2007A09FA /* AlertCenter.swift */,
@@ -117,7 +120,6 @@
 				35BBBBB020F30004004C3AF5 /* Assets.xcassets */,
 				35BBBBB220F30004004C3AF5 /* LaunchScreen.storyboard */,
 				35BBBBB520F30004004C3AF5 /* Info.plist */,
-				BA941D94210EBFB2009006A0 /* 345App.xcdatamodeld */,
 			);
 			path = 345Project;
 			sourceTree = "<group>";
@@ -138,6 +140,15 @@
 				35BBBBCB20F30005004C3AF5 /* Info.plist */,
 			);
 			path = 345ProjectUITests;
+			sourceTree = "<group>";
+		};
+		BAF18ED92118D530005F7DE5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BA941D94210EBFB2009006A0 /* 345App.xcdatamodeld */,
+				BAF18EDA2118D559005F7DE5 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 				BA941D96210EBFB2009006A0 /* 345App.xcdatamodeld in Sources */,
 				35BBBBAA20F30002004C3AF5 /* AppDelegate.swift in Sources */,
 				4FE512BE20FB0FB500CB7012 /* TaskEditViewController.swift in Sources */,
+				BAF18EDB2118D559005F7DE5 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
