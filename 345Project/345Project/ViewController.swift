@@ -64,6 +64,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if let _ = sender as? UIButton, let vc = segue.destination as? NewItemController {
+            vc.managedContext = resultsController.managedObjectContext
+        }
+        
         if segue.identifier == "editTask" {
         
         
@@ -98,6 +102,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             sectionNameKeyPath: nil,
             cacheName: nil
         )
+        resultsController.delegate = self
         do{
             try resultsController.performFetch()
         } catch {
@@ -114,5 +119,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 
+}
+
+extension ViewController: NSFetchedResultsControllerDelegate{
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myTableView.beginUpdates()
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myTableView.endUpdates()
+    }
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                myTableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        default:
+            break
+        }
+    }
 }
 

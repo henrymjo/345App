@@ -11,6 +11,9 @@ import CoreData
 
 class NewItemController: UIViewController {
     
+    //Mark - Properties
+    var managedContext: NSManagedObjectContext!
+    
     var taskDescription = ""
     var remindersOn = false
     var repeats = 0
@@ -60,12 +63,20 @@ class NewItemController: UIViewController {
     
     
     @IBAction func addTask(_ sender: UIButton) {
-    if(input.text != ""){
-        taskDescription = input.text!
-        remindersOn = reminderSwitch.isOn
-        repeats = repeatTask.selectedSegmentIndex
-        date = datePicker.date
-        taskMgr.addTask(name: taskDescription, reminder: remindersOn, repeating: repeats, date: date)
+        guard let title = input.text, !title.isEmpty else{
+            return
+        }
+        let todo = ToDo(context: managedContext)
+        todo.title = title
+        todo.date = datePicker.date
+        todo.reminder = Int16(repeatTask.selectedSegmentIndex)
+        
+        do{
+            try managedContext.save()
+            dismiss(animated: true)
+            input.resignFirstResponder()
+        } catch {
+            print("Error saving todo: \(error)")
         }
     }
     
