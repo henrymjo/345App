@@ -19,7 +19,7 @@ provides-dynamic-lookup:
 - "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
-- !private "!="
+- !private "!"
 - "AssignmentPrecedence"
 - "Bool"
 - "BooleanLiteralType"
@@ -42,6 +42,7 @@ depends-top-level:
 - !private "taskMgr"
 depends-member:
 - ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "date"]
 - !private ["So15CALayerDelegateP", "datePickerMode"]
@@ -65,6 +66,7 @@ depends-member:
 - !private ["s7CVarArgP", "displayDateChosen"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "input"]
+- !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "isOn"]
 - !private ["s7CVarArgP", "minimumDate"]
 - !private ["s7CVarArgP", "myDateFormatter"]
@@ -80,7 +82,9 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "isEmpty"]
 - ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "isEmpty"]
 - ["s28CustomDebugStringConvertibleP", "Date"]
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "NSDate"]
@@ -96,6 +100,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "displayDateChosen"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "input"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "isOn"]
 - !private ["s28CustomDebugStringConvertibleP", "minimumDate"]
 - !private ["s28CustomDebugStringConvertibleP", "myDateFormatter"]
@@ -112,8 +117,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
 - ["s23CustomStringConvertibleP", "Date"]
 - !private ["s23CustomStringConvertibleP", "DateFormatter"]
 - !private ["s23CustomStringConvertibleP", "NSDate"]
@@ -130,6 +137,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "displayDateChosen"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "input"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "isOn"]
 - !private ["s23CustomStringConvertibleP", "minimumDate"]
 - !private ["s23CustomStringConvertibleP", "myDateFormatter"]
@@ -150,8 +158,10 @@ depends-member:
 - !private ["So13DateFormatterC", "string"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isEmpty"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isEmpty"]
 - ["s9EquatableP", "Date"]
 - !private ["s9EquatableP", "DateFormatter"]
 - !private ["s9EquatableP", "NSDate"]
@@ -169,6 +179,7 @@ depends-member:
 - !private ["s9EquatableP", "displayDateChosen"]
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "input"]
+- !private ["s9EquatableP", "isEmpty"]
 - !private ["s9EquatableP", "isOn"]
 - !private ["s9EquatableP", "minimumDate"]
 - !private ["s9EquatableP", "myDateFormatter"]
@@ -185,8 +196,11 @@ depends-member:
 - !private ["s9EquatableP", "viewDidLoad"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
 - ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
 - !private ["So9FormatterC", "dateFormat"]
 - !private ["So9FormatterC", "init"]
 - !private ["So9FormatterC", "string"]
@@ -207,6 +221,7 @@ depends-member:
 - !private ["s8HashableP", "displayDateChosen"]
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "input"]
+- !private ["s8HashableP", "isEmpty"]
 - !private ["s8HashableP", "isOn"]
 - !private ["s8HashableP", "minimumDate"]
 - !private ["s8HashableP", "myDateFormatter"]
@@ -223,7 +238,9 @@ depends-member:
 - !private ["s8HashableP", "viewDidLoad"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
 - ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
 - ["So8NSCodingP", "Date"]
 - !private ["So8NSCodingP", "DateFormatter"]
 - !private ["So8NSCodingP", "NSDate"]
@@ -238,6 +255,7 @@ depends-member:
 - !private ["So8NSCodingP", "displayDateChosen"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "input"]
+- !private ["So8NSCodingP", "isEmpty"]
 - !private ["So8NSCodingP", "isOn"]
 - !private ["So8NSCodingP", "minimumDate"]
 - !private ["So8NSCodingP", "myDateFormatter"]
@@ -254,6 +272,7 @@ depends-member:
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", "dateFormat"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
 - !private ["So9NSCopyingP", "string"]
 - !private ["So6NSDateC", "init"]
 - ["So26NSExtensionRequestHandlingP", "Date"]
@@ -277,6 +296,9 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "taskDescription"]
 - !private ["So26NSExtensionRequestHandlingP", "taskMgr"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Date"]
 - !private ["So8NSObjectC", "DateFormatter"]
@@ -299,6 +321,7 @@ depends-member:
 - ["So8NSObjectC", "displayDateChosen"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "input"]
+- !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectC", "isOn"]
 - !private ["So8NSObjectC", "minimumDate"]
 - ["So8NSObjectC", "myDateFormatter"]
@@ -331,6 +354,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "displayDateChosen"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "input"]
+- !private ["So16NSObjectProtocolP", "isEmpty"]
 - !private ["So16NSObjectProtocolP", "isOn"]
 - !private ["So16NSObjectProtocolP", "minimumDate"]
 - !private ["So16NSObjectProtocolP", "myDateFormatter"]
@@ -346,6 +370,8 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So8NSStringC", "isEmpty"]
 - ["10_45Project17NewItemControllerC", "Bool"]
 - ["10_45Project17NewItemControllerC", "Date"]
 - !private ["10_45Project17NewItemControllerC", "DateFormatter"]
@@ -380,14 +406,20 @@ depends-member:
 - ["10_45Project17NewItemControllerC", "viewDidAppear"]
 - ["10_45Project17NewItemControllerC", "viewDidLoad"]
 - ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
 - !private ["s16RawRepresentableP", "dateAndTime"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
 - ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "isEmpty"]
 - ["SS", "init"]
+- !private ["SS", "isEmpty"]
 - ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "isEmpty"]
 - !private ["10_45Project11TaskManagerC", "addTask"]
 - ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
 - ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
 - !private ["So29UIAccessibilityIdentificationP", "date"]
 - !private ["So29UIAccessibilityIdentificationP", "datePickerMode"]
 - !private ["So29UIAccessibilityIdentificationP", "isOn"]
@@ -696,11 +728,17 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDate"]
@@ -716,6 +754,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "displayDateChosen"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "input"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isOn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "myDateFormatter"]
@@ -732,7 +771,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "isEmpty"]
 depends-nominal:
 - "s23BidirectionalCollectionP"
 - !private "Sb"
@@ -761,9 +802,13 @@ depends-nominal:
 - !private "So9NSCopyingP"
 - !private "So6NSDateC"
 - "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
 - !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
 - "10_45Project17NewItemControllerC"
 - "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
@@ -819,6 +864,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -832,6 +878,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
