@@ -59,13 +59,14 @@ class NewItemController: UIViewController {
     
     
     @IBAction func addTask(_ sender: UIButton) {
-    if(input.text != ""){
-        taskDescription = input.text!
+        guard let title = input.text, !title.isEmpty else{
+            return
+        }
+        taskDescription = title
         remindersOn = reminderSwitch.isOn
         repeats = repeatTask.selectedSegmentIndex
         date = datePicker.date
         taskMgr.addTask(name: taskDescription, reminder: remindersOn, repeating: repeats, date: date)
-        }
     }
     
     

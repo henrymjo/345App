@@ -39,10 +39,13 @@
                                     <outlet property="delegate" destination="zKH-T0-QW2" id="Qfi-i8-pzo"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbE-Fb-zIw">
-                                <rect key="frame" x="326" y="36" width="33" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbE-Fb-zIw">
+                                <rect key="frame" x="326" y="39" width="33" height="32"/>
                                 <accessibility key="accessibilityConfiguration" hint="Tap to bring up the new task creator" label="Create a new task"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="4C6-lI-7YS"/>
+                                    <constraint firstAttribute="width" constant="33" id="HyX-ux-MeP"/>
+                                </constraints>
                                 <state key="normal" title="Add Task" image="Image-1"/>
                                 <connections>
                                     <segue destination="O0f-GP-Qpk" kind="popoverPresentation" identifier="newTask" popoverAnchorView="nbE-Fb-zIw" id="X4e-Zm-IFi">
@@ -50,12 +53,15 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Kz-tBM">
-                                <rect key="frame" x="16" y="36" width="33" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Kz-tBM">
+                                <rect key="frame" x="16" y="39" width="33" height="32"/>
                                 <accessibility key="accessibilityConfiguration" hint="Tap to bring up settings menu" label="Settings">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="9L1-eP-b71"/>
+                                    <constraint firstAttribute="height" constant="32" id="xCa-Rm-Hh1"/>
+                                </constraints>
                                 <state key="normal" title="Settings" image="Image"/>
                                 <connections>
                                     <segue destination="ykz-eX-k3g" kind="popoverPresentation" popoverAnchorView="g3s-Kz-tBM" id="cmj-iM-gs9">
@@ -63,11 +69,10 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-v1-QNI">
-                                <rect key="frame" x="156" y="39" width="62" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-v1-QNI">
+                                <rect key="frame" x="157" y="39" width="61" height="27"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Today">
+                                    <fragment content="To Do">
                                         <attributes>
                                             <font key="NSFont" size="23" name="Helvetica"/>
                                         </attributes>
@@ -77,6 +82,17 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nbE-Fb-zIw" firstAttribute="leading" secondItem="jba-v1-QNI" secondAttribute="trailing" constant="108" id="57H-YX-bS3"/>
+                            <constraint firstItem="nbE-Fb-zIw" firstAttribute="top" secondItem="rco-9U-1Ko" secondAttribute="top" constant="19" id="EQX-BY-lx6"/>
+                            <constraint firstItem="jba-v1-QNI" firstAttribute="top" secondItem="rco-9U-1Ko" secondAttribute="top" constant="19" id="Iww-V0-mXL"/>
+                            <constraint firstItem="jba-v1-QNI" firstAttribute="leading" secondItem="g3s-Kz-tBM" secondAttribute="trailing" constant="108" id="N77-y1-ClC"/>
+                            <constraint firstItem="nbE-Fb-zIw" firstAttribute="leading" secondItem="jba-v1-QNI" secondAttribute="trailing" constant="108" id="TqT-ya-pZ6"/>
+                            <constraint firstItem="jba-v1-QNI" firstAttribute="leading" secondItem="g3s-Kz-tBM" secondAttribute="trailing" constant="108" id="TyT-EB-opg"/>
+                            <constraint firstItem="rco-9U-1Ko" firstAttribute="trailing" secondItem="nbE-Fb-zIw" secondAttribute="trailing" constant="16" id="iSh-9T-vaA"/>
+                            <constraint firstItem="g3s-Kz-tBM" firstAttribute="leading" secondItem="rco-9U-1Ko" secondAttribute="leading" constant="16" id="oVv-xH-4hO"/>
+                            <constraint firstItem="g3s-Kz-tBM" firstAttribute="top" secondItem="rco-9U-1Ko" secondAttribute="top" constant="19" id="z3X-Zy-Qoi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rco-9U-1Ko"/>
                     </view>
                     <connections>
@@ -106,7 +122,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " borderStyle="roundedRect" placeholder="Short description eg. Get Groceries" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zti-jY-Ugi">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Short description eg. Get Groceries" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zti-jY-Ugi">
                                 <rect key="frame" x="16" y="99" width="326" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Task name input"/>
@@ -200,7 +216,7 @@
                                 <accessibility key="accessibilityConfiguration" hint="Tap to go back and see list of current tasks" label="Return to task list"/>
                                 <state key="normal" title="Back" image="left-arrow"/>
                                 <connections>
-                                    <segue destination="zKH-T0-QW2" kind="show" identifier="Back" id="3Ip-XA-ny7"/>
+                                    <segue destination="zKH-T0-QW2" kind="show" identifier="Back" animates="NO" id="3Ip-XA-ny7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -235,21 +251,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49P-yt-0Jf">
-                                <rect key="frame" x="16" y="36" width="44" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49P-yt-0Jf">
+                                <rect key="frame" x="16" y="39" width="26" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" image="left-arrow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUA-NA-BxL">
+                                <rect key="frame" x="16" y="38" width="26" height="28"/>
+                                <state key="normal" image="left-arrow"/>
                                 <connections>
-                                    <segue destination="zKH-T0-QW2" kind="popoverPresentation" popoverAnchorView="49P-yt-0Jf" id="OVY-TI-gVB">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="zKH-T0-QW2" kind="show" animates="NO" id="sU5-ge-XG3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zkX-0N-lj5" firstAttribute="leading" secondItem="VUA-NA-BxL" secondAttribute="trailing" constant="99" id="0a1-Yf-RS2"/>
                             <constraint firstItem="deT-tY-EMI" firstAttribute="trailing" secondItem="zkX-0N-lj5" secondAttribute="trailing" constant="141.5" id="Buw-r0-equ"/>
+                            <constraint firstItem="deT-tY-EMI" firstAttribute="bottom" secondItem="VUA-NA-BxL" secondAttribute="bottom" constant="601" id="C6j-70-d1q"/>
                             <constraint firstItem="zkX-0N-lj5" firstAttribute="top" secondItem="deT-tY-EMI" secondAttribute="top" constant="19" id="Ch7-iw-hP4"/>
+                            <constraint firstItem="VUA-NA-BxL" firstAttribute="top" secondItem="deT-tY-EMI" secondAttribute="top" constant="18" id="Fh6-fk-RbB"/>
+                            <constraint firstItem="zkX-0N-lj5" firstAttribute="leading" secondItem="VUA-NA-BxL" secondAttribute="trailing" constant="99" id="cwq-5x-L5R"/>
+                            <constraint firstItem="VUA-NA-BxL" firstAttribute="leading" secondItem="deT-tY-EMI" secondAttribute="leading" constant="16" id="iPj-UI-LxR"/>
+                            <constraint firstItem="VUA-NA-BxL" firstAttribute="top" secondItem="deT-tY-EMI" secondAttribute="top" constant="18" id="oVK-GY-qml"/>
                             <constraint firstItem="zkX-0N-lj5" firstAttribute="top" secondItem="deT-tY-EMI" secondAttribute="top" constant="19" id="p4F-sl-qZI"/>
                             <constraint firstItem="zkX-0N-lj5" firstAttribute="leading" secondItem="deT-tY-EMI" secondAttribute="leading" constant="141.5" id="yCF-wW-bfM"/>
                         </constraints>
@@ -356,6 +380,9 @@
                                 <rect key="frame" x="16" y="20" width="26" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="left-arrow"/>
+                                <connections>
+                                    <segue destination="zKH-T0-QW2" kind="show" id="f1q-Lu-pMm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

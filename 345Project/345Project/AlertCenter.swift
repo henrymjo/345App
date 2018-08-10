@@ -29,8 +29,8 @@ class AlertCenter: NSObject{
         
         let content = UNMutableNotificationContent()
         content.title = title
-        content.subtitle = subtitle
-        content.body = body
+        content.subtitle = ""
+        content.body = ""
         content.badge = 1;
         var repeatsAreOn = false
         if(repeats != 0){
