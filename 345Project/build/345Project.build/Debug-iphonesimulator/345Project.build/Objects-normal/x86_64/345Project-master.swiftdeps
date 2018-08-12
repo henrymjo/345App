@@ -1,8 +1,8 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "40679c5c9aba18ebb3eaaf215d5726d0"
-build_time: [1534049789, 195560000]
+build_time: [1534051043, 819705000]
 inputs:
-  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/ViewController.swift": [1534046085, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/ViewController.swift": [1534050034, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AlertCenter.swift": [1534039467, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/NewItemController.swift": [1534039712, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/TaskManager.swift": [1533876126, 0]
