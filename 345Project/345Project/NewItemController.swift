@@ -8,6 +8,9 @@
 
 import UIKit
 
+/** Visualisation of the current task and be able to make edits to it.
+  * Needs to be 10x more visually appealing for Mainly Accessibility issues and also general consumpion
+**/
 class NewItemController: UIViewController {
     
     /** These variables get sent to the task manager to set the values for

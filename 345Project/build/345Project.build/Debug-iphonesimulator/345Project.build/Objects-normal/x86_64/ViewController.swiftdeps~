@@ -14,13 +14,14 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 depends-top-level:
 - !private "=="
-- "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - "CastingPrecedence"
+- "FloatLiteralType"
 - "IndexPath"
 - "Int"
-- "StringLiteralType"
+- "IntegerLiteralType"
+- !private "StringLiteralType"
 - !private "TaskEditViewController"
 - "UIStoryboardSegue"
 - "UITableView"
@@ -36,7 +37,7 @@ depends-top-level:
 - !private "taskMgr"
 depends-member:
 - !private ["10_45Project11AlertCenterC", "requestAlerts"]
-- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s23BidirectionalCollectionP", "row"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "init"]
@@ -60,7 +61,7 @@ depends-member:
 - !private ["s7CVarArgP", "identifier"]
 - ["s7CVarArgP", "indexPathForPreferredFocusedView"]
 - ["s7CVarArgP", "indexPathForPreferredFocusedViewInTableView"]
-- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "myTableView"]
 - ["s7CVarArgP", "numberOfSections"]
 - ["s7CVarArgP", "numberOfSectionsInTableView"]
@@ -96,9 +97,9 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
-- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "init"]
 - !private ["s10CollectionP", "row"]
-- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "init"]
 - !private ["s10ComparableP", "row"]
 - !private ["s28CustomDebugStringConvertibleP", "TaskEditViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "UITableViewCell"]
@@ -116,7 +117,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
-- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "myTableView"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSectionsInTableView"]
@@ -154,9 +155,9 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
-- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s23CustomStringConvertibleP", "TaskEditViewController"]
 - !private ["s23CustomStringConvertibleP", "UITableViewCell"]
@@ -175,7 +176,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "identifier"]
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
-- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "myTableView"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
 - ["s23CustomStringConvertibleP", "numberOfSectionsInTableView"]
@@ -213,10 +214,10 @@ depends-member:
 - ["s23CustomStringConvertibleP", "viewForZooming"]
 - ["s23CustomStringConvertibleP", "viewForZoomingInScrollView"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "row"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "row"]
 - !private ["s9EquatableP", "TaskEditViewController"]
 - !private ["s9EquatableP", "UITableViewCell"]
@@ -237,7 +238,7 @@ depends-member:
 - !private ["s9EquatableP", "identifier"]
 - ["s9EquatableP", "indexPathForPreferredFocusedView"]
 - ["s9EquatableP", "indexPathForPreferredFocusedViewInTableView"]
-- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "myTableView"]
 - ["s9EquatableP", "numberOfSections"]
 - ["s9EquatableP", "numberOfSectionsInTableView"]
@@ -276,9 +277,9 @@ depends-member:
 - ["s9EquatableP", "viewForZoomingInScrollView"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s8HashableP", "TaskEditViewController"]
 - !private ["s8HashableP", "UITableViewCell"]
 - !private ["s8HashableP", "UITableViewCellEditingStyle"]
@@ -298,7 +299,7 @@ depends-member:
 - !private ["s8HashableP", "identifier"]
 - ["s8HashableP", "indexPathForPreferredFocusedView"]
 - ["s8HashableP", "indexPathForPreferredFocusedViewInTableView"]
-- ["s8HashableP", "init"]
+- !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "myTableView"]
 - ["s8HashableP", "numberOfSections"]
 - ["s8HashableP", "numberOfSectionsInTableView"]
@@ -337,8 +338,8 @@ depends-member:
 - ["s8HashableP", "viewForZoomingInScrollView"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s10MirrorPathP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "row"]
 - !private ["So8NSCodingP", "TaskEditViewController"]
 - !private ["So8NSCodingP", "UITableViewCell"]
@@ -446,7 +447,6 @@ depends-member:
 - ["So8NSObjectC", "indexPathForPreferredFocusedView"]
 - ["So8NSObjectC", "indexPathForPreferredFocusedViewInTableView"]
 - ["So8NSObjectC", "init"]
-- ["So8NSObjectC", "list"]
 - ["So8NSObjectC", "myTableView"]
 - ["So8NSObjectC", "numberOfSections"]
 - ["So8NSObjectC", "numberOfSectionsInTableView"]
@@ -537,14 +537,14 @@ depends-member:
 - ["So16NSObjectProtocolP", "viewForZooming"]
 - ["So16NSObjectProtocolP", "viewForZoomingInScrollView"]
 - !private ["s22RandomAccessCollectionP", "row"]
-- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s16RawRepresentableP", "default"]
 - !private ["s16RawRepresentableP", "delete"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
-- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "row"]
-- ["SS", "init"]
-- ["s14StringProtocolP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
 - !private ["10_45Project22TaskEditViewControllerC", "date"]
 - !private ["10_45Project22TaskEditViewControllerC", "init"]
 - !private ["10_45Project22TaskEditViewControllerC", "remindersOn"]
@@ -557,8 +557,8 @@ depends-member:
 - !private ["10_45Project11TaskManagerC", "getTaskReminder"]
 - !private ["10_45Project11TaskManagerC", "getTaskRepeats"]
 - !private ["10_45Project11TaskManagerC", "removeTask"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
@@ -771,7 +771,6 @@ depends-member:
 - ["So11UIResponderC", "indexPathForPreferredFocusedView"]
 - ["So11UIResponderC", "indexPathForPreferredFocusedViewInTableView"]
 - ["So11UIResponderC", "init"]
-- ["So11UIResponderC", "list"]
 - ["So11UIResponderC", "myTableView"]
 - ["So11UIResponderC", "numberOfSections"]
 - ["So11UIResponderC", "numberOfSectionsInTableView"]
@@ -1064,7 +1063,6 @@ depends-member:
 - ["So16UIViewControllerC", "indexPathForPreferredFocusedView"]
 - ["So16UIViewControllerC", "indexPathForPreferredFocusedViewInTableView"]
 - ["So16UIViewControllerC", "init"]
-- ["So16UIViewControllerC", "list"]
 - ["So16UIViewControllerC", "myTableView"]
 - ["So16UIViewControllerC", "numberOfSections"]
 - ["So16UIViewControllerC", "numberOfSectionsInTableView"]
@@ -1112,7 +1110,6 @@ depends-member:
 - ["10_45Project14ViewControllerC", "indexPathForPreferredFocusedView"]
 - ["10_45Project14ViewControllerC", "indexPathForPreferredFocusedViewInTableView"]
 - ["10_45Project14ViewControllerC", "init"]
-- ["10_45Project14ViewControllerC", "list"]
 - ["10_45Project14ViewControllerC", "myTableView"]
 - ["10_45Project14ViewControllerC", "numberOfSections"]
 - ["10_45Project14ViewControllerC", "numberOfSectionsInTableView"]
@@ -1147,11 +1144,11 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textLabel"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TaskEditViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITableViewCellEditingStyle"]
@@ -1205,49 +1202,49 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
-- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
-- ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "10_45Project11AlertCenterC"
-- "s23BidirectionalCollectionP"
+- !private "s23BidirectionalCollectionP"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
-- "s10CollectionP"
-- "s10ComparableP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
-- "s17CustomReflectableP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "s9DecodableP"
-- "s9EncodableP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
 - "s9EquatableP"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
 - !private "10Foundation9IndexPathV"
-- "s25LosslessStringConvertibleP"
-- "s10MirrorPathP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - !private "s17MutableCollectionP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
 - !private "s22RandomAccessCollectionP"
-- "s26RangeReplaceableCollectionP"
+- !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
-- "s8SequenceP"
-- "SS"
-- "s14StringProtocolP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
 - !private "10_45Project22TaskEditViewControllerC"
 - !private "10_45Project11TaskManagerC"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -1280,18 +1277,19 @@ depends-nominal:
 - "10_45Project14ViewControllerC"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
-- "s21_ObjectiveCBridgeableP"
-- "s16_SwiftStringViewP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
@@ -1305,6 +1303,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
@@ -1314,4 +1313,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "e4d00bded8fdd5b9f5fe933e817c24ae"
+interface-hash: "8323ca9246b0786715262a965cc86faf"

@@ -267,7 +267,6 @@ depends-member:
 - ["So8NSObjectC", "repeats"]
 - !private ["So8NSObjectC", "selectedSegmentIndex"]
 - ["So8NSObjectC", "showDateSelected"]
-- ["So8NSObjectC", "showTaskName"]
 - !private ["So8NSObjectC", "string"]
 - ["So8NSObjectC", "taskEditName"]
 - ["So8NSObjectC", "taskIndex"]
@@ -331,7 +330,6 @@ depends-member:
 - ["10_45Project22TaskEditViewControllerC", "repeatSelector"]
 - ["10_45Project22TaskEditViewControllerC", "repeats"]
 - ["10_45Project22TaskEditViewControllerC", "showDateSelected"]
-- ["10_45Project22TaskEditViewControllerC", "showTaskName"]
 - ["10_45Project22TaskEditViewControllerC", "taskEditName"]
 - ["10_45Project22TaskEditViewControllerC", "taskIndex"]
 - !private ["10_45Project22TaskEditViewControllerC", "taskMgr"]
@@ -478,7 +476,6 @@ depends-member:
 - ["So11UIResponderC", "repeats"]
 - !private ["So11UIResponderC", "selectedSegmentIndex"]
 - ["So11UIResponderC", "showDateSelected"]
-- ["So11UIResponderC", "showTaskName"]
 - ["So11UIResponderC", "taskEditName"]
 - ["So11UIResponderC", "taskIndex"]
 - !private ["So11UIResponderC", "taskMgr"]
@@ -581,7 +578,6 @@ depends-member:
 - ["So16UIViewControllerC", "repeatSelector"]
 - ["So16UIViewControllerC", "repeats"]
 - ["So16UIViewControllerC", "showDateSelected"]
-- ["So16UIViewControllerC", "showTaskName"]
 - ["So16UIViewControllerC", "taskEditName"]
 - ["So16UIViewControllerC", "taskIndex"]
 - !private ["So16UIViewControllerC", "taskMgr"]
@@ -724,4 +720,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "1603aaf560308574903e4e051f7036d9"
+interface-hash: "7bcb6f9278508ea3aff7b0008ffaea44"

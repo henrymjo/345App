@@ -8,25 +8,27 @@
 
 import UIKit
 
+
+/** Edit task page controller.
+    Shows all currect settings for a task and makes them alterable
+    UI should be improved for Accessibily purposes.
+ **/
 class TaskEditViewController: UIViewController {
 
-    @IBOutlet weak var taskName: UILabel?
-    @IBOutlet weak var InitialReminder: UISwitch!
-    @IBOutlet weak var InitialRepeat: UISegmentedControl!
-    @IBOutlet weak var datePicked: UIDatePicker!
-    @IBOutlet weak var showDateSelected: UILabel!
     
-    var anythingDidChange = false
-    var date = Date()
-    var remindersOn = false;
-    var repeats = 0;
-    var taskEditName = ""
-    var taskIndex = 0
+    @IBOutlet weak var taskName: UILabel? //Task name selected is displayed
+    @IBOutlet weak var InitialReminder: UISwitch! //Whether the reminder is initially on or off.
+    @IBOutlet weak var InitialRepeat: UISegmentedControl! // What repeats are initally set to
+    @IBOutlet weak var datePicked: UIDatePicker! // The date picked, wil start at the original date picked
+    @IBOutlet weak var showDateSelected: UILabel! // Label showing what date is selected right now. Accessibility
     
-    func showTaskName(task: String){
-        taskEditName = task
+    var anythingDidChange = false // Were any fields altered
+    var date = Date() // date currently selected
+    var remindersOn = false; // reminders selected
+    var repeats = 0; // repeat index selected
+    var taskEditName = "" // used to set the task name. Could make this alterable.
+    var taskIndex = 0 // the task's index in the task array
     
-    }
     
     /** Called if the date in the date picker wheel is changed.
         Updates the date variable and shows the current current date chosen below the picker
@@ -68,6 +70,9 @@ class TaskEditViewController: UIViewController {
         }
     }
     
+/** turns a date into the string formate dd-MM-YY HH:mm
+    This needs to be changed to be more visusally appealing in the app.
+ **/
     func myDateFormatter(date: Date) -> String{
         
         let dateFormatter = DateFormatter()
@@ -89,6 +94,9 @@ class TaskEditViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    /** When the view appears set all the correct values for that task
+    **/
     override func viewDidAppear(_ animated: Bool) {
         taskName?.text = taskEditName
         InitialReminder.isOn = remindersOn

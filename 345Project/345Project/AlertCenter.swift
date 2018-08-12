@@ -70,8 +70,8 @@ class AlertCenter: NSObject{
             /** Adds alert to the device alerts **/
             addAlert(trigger: trigger, content: content)
         } else {
-            print("Task too close to remind"); // debugging purposes only, compareTime deals with communicating with user
-        }
+            print("Task too close to remind"); // debugging purposes only,
+            }                                  //communicating this with user is done in the viewControllers.
     }
     
     /** adds the alert to the users device.
