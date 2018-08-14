@@ -210,14 +210,28 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
 @class UITextField;
-@class UIDatePicker;
-@class UISwitch;
-@class UISegmentedControl;
 @class UIButton;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC10_45Project7NewItem")
+@interface NewItem : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TaskTextField;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified UrgencyButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ReminderButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified TimeButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified AddTaskButton;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UILabel;
+@class UIDatePicker;
+@class UISwitch;
+@class UISegmentedControl;
 
 /// Visualisation of the current task and be able to make edits to it.
 /// <ul>
@@ -364,9 +378,22 @@ SWIFT_CLASS("_TtC10_45Project11TaskManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStoryboardSegue;
+
+SWIFT_CLASS("_TtC10_45Project17UrgencyController")
+@interface UrgencyController : UIViewController
+- (IBAction)HighButton:(UIButton * _Nonnull)sender;
+- (IBAction)MedButton:(UIButton * _Nonnull)sender;
+- (IBAction)LowButton:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITableView;
 @class UITableViewCell;
-@class UIStoryboardSegue;
 
 /// ViewController class controls the presentation of the task list on the main page.
 /// Has a table view to control selections.
