@@ -48,9 +48,7 @@
                                 </constraints>
                                 <state key="normal" title="Add Task" image="Image-1"/>
                                 <connections>
-                                    <segue destination="O0f-GP-Qpk" kind="popoverPresentation" identifier="newTask" popoverAnchorView="nbE-Fb-zIw" id="X4e-Zm-IFi">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="A1S-18-rft" kind="push" id="eyQ-J6-qxv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Kz-tBM">
@@ -107,6 +105,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boN-B4-DVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-722.39999999999998" y="-729.08545727136436"/>
+        </scene>
+        <!--NewTaskController-->
+        <scene sceneID="7kd-ZP-2Rc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewTaskController" id="A1S-18-rft" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lBH-Pj-Fzv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-WR-exy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="-1263"/>
         </scene>
         <!--New Task-->
         <scene sceneID="Ku2-1l-S36">

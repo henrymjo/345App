@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ecD-dY-5HJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ecD-dY-5HJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,6 +46,9 @@
                                 <state key="normal" title="Time">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fjn-gx-ul3" kind="show" id="s9c-3I-KJc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJz-AT-2Cg">
                                 <rect key="frame" x="0.0" y="542" width="375" height="125"/>
@@ -56,7 +59,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Task Description eg, Gym" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="kfd-zN-3mp">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Task Description eg, 'Gym'" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="kfd-zN-3mp">
                                 <rect key="frame" x="0.0" y="45" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -146,10 +149,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-MK-DxF">
-                                <rect key="frame" x="16" y="123" width="343" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-MK-DxF">
+                                <rect key="frame" x="16" y="120" width="343" height="80"/>
                                 <color key="backgroundColor" red="0.16862745098039217" green="0.90588235294117647" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Uqs-wQ-04G"/>
+                                </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="ON">
@@ -162,15 +167,26 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
-                                <rect key="frame" x="0.0" y="302" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nst-AE-Yrx">
+                                <rect key="frame" x="122" y="509" width="110" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
+                                <rect key="frame" x="0.0" y="275" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
                                     <!--2018-08-19 09:18:26 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M6c-MK-DxF" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="8yN-j9-rew"/>
+                            <constraint firstItem="UW7-EU-fQC" firstAttribute="trailing" secondItem="iNr-MZ-iNh" secondAttribute="trailing" id="EVW-k8-fzf"/>
+                            <constraint firstItem="M6c-MK-DxF" firstAttribute="top" secondItem="iNr-MZ-iNh" secondAttribute="top" constant="100" id="IaQ-WB-cnh"/>
+                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="M6c-MK-DxF" secondAttribute="trailing" constant="16" id="T0d-KH-tDA"/>
+                            <constraint firstItem="UW7-EU-fQC" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" id="d3j-dw-MAY"/>
+                            <constraint firstItem="UW7-EU-fQC" firstAttribute="top" secondItem="M6c-MK-DxF" secondAttribute="bottom" constant="75" id="zYW-5b-qAf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iNr-MZ-iNh"/>
                     </view>
                 </viewController>
@@ -181,7 +197,7 @@
         <!--Time-->
         <scene sceneID="00P-5S-o7g">
             <objects>
-                <viewController title="Time" id="fjn-gx-ul3" sceneMemberID="viewController">
+                <viewController title="Time" id="fjn-gx-ul3" customClass="TimeViewController" customModule="_45Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vzr-fp-Pq0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,6 +229,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o3c-sM-ino"/>
                     </view>
+                    <connections>
+                        <outlet property="HoursIcon" destination="fgo-3w-62y" id="0HC-0Z-VWq"/>
+                        <outlet property="hoursIcon" destination="fgo-3w-62y" id="e7h-yM-OJQ"/>
+                        <outlet property="scrollWheel" destination="Y5V-wo-VRw" id="AJN-5r-iBJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwE-ie-3C8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
