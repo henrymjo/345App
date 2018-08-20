@@ -210,18 +210,19 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
 @class UIButton;
+@class UITextField;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC10_45Project7NewItem")
 @interface NewItem : UIViewController
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified TaskTextField;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified UrgencyButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ReminderButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified TimeButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified AddTaskButton;
+/// function called when textField editing ends *
+- (IBAction)TaskNameEntry:(UITextField * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -376,6 +377,19 @@ SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 SWIFT_CLASS("_TtC10_45Project11TaskManager")
 @interface TaskManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UISlider;
+
+SWIFT_CLASS("_TtC10_45Project18TimeViewController")
+@interface TimeViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified scrollWheel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified hoursIcon;
+- (IBAction)scrolled:(UISlider * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIStoryboardSegue;
