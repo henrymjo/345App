@@ -17,6 +17,7 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Date"
+- "Float"
 - "NewItem"
 - "StringLiteralType"
 - "UIButton"
@@ -154,6 +155,7 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "yellow"]
 - ["So8NSObjectC", "AddTaskButton"]
 - ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "Float"]
 - ["So8NSObjectC", "ReminderButton"]
 - ["So8NSObjectC", "TaskNameEntry"]
 - ["So8NSObjectC", "TimeButton"]
@@ -192,6 +194,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "yellow"]
 - ["10_45Project7NewItemC", "AddTaskButton"]
 - ["10_45Project7NewItemC", "Date"]
+- ["10_45Project7NewItemC", "Float"]
 - ["10_45Project7NewItemC", "ReminderButton"]
 - ["10_45Project7NewItemC", "TaskNameEntry"]
 - ["10_45Project7NewItemC", "TimeButton"]
@@ -277,6 +280,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So11UIResponderC", "AddTaskButton"]
 - ["So11UIResponderC", "Date"]
+- ["So11UIResponderC", "Float"]
 - ["So11UIResponderC", "ReminderButton"]
 - ["So11UIResponderC", "TaskNameEntry"]
 - ["So11UIResponderC", "TimeButton"]
@@ -335,6 +339,7 @@ depends-member:
 - !private ["So6UIViewC", "text"]
 - ["So16UIViewControllerC", "AddTaskButton"]
 - ["So16UIViewControllerC", "Date"]
+- ["So16UIViewControllerC", "Float"]
 - ["So16UIViewControllerC", "ReminderButton"]
 - ["So16UIViewControllerC", "TaskNameEntry"]
 - ["So16UIViewControllerC", "TimeButton"]
@@ -483,4 +488,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "f0f647f84aefa0193922387154ef71cf"
+interface-hash: "a70a0253c157f71f139ee99b7002e8a4"

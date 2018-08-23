@@ -380,6 +380,7 @@ SWIFT_CLASS("_TtC10_45Project11TaskManager")
 @end
 
 @class UISlider;
+@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 @interface TimeViewController : UIViewController
@@ -388,11 +389,12 @@ SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 - (IBAction)scrolled:(UISlider * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)confirmButton:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10_45Project17UrgencyController")
 @interface UrgencyController : UIViewController
@@ -459,6 +461,17 @@ SWIFT_CLASS("_TtC10_45Project14ViewController")
 /// Refresh the tableView to show updated tasks when this controller is opened *
 - (void)viewDidAppear:(BOOL)animated;
 /// Request to send alerts when the app opens for the first time *
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project18taskListController")
+@interface taskListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
