@@ -14,7 +14,7 @@ class NewItem: UIViewController {
     var taskName = "" // String
     var urgency = 0 // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
-    var time = 0.0 // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
+    var time: Float = 0.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
 
     @IBOutlet weak var UrgencyButton: UIButton!

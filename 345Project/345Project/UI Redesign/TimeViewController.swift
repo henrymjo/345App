@@ -11,14 +11,18 @@ import UIKit
 class TimeViewController: UIViewController {
 
     
-    
+    var selectedTime: Float = 0.0;
     @IBOutlet weak var scrollWheel: UISlider!
     
     @IBOutlet weak var hoursIcon: UILabel!
     
+    let step: Float = 0.5;
     @IBAction func scrolled(_ sender: UISlider){
-        let hours: Float = scrollWheel.value
-        hoursIcon.text = "\(hours)"
+        let roundedValue = round(sender.value/step) * step;
+        //let hours: Float = scrollWheel.value
+        hoursIcon.text = "\(roundedValue)";
+        selectedTime = roundedValue;
+        print("Scroller moved to: \(roundedValue)");
     }
     
     
@@ -33,7 +37,18 @@ class TimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func confirmButton(_ sender: Any) {
+        performSegue(withIdentifier: "time", sender: self);
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "time"){
+            let homeController = segue.destination as? NewItem
+            homeController?.time = selectedTime;
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
