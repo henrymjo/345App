@@ -8,11 +8,13 @@
 
 import UIKit
 
+let taskManager: taskListController = taskListController()
+
 class NewItem: UIViewController {
 
     
     var taskName = "" // String
-    var urgency = 0 // 0, 1, 2 representing urgency
+    var urgency = "low" // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 0.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
@@ -30,10 +32,10 @@ class NewItem: UIViewController {
     /* on load set the urgency button colour. Default is red currently **/
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(urgency == 0){
+        if(urgency == "high"){
             UrgencyButton.backgroundColor = UIColor.red
         } else {
-            if(urgency == 1){
+            if(urgency == "medium"){
                 UrgencyButton.backgroundColor = UIColor.yellow
             } else {
                 UrgencyButton.backgroundColor = UIColor.green
@@ -48,6 +50,9 @@ class NewItem: UIViewController {
     }
     
 
+    @IBAction func addNewTask(_ sender: Any) {
+        taskManager.createTask(taskName: taskName, urgency: urgency, reminderDate: reminderDate, time: time)
+    }
     /*
     // MARK: - Navigation
 

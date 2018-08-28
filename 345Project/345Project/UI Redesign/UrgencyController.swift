@@ -39,13 +39,13 @@ class UrgencyController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editController = segue.destination as? NewItem
         if(segue.identifier == "high"){
-            editController?.urgency = 0
+            editController?.urgency = "high"
             // set urgency to high and colour to red
         } else if(segue.identifier == "med"){
-            editController?.urgency = 1
+            editController?.urgency = "medium"
             // set urgency to  med and set colour to yellow
         } else if(segue.identifier == "low"){
-            editController?.urgency = 2
+            editController?.urgency = "low"
             // set urgency to low and set colour to green
         }
     }

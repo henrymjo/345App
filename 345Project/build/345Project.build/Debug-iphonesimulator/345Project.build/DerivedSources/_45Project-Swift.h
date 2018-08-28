@@ -210,10 +210,19 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIButton;
-@class UITextField;
 @class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC10_45Project11CustomCells")
+@interface CustomCells : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIButton;
+@class UITextField;
 
 SWIFT_CLASS("_TtC10_45Project7NewItem")
 @interface NewItem : UIViewController
