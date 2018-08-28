@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Task List Controller-->
         <scene sceneID="Wqa-mv-Loh">
             <objects>
-                <viewController id="3OL-xa-gEv" sceneMemberID="viewController">
+                <viewController id="3OL-xa-gEv" customClass="taskListController" customModule="_45Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tYd-xF-33T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +96,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="851-QJ-rxa"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="UFW-q6-Qxl" id="LJC-CJ-KhV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22Q-xb-KVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,6 +155,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addNewTask:" destination="ecD-dY-5HJ" eventType="touchUpInside" id="cvr-7n-cfx"/>
+                                    <segue destination="3OL-xa-gEv" kind="show" id="bNu-Mm-gCd"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Task Description eg, 'Gym'" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="kfd-zN-3mp">
@@ -160,9 +164,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="TaskNameEntry:" destination="ecD-dY-5HJ" eventType="editingDidEnd" id="d8v-Zh-bW4"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,11 +174,12 @@
                         <outlet property="ReminderButton" destination="B2b-eF-fk8" id="yKm-nU-Otm"/>
                         <outlet property="TimeButton" destination="W8m-Pk-Ayp" id="bX3-Ha-6rt"/>
                         <outlet property="UrgencyButton" destination="57T-Sp-pfD" id="qhT-oo-Wjv"/>
+                        <outlet property="taskName" destination="kfd-zN-3mp" id="C9G-lX-8kh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWz-Dv-F3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="-103"/>
+            <point key="canvasLocation" x="-276" y="-91"/>
         </scene>
         <!--Urgency Controller-->
         <scene sceneID="b6G-tI-8I3">
@@ -358,6 +360,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dKI-37-Las"/>
+        <segue reference="pnw-up-IjH"/>
     </inferredMetricsTieBreakers>
 </document>

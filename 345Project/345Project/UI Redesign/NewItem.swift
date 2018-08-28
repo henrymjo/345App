@@ -13,7 +13,7 @@ let taskManager: taskListController = taskListController()
 class NewItem: UIViewController {
 
     
-    var taskName = "" // String
+    var taskDesc = "" // String
     var urgency = "low" // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 0.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
@@ -23,11 +23,8 @@ class NewItem: UIViewController {
     @IBOutlet weak var ReminderButton: UIButton!
     @IBOutlet weak var TimeButton: UIButton!
     @IBOutlet weak var AddTaskButton: UIButton!
+    @IBOutlet weak var taskName: UITextField!
     
-    /** function called when textField editing ends **/
-    @IBAction func TaskNameEntry(_ sender: UITextField) {
-        taskName = sender.text!
-    }
     
     /* on load set the urgency button colour. Default is red currently **/
     override func viewDidLoad() {
@@ -51,7 +48,9 @@ class NewItem: UIViewController {
     
 
     @IBAction func addNewTask(_ sender: Any) {
-        taskManager.createTask(taskName: taskName, urgency: urgency, reminderDate: reminderDate, time: time)
+        taskDesc = taskName.text!
+        print("Task name: " + taskDesc)
+        taskManager.createTask(taskName: taskDesc, urgency: urgency, reminderDate: reminderDate, time: time)
     }
     /*
     // MARK: - Navigation

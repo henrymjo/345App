@@ -166,6 +166,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 @import UIKit;
 @import Foundation;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -230,10 +231,10 @@ SWIFT_CLASS("_TtC10_45Project7NewItem")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ReminderButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified TimeButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified AddTaskButton;
-/// function called when textField editing ends *
-- (IBAction)TaskNameEntry:(UITextField * _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified taskName;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)addNewTask:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -477,11 +478,48 @@ SWIFT_CLASS("_TtC10_45Project14ViewController")
 @end
 
 
+SWIFT_CLASS("_TtC10_45Project8highCell")
+@interface highCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project7lowCell")
+@interface lowCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project10mediumCell")
+@interface mediumCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC10_45Project18taskListController")
 @interface taskListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+/// This goes through each tableViewCell and returns the height of each cell by looking at the index
+/// of the task and getting its ‘time’ value. The bigger the time, the taller the cell.
+/// Commented out for now as the task list needs to be created properly.
+/// *
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// Manipulates the cell style and contents. Probably need to make changes here to make background
+/// colour = priority colour and length = time.
+/// use cell.contentView.backgroundColor = [UIColor redColor]; or could use a prototype cell for the
+/// 3 categories of priority
+/// *
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

@@ -112,33 +112,41 @@
 		<data>
 		e+w1Wrfapw4KoeWq/V07RTt2Cn4=
 		</data>
+		<key>NewTaskController.storyboardc/3OL-xa-gEv-view-tYd-xF-33T.nib</key>
+		<data>
+		TAdmbeEZg0IMqZp7QDz7xtl460s=
+		</data>
 		<key>NewTaskController.storyboardc/Info.plist</key>
 		<data>
-		shw1kLAm695B8sNNXdJ+kE73Tu4=
+		5S/WMoXIFeXjIyFj9t+BZOtt9Q0=
 		</data>
 		<key>NewTaskController.storyboardc/Jq6-kr-z2m-view-SsM-AB-wf8.nib</key>
 		<data>
-		E7JEubkw+SS2PynsbFDN66xkjrw=
+		vU30hwbdGyXHgE8+duP5vWlqM30=
 		</data>
 		<key>NewTaskController.storyboardc/NewItemPage.nib</key>
 		<data>
-		Kp/AO2PTPmaa1GO2UtaGp2vqfIc=
+		EKAYAILRvVsh9P/LYzQMNhZBz5Q=
+		</data>
+		<key>NewTaskController.storyboardc/UIViewController-3OL-xa-gEv.nib</key>
+		<data>
+		9p5CWputXp9U1ITz77PCU/zmE6o=
 		</data>
 		<key>NewTaskController.storyboardc/UIViewController-Jq6-kr-z2m.nib</key>
 		<data>
-		HUlNBt56gBu6JDl0NuIgl1MNB7Y=
+		pSw0idWHNAglwCJaAsBErLU6cIg=
 		</data>
 		<key>NewTaskController.storyboardc/UIViewController-fjn-gx-ul3.nib</key>
 		<data>
-		x5ZpocNb2UK+9ukJyL5VW80zl9E=
+		vVAJ7f0CY1sEE4ImTEnEGQ10Bps=
 		</data>
 		<key>NewTaskController.storyboardc/ecD-dY-5HJ-view-6mB-9g-Llf.nib</key>
 		<data>
-		SmzHokK6fVwPSFBCka1COOI/3qo=
+		EUWmqa0te0LuEK9y8Xfdoy/e9Ww=
 		</data>
 		<key>NewTaskController.storyboardc/fjn-gx-ul3-view-Vzr-fp-Pq0.nib</key>
 		<data>
-		ekZY8gt6hwEUtepr9DhVceJvy10=
+		qBX0IhqfkGpzyjYaNk0R8NevDAw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -437,81 +445,103 @@
 			TrH/Ls2Ds+QlAsjCOhAO7o+fKJ5tBdBAuCbw0Uf0wfc=
 			</data>
 		</dict>
+		<key>NewTaskController.storyboardc/3OL-xa-gEv-view-tYd-xF-33T.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TAdmbeEZg0IMqZp7QDz7xtl460s=
+			</data>
+			<key>hash2</key>
+			<data>
+			nu1rY81vYxAnO3xPHeuzFwYcEqmCmh6pl2sRX9vRE04=
+			</data>
+		</dict>
 		<key>NewTaskController.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			shw1kLAm695B8sNNXdJ+kE73Tu4=
+			5S/WMoXIFeXjIyFj9t+BZOtt9Q0=
 			</data>
 			<key>hash2</key>
 			<data>
-			WV66czlvppdkUDqcRJebf9O0mBvKc5dou5iItl44mj4=
+			7RJGUS+ll9nkSHnkSclWVJvYz/Slu91xvMYDu/+9MJI=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/Jq6-kr-z2m-view-SsM-AB-wf8.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E7JEubkw+SS2PynsbFDN66xkjrw=
+			vU30hwbdGyXHgE8+duP5vWlqM30=
 			</data>
 			<key>hash2</key>
 			<data>
-			7hFl4Ab3aoy0hpOcURuhjGjV2mCjlI6bVRIrXbFnKHY=
+			iyLBLwpOVGH5Pw8G2G+/z5Z2aKG+p71E4lupn46ld6U=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/NewItemPage.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kp/AO2PTPmaa1GO2UtaGp2vqfIc=
+			EKAYAILRvVsh9P/LYzQMNhZBz5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z38VmqdqsAxV5+wInyx75yJhIu9bIP0RW7eNo4d7Y3A=
+			mVgcBAbVp02Bp0SEqsGkioIpmw+jx0yC/E9vaN/XtM0=
+			</data>
+		</dict>
+		<key>NewTaskController.storyboardc/UIViewController-3OL-xa-gEv.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9p5CWputXp9U1ITz77PCU/zmE6o=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZPLwlETuGmMlyGQ6lcTtoneEr5AByCtYkkd3nFgz9QY=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/UIViewController-Jq6-kr-z2m.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HUlNBt56gBu6JDl0NuIgl1MNB7Y=
+			pSw0idWHNAglwCJaAsBErLU6cIg=
 			</data>
 			<key>hash2</key>
 			<data>
-			KyfvirllCxj8l6+6JGTyR5zsdYUyu7n6urbwBwf8gXI=
+			Vf0Z9xyWlPjKFvTceywAh8ID5QCMZbR/KiTzVey7bEU=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/UIViewController-fjn-gx-ul3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			x5ZpocNb2UK+9ukJyL5VW80zl9E=
+			vVAJ7f0CY1sEE4ImTEnEGQ10Bps=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z4inDZXlCCF8aY5IoncZhMnm8+yfFnmZ5u27CX6iLFg=
+			1Sh87+Q8+7CpPogCeLf281jA+aeSCCOvlBJDQdmNJlY=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/ecD-dY-5HJ-view-6mB-9g-Llf.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SmzHokK6fVwPSFBCka1COOI/3qo=
+			EUWmqa0te0LuEK9y8Xfdoy/e9Ww=
 			</data>
 			<key>hash2</key>
 			<data>
-			YGxhFonysmaNdrjeXmqKXzJBXc1OnRJSgaz2Xgeb+TI=
+			gKImua1ansLAUYmXtjeWjtZDSWybH/WOkJISXF6P7OQ=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/fjn-gx-ul3-view-Vzr-fp-Pq0.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ekZY8gt6hwEUtepr9DhVceJvy10=
+			qBX0IhqfkGpzyjYaNk0R8NevDAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZfWvlIvEUhyXX6pQ8lMldkHLSaYJYC3kwfEbSthdawc=
+			pzJ+mf8d156LwXFrCBa+f6KozyK4crzdV1p6WCwcVKg=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>
