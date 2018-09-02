@@ -103,6 +103,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         myTableView.reloadData()
         print(taskList)
     }

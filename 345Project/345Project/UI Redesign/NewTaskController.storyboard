@@ -164,6 +164,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textEditingDidChange:" destination="ecD-dY-5HJ" eventType="editingChanged" id="iWY-tW-6Xj"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,8 +270,8 @@
                                 <rect key="frame" x="122" y="509" width="110" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
-                                <rect key="frame" x="0.0" y="275" width="375" height="216"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
+                                <rect key="frame" x="0.0" y="285" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
                                     <!--2018-08-19 09:18:26 +0000-->
                                 </date>

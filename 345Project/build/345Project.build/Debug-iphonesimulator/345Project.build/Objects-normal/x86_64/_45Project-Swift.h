@@ -233,6 +233,7 @@ SWIFT_CLASS("_TtC10_45Project7NewItem")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified AddTaskButton;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified taskName;
 - (void)viewDidLoad;
+- (IBAction)textEditingDidChange:(UITextField * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (IBAction)addNewTask:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

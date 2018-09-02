@@ -10,6 +10,11 @@ import UIKit
 
 let taskManager: taskListController = taskListController()
 
+/** biggest problem now is having the task description keep showing the types words.
+    Looks like variables don't get saved when we transition to another controller.
+ **/
+
+
 class NewItem: UIViewController {
 
     
@@ -28,6 +33,9 @@ class NewItem: UIViewController {
     
     /* on load set the urgency button colour. Default is red currently **/
     override func viewDidLoad() {
+        print("in view did load")
+        print("task desc: " + taskDesc)
+        taskName.text = taskDesc
         super.viewDidLoad()
         if(urgency == "high"){
             UrgencyButton.backgroundColor = UIColor.red
@@ -41,6 +49,12 @@ class NewItem: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func textEditingDidChange(_ sender: UITextField) {
+        taskDesc = sender.text!
+        print("editing did change, taskDesc: " + taskDesc)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,7 +62,6 @@ class NewItem: UIViewController {
     
 
     @IBAction func addNewTask(_ sender: Any) {
-        taskDesc = taskName.text!
         print("Task name: " + taskDesc)
         taskManager.createTask(taskName: taskDesc, urgency: urgency, reminderDate: reminderDate, time: time)
     }
