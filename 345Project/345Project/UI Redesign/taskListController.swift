@@ -38,11 +38,17 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     /** This goes through each tableViewCell and returns the height of each cell by looking at the index
      of the task and getting its 'time' value. The bigger the time, the taller the cell.
-     Commented out for now as the task list needs to be created properly.
+     
+     For some reason this method never gets called, although it should in the tableset up or reloadData().
      **/
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        print("heightforrowat")
+        return 140.0;
+        /**
+        print("in heightforrow")
         let thisTask: taskType = taskList[indexPath.row]
+        print("thisTask: \(thisTask)")
         
         switch thisTask.time {
         case 0..<3:
@@ -55,7 +61,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             return 7.0
         default:
             return 1.0
-        }
+        }**/
     }
     
     /** Manipulates the cell style and contents. Probably need to make changes here to make background
@@ -71,7 +77,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch task.urgency {
         case "high":
-            print("urgency is high")
             let cell = tableView.dequeueReusableCell(withIdentifier: "high") as! highCell
             cell.taskName.text = taskName;
             return cell;
@@ -105,7 +110,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidAppear(_ animated: Bool) {
         
         myTableView.reloadData()
-        print(taskList)
     }
     
     override func didReceiveMemoryWarning() {

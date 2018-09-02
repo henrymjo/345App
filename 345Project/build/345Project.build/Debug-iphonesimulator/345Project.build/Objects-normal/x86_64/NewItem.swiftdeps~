@@ -14,7 +14,7 @@ provides-dynamic-lookup:
 - "addNewTask"
 - "didReceiveMemoryWarning"
 - "taskName"
-- "textInput"
+- "textEditingDidChange"
 - "viewDidLoad"
 depends-top-level:
 - !private "+"
@@ -224,7 +224,7 @@ depends-member:
 - !private ["So8NSObjectC", "taskManager"]
 - ["So8NSObjectC", "taskName"]
 - !private ["So8NSObjectC", "text"]
-- ["So8NSObjectC", "textInput"]
+- ["So8NSObjectC", "textEditingDidChange"]
 - ["So8NSObjectC", "time"]
 - ["So8NSObjectC", "urgency"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -270,7 +270,7 @@ depends-member:
 - ["10_45Project7NewItemC", "taskDesc"]
 - !private ["10_45Project7NewItemC", "taskManager"]
 - ["10_45Project7NewItemC", "taskName"]
-- ["10_45Project7NewItemC", "textInput"]
+- ["10_45Project7NewItemC", "textEditingDidChange"]
 - ["10_45Project7NewItemC", "time"]
 - ["10_45Project7NewItemC", "urgency"]
 - ["10_45Project7NewItemC", "viewDidLoad"]
@@ -386,7 +386,7 @@ depends-member:
 - !private ["So11UIResponderC", "taskManager"]
 - ["So11UIResponderC", "taskName"]
 - !private ["So11UIResponderC", "text"]
-- ["So11UIResponderC", "textInput"]
+- ["So11UIResponderC", "textEditingDidChange"]
 - ["So11UIResponderC", "time"]
 - ["So11UIResponderC", "urgency"]
 - ["So11UIResponderC", "viewDidLoad"]
@@ -473,7 +473,7 @@ depends-member:
 - ["So16UIViewControllerC", "taskDesc"]
 - !private ["So16UIViewControllerC", "taskManager"]
 - ["So16UIViewControllerC", "taskName"]
-- ["So16UIViewControllerC", "textInput"]
+- ["So16UIViewControllerC", "textEditingDidChange"]
 - ["So16UIViewControllerC", "time"]
 - ["So16UIViewControllerC", "urgency"]
 - ["So16UIViewControllerC", "viewDidLoad"]
@@ -622,4 +622,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "e603f0559f7320582c5bd8181ded165a"
+interface-hash: "2a4b8024a66044ef262a53afb830d9fc"

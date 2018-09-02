@@ -225,6 +225,12 @@ SWIFT_CLASS("_TtC10_45Project11CustomCells")
 @class UIButton;
 @class UITextField;
 
+/// biggest problem now is having the task description keep showing the types words.
+/// Looks like variables don’t get saved when we transition to another controller.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project7NewItem")
 @interface NewItem : UIViewController
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified UrgencyButton;
@@ -509,8 +515,11 @@ SWIFT_CLASS("_TtC10_45Project18taskListController")
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 /// This goes through each tableViewCell and returns the height of each cell by looking at the index
 /// of the task and getting its ‘time’ value. The bigger the time, the taller the cell.
-/// Commented out for now as the task list needs to be created properly.
+/// \code
+/// For some reason this method never gets called, although it should in the tableset up or reloadData().
 /// *
+///
+/// \endcode
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 /// Manipulates the cell style and contents. Probably need to make changes here to make background
 /// colour = priority colour and length = time.
