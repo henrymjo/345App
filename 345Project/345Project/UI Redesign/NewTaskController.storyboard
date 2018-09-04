@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ecD-dY-5HJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ecD-dY-5HJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -281,12 +282,8 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nst-AE-Yrx">
-                                <rect key="frame" x="122" y="509" width="110" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
-                                <rect key="frame" x="0.0" y="285" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="274" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
                                     <!--2018-08-19 09:18:26 +0000-->
                                 </date>
@@ -316,23 +313,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-wo-VRw">
-                                <rect key="frame" x="33" y="435" width="309" height="31"/>
-                                <connections>
-                                    <action selector="scrolled:" destination="fjn-gx-ul3" eventType="valueChanged" id="LWm-vA-ZmV"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Many Hours Will Your Task Take?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTG-Ns-Ggu">
-                                <rect key="frame" x="16" y="33" width="343" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncR-Yg-bwm">
-                                <rect key="frame" x="62" y="525" width="251" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncR-Yg-bwm">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ncR-Yg-bwm" secondAttribute="height" multiplier="15:4" id="QcT-tF-LQB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -342,8 +328,8 @@
                                     <segue destination="ecD-dY-5HJ" kind="show" id="pnw-up-IjH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-3w-62y">
-                                <rect key="frame" x="62" y="125" width="251" height="208"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-3w-62y">
+                                <rect key="frame" x="147" y="150" width="80.5" height="166"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
                                         <attributes>
@@ -354,15 +340,25 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-wo-VRw">
+                                <rect key="frame" x="33" y="467" width="309" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Y5V-wo-VRw" secondAttribute="height" multiplier="61:6" id="EGc-CX-85s"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="scrolled:" destination="fjn-gx-ul3" eventType="valueChanged" id="LWm-vA-ZmV"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="o3c-sM-ino" firstAttribute="trailing" secondItem="Y5V-wo-VRw" secondAttribute="trailing" constant="35" id="80m-HT-CGl"/>
-                            <constraint firstItem="fgo-3w-62y" firstAttribute="leading" secondItem="o3c-sM-ino" secondAttribute="leading" constant="147" id="KSI-sc-YhW"/>
-                            <constraint firstItem="Y5V-wo-VRw" firstAttribute="top" secondItem="fgo-3w-62y" secondAttribute="bottom" constant="149" id="LxB-oB-q1K"/>
-                            <constraint firstItem="o3c-sM-ino" firstAttribute="trailing" secondItem="fgo-3w-62y" secondAttribute="trailing" constant="147" id="twh-YD-JxR"/>
-                            <constraint firstItem="fgo-3w-62y" firstAttribute="top" secondItem="o3c-sM-ino" secondAttribute="top" constant="100" id="wk6-8o-L4n"/>
-                            <constraint firstItem="Y5V-wo-VRw" firstAttribute="leading" secondItem="o3c-sM-ino" secondAttribute="leading" constant="35" id="x02-qo-B8h"/>
+                            <constraint firstItem="ncR-Yg-bwm" firstAttribute="bottom" secondItem="o3c-sM-ino" secondAttribute="bottom" id="4Rt-5j-Ljh"/>
+                            <constraint firstItem="fgo-3w-62y" firstAttribute="top" secondItem="o3c-sM-ino" secondAttribute="top" constant="130" id="8D3-DS-aZi"/>
+                            <constraint firstItem="fgo-3w-62y" firstAttribute="centerX" secondItem="o3c-sM-ino" secondAttribute="centerX" id="SZY-bw-lRj"/>
+                            <constraint firstItem="Y5V-wo-VRw" firstAttribute="centerX" secondItem="o3c-sM-ino" secondAttribute="centerX" id="UAg-ur-Oup"/>
+                            <constraint firstItem="ncR-Yg-bwm" firstAttribute="leading" secondItem="o3c-sM-ino" secondAttribute="leading" id="ZcS-gG-Lsa"/>
+                            <constraint firstItem="ncR-Yg-bwm" firstAttribute="trailing" secondItem="o3c-sM-ino" secondAttribute="trailing" id="bw9-Fv-qqu"/>
+                            <constraint firstItem="ncR-Yg-bwm" firstAttribute="top" secondItem="Y5V-wo-VRw" secondAttribute="bottom" constant="70" id="w4k-U5-C0J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o3c-sM-ino"/>
                     </view>
@@ -378,6 +374,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uA8-d9-5I9"/>
+        <segue reference="pnw-up-IjH"/>
     </inferredMetricsTieBreakers>
 </document>
