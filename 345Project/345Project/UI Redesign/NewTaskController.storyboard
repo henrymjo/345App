@@ -283,7 +283,7 @@
                                 </state>
                             </button>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
-                                <rect key="frame" x="0.0" y="274" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="248" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
                                     <!--2018-08-19 09:18:26 +0000-->
                                 </date>

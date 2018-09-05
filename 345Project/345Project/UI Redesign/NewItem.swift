@@ -18,6 +18,13 @@ let taskManager: taskListController = taskListController()
 
 class NewItem: UIViewController {
     
+    struct taskType { // couldn't call it task because of other struct from previous design called task.
+        var taskName = "Hello";
+        var urgency = "low";
+        var reminderDate = Date();
+        var time: Float = 0.0;
+    }
+    
     //MARK: Properties
     var managedContext: NSManagedObjectContext!
 
@@ -85,7 +92,6 @@ class NewItem: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         }
