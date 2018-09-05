@@ -288,6 +288,11 @@
                                     <!--2018-08-19 09:18:26 +0000-->
                                 </date>
                             </datePicker>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-C3-Jic">
+                                <rect key="frame" x="67" y="496" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -374,6 +379,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uA8-d9-5I9"/>
+        <segue reference="pnw-up-IjH"/>
     </inferredMetricsTieBreakers>
 </document>
