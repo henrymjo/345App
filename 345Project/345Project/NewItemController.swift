@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 /** Visualisation of the current task and be able to make edits to it.
   * Needs to be 10x more visually appealing for Mainly Accessibility issues and also general consumpion
 **/
 class NewItemController: UIViewController {
     
+    //MARK: Properties
+    var managedContext: NSManagedObjectContext!
+    
     /** These variables get sent to the task manager to set the values for
         the task in the task array
     **/
     
-    var taskDescription = ""
+    var taskDescription = "Gym"
     var remindersOn = false
     var repeats = 0
     var date = Date()

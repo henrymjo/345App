@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 var taskList = [taskType]()
 
@@ -16,6 +17,10 @@ struct taskType { // couldn't call it task because of other struct from previous
     var reminderDate = Date();
     var time: Float = 0.0;
 }
+
+//Core Data Properties
+var resultsController: NSFetchedResultsController<Task>!
+let coreDataStack = CoreDataStack()
 
 
 
@@ -34,7 +39,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taskList.count;
+        return resultsController.sections?[section].numberOfObjects ?? 0
     }
     /** This goes through each tableViewCell and returns the height of each cell by looking at the index
      of the task and getting its 'time' value. The bigger the time, the taller the cell.
@@ -72,7 +77,14 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let task = taskList[indexPath.row]
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        
+        let task = resultsController.object(at: indexPath)
+        cell.textLabel?.text = task.title
+        
+        return cell
+        
+        /*let task = taskList[indexPath.row]
         let taskName = task.taskName
         
         switch task.urgency {
@@ -90,7 +102,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "low") as! lowCell
             cell.taskName.text = taskName;
             return cell;
-        }
+        }*/
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
@@ -103,6 +115,21 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let request: NSFetchRequest<Task> = Task.fetchRequest()
+        let sortDescriptors = NSSortDescriptor(key: "date", ascending: true)
+        request.sortDescriptors = [sortDescriptors]
+        resultsController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: coreDataStack.managedContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil
+        )
+        resultsController.delegate = self
+        do{
+            try resultsController.performFetch()
+        }catch{
+            print("Perform fetch error: \(error)")
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -117,4 +144,31 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let _ = sender as? UIButton, let vc = segue.destination as? NewItem {
+            vc.managedContext = resultsController.managedObjectContext
+        }
+        
+    }
+    
+}
+
+extension taskListController: NSFetchedResultsControllerDelegate{
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myTableView.beginUpdates()
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myTableView.endUpdates()
+    }
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                myTableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        default:
+            break
+        }
+    }
 }

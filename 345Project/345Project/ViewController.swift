@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 /** ViewController class controls the presentation of the task list on the main page.
     Has a table view to control selections.
@@ -17,6 +18,11 @@ import UIKit
     - Colour scheme should be alterable for accessibilty concerns.
  **/
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //Mark: - Properties
+    
+    var resultsController: NSFetchedResultsController<Task>!
+    let coreDataStack = CoreDataStack()
     
 
     // Index of the cell that is selected
@@ -29,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // choose the number of cells in the table by looking at the legnth of out task array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (taskMgr.getTaskLength())
+        return resultsController.sections?[section].numberOfObjects ?? 0
     }
     
     /** Fill in cell text label with text
@@ -37,7 +43,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     **/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = taskMgr.getTaskName(index: indexPath.row)
+        
+        let task = resultsController.object(at: indexPath)
+        cell.textLabel?.text = task.title
         
         return cell
     }
@@ -70,26 +78,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    /** Data gets sent to the edit conroller so they can be seen and altered correctly.
-    **/
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Preparing")
         
-        if segue.identifier == "editTask" {
-        
-        
-            let editController = segue.destination as? TaskEditViewController
-            let taskName = taskMgr.getTaskName(index: tapped)
-            print("Tapped index: \(tapped)")
-        
-            
-            /** send all the set fields to edit controlled **/
-            editController?.date = taskMgr.getDateAsDate(index: tapped)
-            editController?.taskEditName = taskName
-            editController?.remindersOn = taskMgr.getTaskReminder(index: tapped)
-            editController?.repeats = taskMgr.getTaskRepeats(index: tapped)
-            editController?.taskIndex = tapped
-        
+        if let _ = sender as? UIButton, let vc = segue.destination as? NewItemController {
+            vc.managedContext = resultsController.managedObjectContext
         }
+
     }
     
     
@@ -101,8 +97,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     /** Request to send alerts when the app opens for the first time **/
     override func viewDidLoad() {
         super.viewDidLoad()
+        let request: NSFetchRequest<Task> = Task.fetchRequest()
+        let sortDescriptors = NSSortDescriptor(key: "urgency", ascending: false)
+        request.sortDescriptors = [sortDescriptors]
+        resultsController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: coreDataStack.managedContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil
+        )
+        resultsController.delegate = self
+        do{
+           try resultsController.performFetch()
+        }catch{
+            print("Perform fetch error: \(error)")
+        }
         
-        requestAlerts.requestAlerts()
+       // requestAlerts.requestAlerts()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -113,5 +124,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 
+}
+
+
+extension ViewController: NSFetchedResultsControllerDelegate{
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myTableView.beginUpdates()
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myTableView.endUpdates()
+    }
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                myTableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        default:
+            break
+        }
+    }
 }
 

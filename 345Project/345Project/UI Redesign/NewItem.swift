@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 let taskManager: taskListController = taskListController()
 
@@ -16,12 +17,14 @@ let taskManager: taskListController = taskListController()
 
 
 class NewItem: UIViewController {
-
     
-    var taskDesc = "" // String
+    //MARK: Properties
+    var managedContext: NSManagedObjectContext!
+
+    var taskDesc = "Gym" //String for task title
     var urgency = "low" // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
-    var time: Float = 0.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
+    var time: Float = 2.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
 
     @IBOutlet weak var UrgencyButton: UIButton!
@@ -35,7 +38,7 @@ class NewItem: UIViewController {
     override func viewDidLoad() {
         print("in view did load")
         print("task desc: " + taskDesc)
-        taskName.text = taskDesc
+        taskName.text = title
         super.viewDidLoad()
         if(urgency == "high"){
             UrgencyButton.backgroundColor = UIColor.red
@@ -50,7 +53,7 @@ class NewItem: UIViewController {
     }
 
     @IBAction func textEditingDidChange(_ sender: UITextField) {
-        taskDesc = sender.text!
+        title = sender.text!
         print("editing did change, taskDesc: " + taskDesc)
     }
     
@@ -63,6 +66,20 @@ class NewItem: UIViewController {
 
     @IBAction func addNewTask(_ sender: Any) {
         print("Task name: " + taskDesc)
+        
+        let task = Task(context: managedContext)
+        task.title = title
+        task.urgency = "low"
+        task.time = time
+        task.date = Date()
+        
+        do{
+            try managedContext.save()
+        }catch{
+            print("Error saving todo: \(error)")
+        }
+        
+        
         taskManager.createTask(taskName: taskDesc, urgency: urgency, reminderDate: reminderDate, time: time)
     }
     /*
@@ -70,8 +87,8 @@ class NewItem: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        }
     }
     */
 
