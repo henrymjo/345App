@@ -18,18 +18,12 @@ let taskManager: taskListController = taskListController()
 
 class NewItem: UIViewController {
     
-    struct taskType { // couldn't call it task because of other struct from previous design called task.
-        var taskName = "Hello";
-        var urgency: Int = 0; // 0 = low urgency, 1 = medium urgency, 2 = high urgency.
-        var reminderDate = Date();
-        var time: Float = 0.0;
-    }
     
     //MARK: Properties
     var managedContext: NSManagedObjectContext!
 
     var taskDesc = "Gym" //String for task title
-    var urgency = "low" // 0, 1, 2 representing urgency
+    var urgency: Int = 0 // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 2.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
@@ -85,21 +79,30 @@ class NewItem: UIViewController {
         }catch{
             print("Error saving todo: \(error)")
         }
-        
-        
-        taskManager.createTask(taskName: taskDesc, urgency: urgency, reminderDate: reminderDate, time: time)
     }
     
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        /*switch(segue.identifier){
+        switch(segue.identifier){
         case "urgencyIdentifier":
             let vc = segue.destination as? UrgencyController
-            vc.task = ....
-            
-        }*/
+            vc?.taskDesc = taskDesc
+            vc?.urgency = urgency
+            vc?.time = time
+            vc?.reminderDate = reminderDate
+        break
+        case "timeIdentifier":
+            let vc = segue.destination as? TimeViewController
+            vc?.taskDesc = taskDesc
+            vc?.urgency = urgency
+            vc?.time = time
+            vc?.reminderDate = reminderDate
+        break
+        default:
+            print("passing to table view")
+        }
     }
 
 }
