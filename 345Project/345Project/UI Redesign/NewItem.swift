@@ -22,7 +22,7 @@ class NewItem: UIViewController {
     //MARK: Properties
     var managedContext: NSManagedObjectContext!
 
-    var taskDesc = "Gym" //String for task title
+    var taskDesc = "" //String for task title
     var urgency: Int = 0 // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 2.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
@@ -39,12 +39,13 @@ class NewItem: UIViewController {
     override func viewDidLoad() {
         print("in view did load")
         print("task desc: " + taskDesc)
-        taskName.text = title
+        
+        taskName.text = taskDesc;
         super.viewDidLoad()
-        if(urgency == "high"){
+        if(urgency == 2){
             UrgencyButton.backgroundColor = UIColor.red
         } else {
-            if(urgency == "medium"){
+            if(urgency == 1){
                 UrgencyButton.backgroundColor = UIColor.yellow
             } else {
                 UrgencyButton.backgroundColor = UIColor.green
@@ -54,8 +55,7 @@ class NewItem: UIViewController {
     }
 
     @IBAction func textEditingDidChange(_ sender: UITextField) {
-        title = sender.text!
-        print("editing did change, taskDesc: " + taskDesc)
+        taskDesc = sender.text!
     }
     
     
@@ -87,6 +87,7 @@ class NewItem: UIViewController {
         
         switch(segue.identifier){
         case "urgencyIdentifier":
+            print("going to urgency controller")
             let vc = segue.destination as? UrgencyController
             vc?.taskDesc = taskDesc
             vc?.urgency = urgency

@@ -165,6 +165,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import ObjectiveC;
 @import UIKit;
+@import CoreData;
 @import Foundation;
 @import CoreGraphics;
 #endif
@@ -224,6 +225,7 @@ SWIFT_CLASS("_TtC10_45Project11CustomCells")
 
 @class UIButton;
 @class UITextField;
+@class UIStoryboardSegue;
 
 /// biggest problem now is having the task description keep showing the types words.
 /// Looks like variables don’t get saved when we transition to another controller.
@@ -242,6 +244,7 @@ SWIFT_CLASS("_TtC10_45Project7NewItem")
 - (IBAction)textEditingDidChange:(UITextField * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
 - (IBAction)addNewTask:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -327,6 +330,22 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
+
+SWIFT_CLASS_NAMED("Task")
+@interface Task : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Task (SWIFT_EXTENSION(_45Project))
+@property (nonatomic, copy) NSDate * _Nullable date;
+@property (nonatomic) float time;
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, copy) NSString * _Nullable urgency;
+@end
+
 
 /// Edit task page controller.
 /// Shows all currect settings for a task and makes them alterable
@@ -397,7 +416,6 @@ SWIFT_CLASS("_TtC10_45Project11TaskManager")
 @end
 
 @class UISlider;
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 @interface TimeViewController : UIViewController
@@ -406,7 +424,6 @@ SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 - (IBAction)scrolled:(UISlider * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-- (IBAction)confirmButton:(id _Nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -469,11 +486,6 @@ SWIFT_CLASS("_TtC10_45Project14ViewController")
 ///   </li>
 /// </ul>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-/// Data gets sent to the edit conroller so they can be seen and altered correctly.
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 /// Refresh the tableView to show updated tasks when this controller is opened *
 - (void)viewDidAppear:(BOOL)animated;
@@ -482,6 +494,13 @@ SWIFT_CLASS("_TtC10_45Project14ViewController")
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface ViewController (SWIFT_EXTENSION(_45Project)) <NSFetchedResultsControllerDelegate>
+- (void)controllerWillChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controllerDidChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controller:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller didChangeObject:(id _Nonnull)anObject atIndexPath:(NSIndexPath * _Nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * _Nullable)newIndexPath;
 @end
 
 
@@ -531,8 +550,16 @@ SWIFT_CLASS("_TtC10_45Project18taskListController")
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface taskListController (SWIFT_EXTENSION(_45Project)) <NSFetchedResultsControllerDelegate>
+- (void)controllerWillChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controllerDidChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controller:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller didChangeObject:(id _Nonnull)anObject atIndexPath:(NSIndexPath * _Nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * _Nullable)newIndexPath;
 @end
 
 #if __has_attribute(external_source_symbol)

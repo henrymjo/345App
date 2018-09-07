@@ -13,94 +13,136 @@ provides-dynamic-lookup:
 - "prepare"
 - "viewDidLoad"
 depends-top-level:
+- !private "+"
 - !private "=="
 - "AssignmentPrecedence"
 - "CastingPrecedence"
-- "FloatLiteralType"
-- "IntegerLiteralType"
+- "Date"
+- "Float"
+- "Int"
 - !private "NewItem"
-- !private "StringLiteralType"
+- "StringLiteralType"
 - "UIButton"
 - "UIStoryboardSegue"
 - "UIViewController"
 - "UrgencyController"
+- !private "print"
 depends-member:
-- !private ["s23BidirectionalCollectionP", "init"]
+- ["s23BidirectionalCollectionP", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- ["s7CVarArgP", "Date"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "destination"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - !private ["s7CVarArgP", "identifier"]
-- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "performSegue"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reminderDate"]
+- !private ["s7CVarArgP", "taskDesc"]
+- !private ["s7CVarArgP", "time"]
 - !private ["s7CVarArgP", "urgency"]
 - !private ["s7CVarArgP", "viewDidLoad"]
-- !private ["s10CollectionP", "init"]
-- !private ["s10ComparableP", "init"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "destination"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "performSegue"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reminderDate"]
+- !private ["s28CustomDebugStringConvertibleP", "taskDesc"]
+- !private ["s28CustomDebugStringConvertibleP", "time"]
 - !private ["s28CustomDebugStringConvertibleP", "urgency"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
-- !private ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "Date"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "destination"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
-- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "performSegue"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reminderDate"]
+- !private ["s23CustomStringConvertibleP", "taskDesc"]
+- !private ["s23CustomStringConvertibleP", "time"]
 - !private ["s23CustomStringConvertibleP", "urgency"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["10Foundation4DateV", "init"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
-- !private ["s9DecodableP", "init"]
+- ["s9DecodableP", "init"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
-- !private ["s9EncodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "Date"]
 - ["s9EquatableP", ""]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "destination"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - !private ["s9EquatableP", "identifier"]
-- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "performSegue"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "reminderDate"]
+- !private ["s9EquatableP", "taskDesc"]
+- !private ["s9EquatableP", "time"]
 - !private ["s9EquatableP", "urgency"]
 - !private ["s9EquatableP", "viewDidLoad"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "Date"]
 - ["s8HashableP", ""]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "destination"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - !private ["s8HashableP", "identifier"]
-- !private ["s8HashableP", "init"]
+- ["s8HashableP", "init"]
 - !private ["s8HashableP", "performSegue"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "reminderDate"]
+- !private ["s8HashableP", "taskDesc"]
+- !private ["s8HashableP", "time"]
 - !private ["s8HashableP", "urgency"]
 - !private ["s8HashableP", "viewDidLoad"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s10MirrorPathP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "Date"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "performSegue"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "reminderDate"]
+- !private ["So8NSCodingP", "taskDesc"]
+- !private ["So8NSCodingP", "time"]
 - !private ["So8NSCodingP", "urgency"]
 - !private ["So8NSCodingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", "Date"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "reminderDate"]
+- !private ["So26NSExtensionRequestHandlingP", "taskDesc"]
+- !private ["So26NSExtensionRequestHandlingP", "time"]
 - !private ["So26NSExtensionRequestHandlingP", "urgency"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "Float"]
 - ["So8NSObjectC", "HighButton"]
+- ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "LowButton"]
 - ["So8NSObjectC", "MedButton"]
 - !private ["So8NSObjectC", "NewItem"]
@@ -112,48 +154,84 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "performSegue"]
 - ["So8NSObjectC", "prepare"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "reminderDate"]
+- ["So8NSObjectC", "taskDesc"]
+- ["So8NSObjectC", "time"]
 - ["So8NSObjectC", "urgency"]
 - ["So8NSObjectC", "viewDidLoad"]
+- ["So16NSObjectProtocolP", "Date"]
 - ["So16NSObjectProtocolP", ""]
 - !private ["So16NSObjectProtocolP", "destination"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - !private ["So16NSObjectProtocolP", "identifier"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "performSegue"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "reminderDate"]
+- !private ["So16NSObjectProtocolP", "taskDesc"]
+- !private ["So16NSObjectProtocolP", "time"]
 - !private ["So16NSObjectProtocolP", "urgency"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["10_45Project7NewItemC", "reminderDate"]
+- !private ["10_45Project7NewItemC", "taskDesc"]
+- !private ["10_45Project7NewItemC", "time"]
 - !private ["10_45Project7NewItemC", "urgency"]
-- !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s8SequenceP", "init"]
-- !private ["SS", "init"]
-- !private ["s14StringProtocolP", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["s8SequenceP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["So21UIAppearanceContainerP", "Date"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "performSegue"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "reminderDate"]
+- !private ["So21UIAppearanceContainerP", "taskDesc"]
+- !private ["So21UIAppearanceContainerP", "time"]
 - !private ["So21UIAppearanceContainerP", "urgency"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", "Date"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "performSegue"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "reminderDate"]
+- !private ["So18UIContentContainerP", "taskDesc"]
+- !private ["So18UIContentContainerP", "time"]
 - !private ["So18UIContentContainerP", "urgency"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", "Date"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "reminderDate"]
+- !private ["So18UIFocusEnvironmentP", "taskDesc"]
+- !private ["So18UIFocusEnvironmentP", "time"]
 - !private ["So18UIFocusEnvironmentP", "urgency"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", "Date"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "reminderDate"]
+- !private ["So30UIPasteConfigurationSupportingP", "taskDesc"]
+- !private ["So30UIPasteConfigurationSupportingP", "time"]
 - !private ["So30UIPasteConfigurationSupportingP", "urgency"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Date"]
+- ["So11UIResponderC", "Float"]
 - ["So11UIResponderC", "HighButton"]
+- ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "LowButton"]
 - ["So11UIResponderC", "MedButton"]
 - !private ["So11UIResponderC", "NewItem"]
@@ -163,29 +241,51 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "performSegue"]
 - ["So11UIResponderC", "prepare"]
+- !private ["So11UIResponderC", "print"]
+- ["So11UIResponderC", "reminderDate"]
+- ["So11UIResponderC", "taskDesc"]
+- ["So11UIResponderC", "time"]
 - ["So11UIResponderC", "urgency"]
 - ["So11UIResponderC", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", "Date"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "performSegue"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "reminderDate"]
+- !private ["So30UIResponderStandardEditActionsP", "taskDesc"]
+- !private ["So30UIResponderStandardEditActionsP", "time"]
 - !private ["So30UIResponderStandardEditActionsP", "urgency"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So16UIStateRestoringP", "Date"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "performSegue"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "reminderDate"]
+- !private ["So16UIStateRestoringP", "taskDesc"]
+- !private ["So16UIStateRestoringP", "time"]
 - !private ["So16UIStateRestoringP", "urgency"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So17UIStoryboardSegueC", "destination"]
 - !private ["So17UIStoryboardSegueC", "identifier"]
+- ["So18UITraitEnvironmentP", "Date"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "performSegue"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "reminderDate"]
+- !private ["So18UITraitEnvironmentP", "taskDesc"]
+- !private ["So18UITraitEnvironmentP", "time"]
 - !private ["So18UITraitEnvironmentP", "urgency"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So16UIViewControllerC", "Date"]
+- ["So16UIViewControllerC", "Float"]
 - ["So16UIViewControllerC", "HighButton"]
+- ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "LowButton"]
 - ["So16UIViewControllerC", "MedButton"]
 - !private ["So16UIViewControllerC", "NewItem"]
@@ -196,9 +296,16 @@ depends-member:
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "performSegue"]
 - ["So16UIViewControllerC", "prepare"]
+- !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "reminderDate"]
+- ["So16UIViewControllerC", "taskDesc"]
+- ["So16UIViewControllerC", "time"]
 - ["So16UIViewControllerC", "urgency"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- ["10_45Project17UrgencyControllerC", "Date"]
+- ["10_45Project17UrgencyControllerC", "Float"]
 - ["10_45Project17UrgencyControllerC", "HighButton"]
+- ["10_45Project17UrgencyControllerC", "Int"]
 - ["10_45Project17UrgencyControllerC", "LowButton"]
 - ["10_45Project17UrgencyControllerC", "MedButton"]
 - !private ["10_45Project17UrgencyControllerC", "NewItem"]
@@ -209,56 +316,67 @@ depends-member:
 - ["10_45Project17UrgencyControllerC", "init"]
 - !private ["10_45Project17UrgencyControllerC", "performSegue"]
 - ["10_45Project17UrgencyControllerC", "prepare"]
+- !private ["10_45Project17UrgencyControllerC", "print"]
+- ["10_45Project17UrgencyControllerC", "reminderDate"]
+- ["10_45Project17UrgencyControllerC", "taskDesc"]
+- ["10_45Project17UrgencyControllerC", "time"]
 - ["10_45Project17UrgencyControllerC", "urgency"]
 - ["10_45Project17UrgencyControllerC", "viewDidLoad"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reminderDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "taskDesc"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "time"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "urgency"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s16_SwiftStringViewP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "s23BidirectionalCollectionP"
+- "s23BidirectionalCollectionP"
 - !private "Sb"
 - "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
+- "s10CollectionP"
+- "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
-- !private "s17CustomReflectableP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
+- "10Foundation4DateV"
+- "s9DecodableP"
+- "s9EncodableP"
 - "s9EquatableP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
 - !private "10_45Project7NewItemC"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s8SequenceP"
-- !private "SS"
-- !private "s14StringProtocolP"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s26RangeReplaceableCollectionP"
+- "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
 - "So18UIFocusEnvironmentP"
@@ -271,14 +389,14 @@ depends-nominal:
 - "So16UIViewControllerC"
 - "10_45Project17UrgencyControllerC"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
-- !private "s21_ObjectiveCBridgeableP"
-- !private "s16_SwiftStringViewP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -307,4 +425,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "862a7957632a5c1f01184ee80a85d02d"
+interface-hash: "639686ced69eaa05e24bcdbb78a1a5e2"

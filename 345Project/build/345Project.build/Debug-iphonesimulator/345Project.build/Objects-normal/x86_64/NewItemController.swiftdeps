@@ -30,6 +30,7 @@ depends-top-level:
 - "Date"
 - !private "DateFormatter"
 - !private "NSDate"
+- "NSManagedObjectContext"
 - "NewItemController"
 - "String"
 - "StringLiteralType"
@@ -372,6 +373,7 @@ depends-member:
 - ["So8NSObjectC", "Date"]
 - !private ["So8NSObjectC", "DateFormatter"]
 - !private ["So8NSObjectC", "NSDate"]
+- ["So8NSObjectC", "NSManagedObjectContext"]
 - ["So8NSObjectC", "ShowDateSelected"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIButton"]
@@ -394,6 +396,7 @@ depends-member:
 - ["So8NSObjectC", "input"]
 - !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectC", "isOn"]
+- ["So8NSObjectC", "managedContext"]
 - !private ["So8NSObjectC", "minimumDate"]
 - ["So8NSObjectC", "myDateFormatter"]
 - ["So8NSObjectC", "myDateView"]
@@ -451,6 +454,7 @@ depends-member:
 - ["10_45Project17NewItemControllerC", "Date"]
 - !private ["10_45Project17NewItemControllerC", "DateFormatter"]
 - !private ["10_45Project17NewItemControllerC", "NSDate"]
+- ["10_45Project17NewItemControllerC", "NSManagedObjectContext"]
 - ["10_45Project17NewItemControllerC", "ShowDateSelected"]
 - ["10_45Project17NewItemControllerC", "String"]
 - ["10_45Project17NewItemControllerC", "UIButton"]
@@ -469,6 +473,7 @@ depends-member:
 - ["10_45Project17NewItemControllerC", "getReminderTime"]
 - ["10_45Project17NewItemControllerC", "init"]
 - ["10_45Project17NewItemControllerC", "input"]
+- ["10_45Project17NewItemControllerC", "managedContext"]
 - ["10_45Project17NewItemControllerC", "myDateFormatter"]
 - ["10_45Project17NewItemControllerC", "myDateView"]
 - ["10_45Project17NewItemControllerC", "reminderSwitch"]
@@ -655,6 +660,7 @@ depends-member:
 - ["So11UIResponderC", "Date"]
 - !private ["So11UIResponderC", "DateFormatter"]
 - !private ["So11UIResponderC", "NSDate"]
+- ["So11UIResponderC", "NSManagedObjectContext"]
 - ["So11UIResponderC", "ShowDateSelected"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIButton"]
@@ -674,6 +680,7 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "input"]
 - !private ["So11UIResponderC", "isOn"]
+- ["So11UIResponderC", "managedContext"]
 - !private ["So11UIResponderC", "minimumDate"]
 - ["So11UIResponderC", "myDateFormatter"]
 - ["So11UIResponderC", "myDateView"]
@@ -788,6 +795,7 @@ depends-member:
 - ["So16UIViewControllerC", "Date"]
 - !private ["So16UIViewControllerC", "DateFormatter"]
 - !private ["So16UIViewControllerC", "NSDate"]
+- ["So16UIViewControllerC", "NSManagedObjectContext"]
 - ["So16UIViewControllerC", "ShowDateSelected"]
 - ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UIButton"]
@@ -806,6 +814,7 @@ depends-member:
 - ["So16UIViewControllerC", "getReminderTime"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "input"]
+- ["So16UIViewControllerC", "managedContext"]
 - ["So16UIViewControllerC", "myDateFormatter"]
 - ["So16UIViewControllerC", "myDateView"]
 - ["So16UIViewControllerC", "reminderSwitch"]
@@ -1004,4 +1013,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "cfd744a20ff408559297d7c7b261287d"
+interface-hash: "544ce52218c23b7524f128300bd97196"

@@ -9,9 +9,13 @@
 import UIKit
 
 class TimeViewController: UIViewController {
-
     
-    var selectedTime: Float = 0.0;
+    var taskDesc = "";
+    var urgency = 0;
+    var time: Float = 0.0;
+    var reminderDate = Date();
+    
+    
     @IBOutlet weak var scrollWheel: UISlider!
     
     @IBOutlet weak var hoursIcon: UILabel!
@@ -20,14 +24,16 @@ class TimeViewController: UIViewController {
     @IBAction func scrolled(_ sender: UISlider){
         let roundedValue = round(sender.value/step) * step;
         //let hours: Float = scrollWheel.value
-        hoursIcon.text = "\(roundedValue)";
-        selectedTime = roundedValue;
-        print("Scroller moved to: \(roundedValue)");
+        hoursIcon.text = "\(roundedValue)"
+        time = roundedValue;
+        print("Scroller moved to: \(roundedValue)")
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hoursIcon.text = "\(time)"
 
         // Do any additional setup after loading the view.
     }
@@ -37,14 +43,13 @@ class TimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func confirmButton(_ sender: Any) {
-        performSegue(withIdentifier: "time", sender: self);
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "time"){
+        if(segue.identifier == "timeIdentifier"){
             let homeController = segue.destination as? NewItem
-            homeController?.time = selectedTime;
+            homeController?.time = time;
+            homeController?.taskDesc = taskDesc;
+            homeController?.urgency = urgency;
+            homeController?.reminderDate = reminderDate;
             
         }
     }

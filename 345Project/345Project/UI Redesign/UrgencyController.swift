@@ -11,7 +11,7 @@ import UIKit
 class UrgencyController: UIViewController {
     
     
-    var taskDesc = "Gym" //String for task title
+    var taskDesc = "" //String for task title
     var urgency: Int = 0 // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 2.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
@@ -30,6 +30,7 @@ class UrgencyController: UIViewController {
     
     
     override func viewDidLoad() {
+        print("taskDesc: " + taskDesc)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -42,14 +43,21 @@ class UrgencyController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editController = segue.destination as? NewItem
+        editController?.urgency = 2
+        editController?.taskDesc = taskDesc;
+        print("Set newItem.taskDesc = to: " + taskDesc);
+        editController?.reminderDate = reminderDate;
+        editController?.time = time;
+        
+        
         if(segue.identifier == "high"){
-            editController?.urgency = "high"
+            editController?.urgency = 2
             // set urgency to high and colour to red
         } else if(segue.identifier == "med"){
-            editController?.urgency = "medium"
+            editController?.urgency = 1
             // set urgency to  med and set colour to yellow
         } else if(segue.identifier == "low"){
-            editController?.urgency = "low"
+            editController?.urgency = 0
             // set urgency to low and set colour to green
         }
     }
