@@ -165,7 +165,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import ObjectiveC;
 @import UIKit;
+@import CoreData;
 @import Foundation;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -184,6 +186,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+/// AlertCenter class deals with all things relating to notifications and alerts.
+/// TODO: give alerts specific indexes so we can remove them if the task gets deleted
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project11AlertCenter")
 @interface AlertCenter : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -204,15 +212,56 @@ SWIFT_CLASS("_TtC10_45Project11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
-@class UITextField;
-@class UIDatePicker;
-@class UISwitch;
-@class UISegmentedControl;
-@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC10_45Project11CustomCells")
+@interface CustomCells : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIButton;
+@class UITextField;
+@class UIStoryboardSegue;
+
+/// biggest problem now is having the task description keep showing the types words.
+/// Looks like variables don’t get saved when we transition to another controller.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtC10_45Project7NewItem")
+@interface NewItem : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified UrgencyButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ReminderButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified TimeButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified AddTaskButton;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified taskName;
+- (void)viewDidLoad;
+- (IBAction)textEditingDidChange:(UITextField * _Nonnull)sender;
+- (void)didReceiveMemoryWarning;
+- (IBAction)addNewTask:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UILabel;
+@class UIDatePicker;
+@class UISwitch;
+@class UISegmentedControl;
+
+/// Visualisation of the current task and be able to make edits to it.
+/// <ul>
+///   <li>
+///     Needs to be 10x more visually appealing for Mainly Accessibility issues and also general consumpion
+///   </li>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project17NewItemController")
 @interface NewItemController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified displayDateChosen;
@@ -221,23 +270,90 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified reminderSwitch;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified repeatTask;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified ShowDateSelected;
-/// Task is to be added now. Take all variables, create a new Task instance.
-/// Use the task instance to fill out cell contents.
 /// <ul>
+///   <li>
+///     Shows the reminder time as a String below the reminder switch, also the current date chosen.
+///   </li>
+///   <li>
+///     Mainly for visually impaired users
+///   </li>
+///   <li>
+///     to be able to listen to the time the task and the reminder is set for for by swiping over the string.
+///   </li>
+///   <li>
+///     Updates as the date picker date is changed.
+///   </li>
 ///   <li>
 ///   </li>
 /// </ul>
 - (IBAction)myDateView:(UIDatePicker * _Nonnull)sender;
+/// <ul>
+///   <li>
+///     Alters the reminder String if the reminder button is flicker on or off.
+///   </li>
+///   <li>
+///     displays 15 minutes before the task time if on, or “No reminder” if off
+///   </li>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)remindersToggled:(id _Nonnull)sender;
+/// <ul>
+///   <li>
+///     Action method for when the Add Task button is clicked.
+///   </li>
+///   <li>
+///     Assigns all fields to variables and calls the Task manager to add to the task array.
+///   </li>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)addTask:(UIButton * _Nonnull)sender;
+/// <ul>
+///   <li>
+///     View has loaded, calls super method.
+///   </li>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+/// Called once the view has appeared instead of loaded.
+/// * Sets the Date Picker to be set to the current date and time.
+/// * Makes sure you can’t create a task in the past by setting minimum date to current date
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
 
+SWIFT_CLASS_NAMED("Task")
+@interface Task : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Task (SWIFT_EXTENSION(_45Project))
+@property (nonatomic, copy) NSDate * _Nullable date;
+@property (nonatomic) float time;
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, copy) NSString * _Nullable urgency;
+@end
+
+
+/// Edit task page controller.
+/// Shows all currect settings for a task and makes them alterable
+/// UI should be improved for Accessibily purposes.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 @interface TaskEditViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Nullable taskName;
@@ -272,26 +388,96 @@ SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
 - (IBAction)editTask:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+/// When the view appears set all the correct values for that task
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// TaskManager class deals with all task actions:
+/// <ul>
+///   <li>
+///     Creating, Deleting, Editing and getting task values.
+///   </li>
+///   <li>
+///     accessed through taskMgr instance
+///   </li>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project11TaskManager")
 @interface TaskManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UISlider;
+
+SWIFT_CLASS("_TtC10_45Project18TimeViewController")
+@interface TimeViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified scrollWheel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified hoursIcon;
+- (IBAction)scrolled:(UISlider * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project17UrgencyController")
+@interface UrgencyController : UIViewController
+- (IBAction)HighButton:(UIButton * _Nonnull)sender;
+- (IBAction)MedButton:(UIButton * _Nonnull)sender;
+- (IBAction)LowButton:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITableView;
 @class UITableViewCell;
-@class UIStoryboardSegue;
 
+/// ViewController class controls the presentation of the task list on the main page.
+/// Has a table view to control selections.
+/// sends data to edit task page to show correct fields
+/// TODO:
+/// <ul>
+///   <li>
+///     Cell’s need to be designed to be bigger and clearer in the future for accessibity concerns.
+///   </li>
+///   <li>
+///     Colour scheme should be alterable for accessibilty concerns.
+///   </li>
+/// </ul>
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project14ViewController")
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+/// Fill in cell text label with text
+/// Could be filled with much more to design cells
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// Implements ability to delete tasks.
+/// \code
+///  *  Complete removal of the alert should also be called here
+/// *
+///
+/// \endcode
 - (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 /// Called when a cell is tapped.
 /// reference using indexPath.row to give the index of the task in the TaskManager array.
@@ -301,11 +487,79 @@ SWIFT_CLASS("_TtC10_45Project14ViewController")
 /// </ul>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+/// Refresh the tableView to show updated tasks when this controller is opened *
 - (void)viewDidAppear:(BOOL)animated;
+/// Request to send alerts when the app opens for the first time *
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface ViewController (SWIFT_EXTENSION(_45Project)) <NSFetchedResultsControllerDelegate>
+- (void)controllerWillChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controllerDidChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controller:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller didChangeObject:(id _Nonnull)anObject atIndexPath:(NSIndexPath * _Nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * _Nullable)newIndexPath;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project8highCell")
+@interface highCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project7lowCell")
+@interface lowCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project10mediumCell")
+@interface mediumCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10_45Project18taskListController")
+@interface taskListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+/// This goes through each tableViewCell and returns the height of each cell by looking at the index
+/// of the task and getting its ‘time’ value. The bigger the time, the taller the cell.
+/// \code
+/// For some reason this method never gets called, although it should in the tableset up or reloadData().
+/// *
+///
+/// \endcode
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// Manipulates the cell style and contents. Probably need to make changes here to make background
+/// colour = priority colour and length = time.
+/// use cell.contentView.backgroundColor = [UIColor redColor]; or could use a prototype cell for the
+/// 3 categories of priority
+/// *
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface taskListController (SWIFT_EXTENSION(_45Project)) <NSFetchedResultsControllerDelegate>
+- (void)controllerWillChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controllerDidChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
+- (void)controller:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller didChangeObject:(id _Nonnull)anObject atIndexPath:(NSIndexPath * _Nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * _Nullable)newIndexPath;
 @end
 
 #if __has_attribute(external_source_symbol)

@@ -87,7 +87,6 @@ class NewItem: UIViewController {
         
         switch(segue.identifier){
         case "urgencyIdentifier":
-            print("going to urgency controller")
             let vc = segue.destination as? UrgencyController
             vc?.taskDesc = taskDesc
             vc?.urgency = urgency

@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "40679c5c9aba18ebb3eaaf215d5726d0"
-build_time: [1536299101, 379257000]
+build_time: [1536299305, 909932000]
 inputs:
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/ViewController.swift": [1536112367, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AlertCenter.swift": [1536112367, 0]
@@ -12,7 +12,7 @@ inputs:
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/taskListController.swift": [1536297825, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AppDelegate.swift": [1536114736, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/CustomCells.swift": [1536112367, 0]
-  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/TimeViewController.swift": [1536299091, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/TimeViewController.swift": [1536299303, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/TaskEditViewController.swift": [1536114736, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/build/345Project.build/Debug-iphonesimulator/345Project.build/DerivedSources/CoreDataGenerated/Tasks/Task+CoreDataClass.swift": [1536297249, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/build/345Project.build/Debug-iphonesimulator/345Project.build/DerivedSources/CoreDataGenerated/Tasks/Task+CoreDataProperties.swift": [1536297249, 0]
