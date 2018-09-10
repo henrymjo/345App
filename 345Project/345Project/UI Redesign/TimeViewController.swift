@@ -12,7 +12,7 @@ class TimeViewController: UIViewController {
     
     var taskDesc = "";
     var urgency = 0;
-    var time: Float = 0.0;
+    var time: Float = 1.0;
     var reminderDate = Date();
     
     
@@ -29,6 +29,8 @@ class TimeViewController: UIViewController {
         print("Scroller moved to: \(roundedValue)")
     }
     
+    @IBAction func dateChanged(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +46,12 @@ class TimeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "timeIdentifier"){
-            let homeController = segue.destination as? NewItem
-            homeController?.time = time;
-            homeController?.taskDesc = taskDesc;
-            homeController?.urgency = urgency;
-            homeController?.reminderDate = reminderDate;
-            
-        }
+        let homeController = segue.destination as? NewItem
+        homeController?.time = time;
+        homeController?.taskDesc = taskDesc;
+        homeController?.urgency = urgency;
+        homeController?.reminderDate = reminderDate;
+        
     }
     
     /*

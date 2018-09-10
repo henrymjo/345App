@@ -14,7 +14,7 @@ class UrgencyController: UIViewController {
     var taskDesc = "" //String for task title
     var urgency: Int = 0 // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
-    var time: Float = 2.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
+    var time: Float = 1.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
 
     @IBAction func HighButton(_ sender: UIButton) {
         performSegue(withIdentifier: "high", sender: sender)

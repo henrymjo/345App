@@ -29,13 +29,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var myTableView: UITableView!
     
-    func createTask(taskName: String, urgency: String, reminderDate: Date, time: Float){
-        let newTask = taskType(taskName: taskName, urgency: urgency, reminderDate: reminderDate, time: time)
-        taskList.append(newTask)
-        
-        // create a reminder here.
-    }
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -135,7 +128,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
         myTableView.reloadData()
     }
     
@@ -148,6 +140,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let _ = sender as? UIButton, let vc = segue.destination as? NewItem {
             vc.managedContext = resultsController.managedObjectContext
+            print("passing")
         }
         
     }

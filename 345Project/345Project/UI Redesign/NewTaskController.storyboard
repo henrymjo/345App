@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OL-xa-gEv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OL-xa-gEv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="16" y="110" width="343" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="high" id="DCT-ZC-xwb" customClass="highCell" customModule="_45Project" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="high" id="DCT-ZC-xwb" customClass="highCell" customModule="_45Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DCT-ZC-xwb" id="qVd-1y-Wg5">
@@ -44,7 +44,7 @@
                                             <outlet property="taskName" destination="b5g-UZ-oFM" id="eaA-gr-t5i"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medium" id="HED-j8-y1g" customClass="mediumCell" customModule="_45Project" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medium" id="HED-j8-y1g" customClass="mediumCell" customModule="_45Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HED-j8-y1g" id="l2G-Du-7U1">
@@ -65,7 +65,7 @@
                                             <outlet property="taskName" destination="sRk-Cf-OMA" id="vUA-PG-RvA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="low" id="3UP-F7-HyH" customClass="lowCell" customModule="_45Project" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="low" id="3UP-F7-HyH" customClass="lowCell" customModule="_45Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3UP-F7-HyH" id="Nka-Xv-WEo">
@@ -142,13 +142,16 @@
                                             <segue destination="Jq6-kr-z2m" kind="show" identifier="urgencyIdentifier" id="vLB-fY-K00"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2b-eF-fk8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2b-eF-fk8" customClass="reminderIdentifier">
                                         <rect key="frame" x="0.0" y="132" width="375" height="121.5"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <state key="normal" title="Reminder">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Oil-xj-Fqp" kind="show" id="Wap-YL-kym"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-Pk-Ayp">
                                         <rect key="frame" x="0.0" y="263.5" width="375" height="122"/>
@@ -158,7 +161,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="fjn-gx-ul3" kind="show" identifier="timeIdentifier" id="s9c-3I-KJc"/>
+                                            <segue destination="fjn-gx-ul3" kind="show" identifier="timeIdentifier" id="lA8-jw-X6i"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJz-AT-2Cg">
@@ -276,16 +279,26 @@
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="-455.62218890554726"/>
         </scene>
-        <!--View Controller-->
+        <!--Reminder View Controller-->
         <scene sceneID="sei-Uo-ndd">
             <objects>
-                <viewController id="Oil-xj-Fqp" sceneMemberID="viewController">
+                <viewController id="Oil-xj-Fqp" customClass="ReminderViewController" customModule="_45Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esF-rm-yoC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-MK-DxF">
-                                <rect key="frame" x="16" y="120" width="343" height="80"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
+                                <rect key="frame" x="0.0" y="155" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
+                                    <!--2018-08-19 09:18:26 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="Oil-xj-Fqp" eventType="valueChanged" id="NWc-SH-lxU"/>
+                                    <action selector="dateChanged:" destination="YZA-xs-hQc" eventType="valueChanged" id="h4N-UQ-0JK"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-MK-DxF">
+                                <rect key="frame" x="16" y="450" width="343" height="80"/>
                                 <color key="backgroundColor" red="0.16862745098039217" green="0.90588235294117647" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Uqs-wQ-04G"/>
@@ -301,18 +314,18 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="reminderToggled:" destination="Oil-xj-Fqp" eventType="touchUpInside" id="h5j-3k-WB6"/>
+                                </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
-                                <rect key="frame" x="0.0" y="248" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
-                                    <!--2018-08-19 09:18:26 +0000-->
-                                </date>
-                            </datePicker>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-C3-Jic">
-                                <rect key="frame" x="67" y="496" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frb-3l-qFi">
+                                <rect key="frame" x="22" y="20" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="ecD-dY-5HJ" kind="show" id="H8A-lN-ieq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -325,8 +338,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iNr-MZ-iNh"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="UW7-EU-fQC" id="ksk-4U-eaJ"/>
+                        <outlet property="reminderToggle" destination="M6c-MK-DxF" id="Yih-N6-zL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1Q-eZ-DtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YZA-xs-hQc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1421.5999999999999" y="-121.88905547226388"/>
         </scene>
@@ -398,7 +416,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vLB-fY-K00"/>
-        <segue reference="L5K-r5-yMQ"/>
+        <segue reference="Wap-YL-kym"/>
+        <segue reference="H8A-lN-ieq"/>
     </inferredMetricsTieBreakers>
 </document>
