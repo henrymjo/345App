@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class ReminderViewController: UIViewController {
     
     @IBOutlet weak var reminderToggle: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var managedContext: NSManagedObjectContext!
     
     var taskDesc = "";
     var urgency = 0;
@@ -20,6 +23,7 @@ class ReminderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("taskDesc: \(taskDesc)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,10 +46,12 @@ class ReminderViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("passing back")
         let homeController = segue.destination as? NewItem
         homeController?.time = time;
         homeController?.taskDesc = taskDesc;
         homeController?.urgency = urgency;
         homeController?.reminderDate = reminderDate;
+        homeController?.managedContext = managedContext
     }
 }

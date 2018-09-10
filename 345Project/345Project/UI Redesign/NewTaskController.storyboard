@@ -150,7 +150,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Oil-xj-Fqp" kind="show" id="Wap-YL-kym"/>
+                                            <segue destination="Oil-xj-Fqp" kind="show" identifier="reminderIdentifier" id="Wap-YL-kym"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-Pk-Ayp">

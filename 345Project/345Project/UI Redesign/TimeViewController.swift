@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TimeViewController: UIViewController {
+    
+    var managedContext: NSManagedObjectContext!
     
     var taskDesc = "";
     var urgency = 0;
@@ -51,6 +54,7 @@ class TimeViewController: UIViewController {
         homeController?.taskDesc = taskDesc;
         homeController?.urgency = urgency;
         homeController?.reminderDate = reminderDate;
+        homeController?.managedContext = managedContext
         
     }
     

@@ -140,6 +140,9 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let _ = sender as? UIButton, let vc = segue.destination as? NewItem {
             vc.managedContext = resultsController.managedObjectContext
+            if(vc.managedContext == nil){
+                print("managedContext = nil")
+            }
             print("passing")
         }
         

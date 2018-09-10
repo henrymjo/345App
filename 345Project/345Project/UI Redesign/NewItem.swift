@@ -69,8 +69,8 @@ class NewItem: UIViewController {
         print("Task name: " + taskDesc)
         
         let task = Task(context: managedContext)
-        task.title = title
-        task.urgency = "low"
+        task.title = taskDesc
+        task.urgency = "high"
         task.time = time
         task.date = Date()
         
@@ -92,6 +92,7 @@ class NewItem: UIViewController {
             vc?.urgency = urgency
             vc?.time = time
             vc?.reminderDate = reminderDate
+            vc?.managedContext = managedContext
         break
         case "timeIdentifier":
             let vc = segue.destination as? TimeViewController
@@ -99,13 +100,15 @@ class NewItem: UIViewController {
             vc?.urgency = urgency
             vc?.time = time
             vc?.reminderDate = reminderDate
+            vc?.managedContext = managedContext
         break
         case "reminderIdentifier":
-            let vc = segue.destination as? TimeViewController
+            let vc = segue.destination as? ReminderViewController
             vc?.taskDesc = taskDesc
             vc?.urgency = urgency
             vc?.time = time
             vc?.reminderDate = reminderDate
+            vc?.managedContext = managedContext
         break
         default:
             print("passing to table view")
