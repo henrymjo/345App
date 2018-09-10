@@ -23,7 +23,6 @@ var resultsController: NSFetchedResultsController<Task>!
 let coreDataStack = CoreDataStack()
 
 
-
 class taskListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -32,6 +31,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("number of rows in section");
         return resultsController.sections?[section].numberOfObjects ?? 0
     }
     /** This goes through each tableViewCell and returns the height of each cell by looking at the index
@@ -40,9 +40,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
      For some reason this method never gets called, although it should in the tableset up or reloadData().
      **/
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+
         print("heightforrowat")
-        return 140.0;
+        return 140.0
         /**
         print("in heightforrow")
         let thisTask: taskType = taskList[indexPath.row]
@@ -73,12 +74,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         
         let task = resultsController.object(at: indexPath)
-        cell.textLabel?.text = task.title
+        let taskName = task.title;
+        cell.textLabel?.text = taskName;
         
-        return cell
-        
-        /*let task = taskList[indexPath.row]
-        let taskName = task.taskName
+        //let task = taskList[indexPath.row]
         
         switch task.urgency {
         case "high":
@@ -95,7 +94,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "low") as! lowCell
             cell.taskName.text = taskName;
             return cell;
-        }*/
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){

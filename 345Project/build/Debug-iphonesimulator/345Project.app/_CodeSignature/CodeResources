@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		7kaaJAfL6c+86Ynl0Aarpu5NwBM=
+		q3WLbLi/6bvGtXGelwCRuArWnzU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		vBcIHod99IGT70GhNokIhNFJsAo=
+		XmGM2yLgT3DUOJ/lJO8GSi/Rv50=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		qLhNayQs5WteU9ZiG2usiKLNoIg=
+		0X8kqqfc8Hx9HUMmjVuFtt+n8Xo=
 		</data>
 		<key>Base.lproj/Main.storyboardc/EditController.nib</key>
 		<data>
-		OPVYex/4FNy7lmdp1ReeMVHaQUo=
+		sVYL/bMPaHpRM2rFuBZJx+ukk3E=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,27 +30,27 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-A1S-18-rft.nib</key>
 		<data>
-		PObezks8ralwG9Ond9cwL0d55uM=
+		/dTxMGe3gCbGSgJbLyYvQVKI7I0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-ykz-eX-k3g.nib</key>
 		<data>
-		pKTFO/wdCbwt/K/CdUE3Jc/43H8=
+		d2mfE7FNh6SNeYcoqYbMKGy5sPw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-zKH-T0-QW2.nib</key>
 		<data>
-		nytfPnuNnoBjoKUOUFJYxM+nHVs=
+		ScjhLRjKplRZL6Y9TI1FMZF/uIw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/qXG-Qw-ysw-view-xe6-zD-8yW.nib</key>
 		<data>
-		nAUGT8pq9SR/spyWsE5yq6E2cho=
+		WRpEWOkn2/5GiMGbjlbrZz5AQj4=
 		</data>
 		<key>Base.lproj/Main.storyboardc/ykz-eX-k3g-view-HwA-7b-o0F.nib</key>
 		<data>
-		IPF0aVrL0qDFbyDSTy9ucDuRVVQ=
+		f4dv5U3OQrtPwFLvLVYb1XJJfZk=
 		</data>
 		<key>Base.lproj/Main.storyboardc/zKH-T0-QW2-view-ceQ-c6-hWT.nib</key>
 		<data>
-		v7DOORj5+DkyDdls1DPkKdnDhjQ=
+		hMo9UxKMk2tI+Uc5BcOrF982Uwo=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -114,39 +114,47 @@
 		</data>
 		<key>NewTaskController.storyboardc/3OL-xa-gEv-view-tYd-xF-33T.nib</key>
 		<data>
-		TGRp/BgOT9Kryz0cEL7XpMjCm8E=
+		dmTME27uR4qADZReQChorOhNnNY=
 		</data>
 		<key>NewTaskController.storyboardc/Info.plist</key>
 		<data>
-		7g8BvmM6iDC7v5pX8jTyjBsHl88=
+		rQh2cx/FFAfmLgUHbZWFFrA2JIw=
 		</data>
 		<key>NewTaskController.storyboardc/Jq6-kr-z2m-view-SsM-AB-wf8.nib</key>
 		<data>
-		2/1gLnglJ3n5EP2mzNDL5HaTh34=
+		p1hG1/vQp16bfLttTVaiH+Js4h0=
 		</data>
 		<key>NewTaskController.storyboardc/NewItemPage.nib</key>
 		<data>
-		Ga1N0FwX2diJLZq7VwsF0y5jtEo=
+		otYCjBdZ7TRymRC4ayIFtCR3vO4=
+		</data>
+		<key>NewTaskController.storyboardc/Oil-xj-Fqp-view-esF-rm-yoC.nib</key>
+		<data>
+		z6DzHd2EJ5zpB9x6ZnHVmsVy9G8=
 		</data>
 		<key>NewTaskController.storyboardc/UIViewController-3OL-xa-gEv.nib</key>
 		<data>
-		8+Dp+sKtA2BvRwD999ShU0H9hsA=
+		ol+ppjD7c6zXpu3JNqGaIlcs0r8=
 		</data>
 		<key>NewTaskController.storyboardc/UIViewController-Jq6-kr-z2m.nib</key>
 		<data>
-		T5wHe5p1TcCnoprFxG3Eq8/LpD4=
+		OXeTHBHDRVpaZC5RLLrPFMms8fM=
+		</data>
+		<key>NewTaskController.storyboardc/UIViewController-Oil-xj-Fqp.nib</key>
+		<data>
+		5rMmx/EQBkHCi45EVwyA1reQAU0=
 		</data>
 		<key>NewTaskController.storyboardc/UIViewController-fjn-gx-ul3.nib</key>
 		<data>
-		HCFA8KzedbfpUcioSne/FPEsj+o=
+		vQUytmjksZNsic/sF0BE2XXGHEw=
 		</data>
 		<key>NewTaskController.storyboardc/ecD-dY-5HJ-view-6mB-9g-Llf.nib</key>
 		<data>
-		fnrekXs8HAiqMPb+zFUZHGgKtVw=
+		siul71m8QkaM5EGShXaj7qbck9A=
 		</data>
 		<key>NewTaskController.storyboardc/fjn-gx-ul3-view-Vzr-fp-Pq0.nib</key>
 		<data>
-		kMp9VZBPGCoAlBuR6N8DExsX0gw=
+		Jp3/Cy4uTku/MgRhF8mTL1cnJL0=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -171,22 +179,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7kaaJAfL6c+86Ynl0Aarpu5NwBM=
+			q3WLbLi/6bvGtXGelwCRuArWnzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/gb7s32om0ioylc9pjyAtEYRuwDycDRf1HHn1GePHn0=
+			UYKdcNlsqIHHlNbmKW0AR7lbAgx1JaHUQDC/1gqEJmA=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vBcIHod99IGT70GhNokIhNFJsAo=
+			XmGM2yLgT3DUOJ/lJO8GSi/Rv50=
 			</data>
 			<key>hash2</key>
 			<data>
-			RMWtnowNZcJnfohQudroOjD9dTGbZWsvsXE16+XgPvo=
+			uBlycudyrZjPZ9ZXZRaFeXfdT+uUVvPTav6tywhdOcA=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -204,22 +212,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qLhNayQs5WteU9ZiG2usiKLNoIg=
+			0X8kqqfc8Hx9HUMmjVuFtt+n8Xo=
 			</data>
 			<key>hash2</key>
 			<data>
-			7H2r7JrIF42ll/8gpcleZzA3+Jf5pSVurQO8PsXAwTY=
+			nAOznP+L4FJMphtWF3o3Dc/e2QH7QMSAVKcY+47nP2U=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/EditController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OPVYex/4FNy7lmdp1ReeMVHaQUo=
+			sVYL/bMPaHpRM2rFuBZJx+ukk3E=
 			</data>
 			<key>hash2</key>
 			<data>
-			BvbNaWYtnQ2xuhmvunICAFtNy7dcaugxTfk1tAJJ4O0=
+			S8VxfcX/33c8C91zBTzjBBGM59Iw2m53NlKpm3inXr8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -237,66 +245,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PObezks8ralwG9Ond9cwL0d55uM=
+			/dTxMGe3gCbGSgJbLyYvQVKI7I0=
 			</data>
 			<key>hash2</key>
 			<data>
-			9nqBYyQpjLgXCcIK2BWF0op+ei3HyjVTvJZDhFJ+u9k=
+			MDRIPfCuXEQs6ahWoV4e7V2R0wExaa8HpEnFaCY117A=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-ykz-eX-k3g.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pKTFO/wdCbwt/K/CdUE3Jc/43H8=
+			d2mfE7FNh6SNeYcoqYbMKGy5sPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZMTVJ2LLZo4AxtAG9UdeOadGU1RIGZv5c/2nfefBUy8=
+			uZG913DaHo/HnkYMcPqvbhBfE+OW5Kldl+Kn2R3YMJ8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-zKH-T0-QW2.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nytfPnuNnoBjoKUOUFJYxM+nHVs=
+			ScjhLRjKplRZL6Y9TI1FMZF/uIw=
 			</data>
 			<key>hash2</key>
 			<data>
-			aBOko0xagNuwx89VNcltB2/wFbHEjrZZwuNEki7bmA8=
+			Bvyk041WiZNrqdv+bXJNNb5HfB7Um3ji3MJuOPpdPLQ=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/qXG-Qw-ysw-view-xe6-zD-8yW.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nAUGT8pq9SR/spyWsE5yq6E2cho=
+			WRpEWOkn2/5GiMGbjlbrZz5AQj4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yuy9YpaQlB1P6wkqhXAv8ExNTMdLl8tDQbvBQxmQau8=
+			xqWGC2IrSqZFw1kyQl66mUNFEHaj8avZmDpE2bXm+vw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/ykz-eX-k3g-view-HwA-7b-o0F.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IPF0aVrL0qDFbyDSTy9ucDuRVVQ=
+			f4dv5U3OQrtPwFLvLVYb1XJJfZk=
 			</data>
 			<key>hash2</key>
 			<data>
-			DObaxMbROVA/pAHAjs4YwJIC3TAkLU+g+xXnRBlwJrU=
+			RCMmmrqb8HYhm1Njyc+dBfGMd1aJ0XCV5rezAgYCIIU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/zKH-T0-QW2-view-ceQ-c6-hWT.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v7DOORj5+DkyDdls1DPkKdnDhjQ=
+			hMo9UxKMk2tI+Uc5BcOrF982Uwo=
 			</data>
 			<key>hash2</key>
 			<data>
-			9yEGg+gl3XLfhqSEJAe9r0Xnz6VRKwUTPWYb0QryaYI=
+			HDSySfAUlz9H4ji52C359sBRTFFs5oJ5iix3DLUpwyA=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -457,99 +465,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TGRp/BgOT9Kryz0cEL7XpMjCm8E=
+			dmTME27uR4qADZReQChorOhNnNY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wb8/IT4H5d8yWfUD1DdikCz6kmoREEydSYSR2jnWuIQ=
+			j0mNaj9G+FX5IbRC1U3ECdFkIQ7RvdIf0e/Nv/1sT+s=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7g8BvmM6iDC7v5pX8jTyjBsHl88=
+			rQh2cx/FFAfmLgUHbZWFFrA2JIw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ePffVMhbvCOuJbRBVKirREBcUoDXnP9lgV+GpXk3aM0=
+			UBqdKgMIzhSxnCioBKCTHOiT5ksQFeYvak1N7mgZVWA=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/Jq6-kr-z2m-view-SsM-AB-wf8.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2/1gLnglJ3n5EP2mzNDL5HaTh34=
+			p1hG1/vQp16bfLttTVaiH+Js4h0=
 			</data>
 			<key>hash2</key>
 			<data>
-			NKkwbnv307t1DlCZmkLJfk7vY6I6acf2preB7Lrig3Q=
+			LWdcCIRmBmNSHRNYE3zhu0ates7NJBd++/PfTa4JDhg=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/NewItemPage.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ga1N0FwX2diJLZq7VwsF0y5jtEo=
+			otYCjBdZ7TRymRC4ayIFtCR3vO4=
 			</data>
 			<key>hash2</key>
 			<data>
-			l/N+hV127JM5vmSw5konOYkRfkggKRVezpVZoWwbtdM=
+			4p3P6ZF7GrzhVHwnczVEHgUPM1WB3QpX6SUkrnv9SEI=
+			</data>
+		</dict>
+		<key>NewTaskController.storyboardc/Oil-xj-Fqp-view-esF-rm-yoC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z6DzHd2EJ5zpB9x6ZnHVmsVy9G8=
+			</data>
+			<key>hash2</key>
+			<data>
+			/+hSV+qzTsXRF4g2458gfrPMsi/mTJEDYKe1rmXye8o=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/UIViewController-3OL-xa-gEv.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8+Dp+sKtA2BvRwD999ShU0H9hsA=
+			ol+ppjD7c6zXpu3JNqGaIlcs0r8=
 			</data>
 			<key>hash2</key>
 			<data>
-			kn6uv0eKjWq+W4Wa7VlIsX/w0CjqAFVUGqNjkxlxcu4=
+			4MocYdhhQa6mhNWaUarrsNQ3QXcfxSlF85oSGjQkHS4=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/UIViewController-Jq6-kr-z2m.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			T5wHe5p1TcCnoprFxG3Eq8/LpD4=
+			OXeTHBHDRVpaZC5RLLrPFMms8fM=
 			</data>
 			<key>hash2</key>
 			<data>
-			G6vEv2ZWeOdSknBxcB8NlEPepsgJFnJ+A1aIvWeERds=
+			0esBT09W0zMD9R/6Wj3IdWdBruXw96+2huPMIuMV9a4=
+			</data>
+		</dict>
+		<key>NewTaskController.storyboardc/UIViewController-Oil-xj-Fqp.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5rMmx/EQBkHCi45EVwyA1reQAU0=
+			</data>
+			<key>hash2</key>
+			<data>
+			S3f+l247IT+y1qv84K8Nk+moLVM6+jDDhZQ9xNqll8w=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/UIViewController-fjn-gx-ul3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HCFA8KzedbfpUcioSne/FPEsj+o=
+			vQUytmjksZNsic/sF0BE2XXGHEw=
 			</data>
 			<key>hash2</key>
 			<data>
-			2dvWOypCtOPhpV7pAUljGCyBrXSXI6KtQr5MB3wKWYE=
+			DvVok1xjhAaLxa/tM4RZ7uTeW8RTjXbvabouXT0PcbU=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/ecD-dY-5HJ-view-6mB-9g-Llf.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fnrekXs8HAiqMPb+zFUZHGgKtVw=
+			siul71m8QkaM5EGShXaj7qbck9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			c+cgC66bWRF8d92M7n4HdE4kddLtV1VWxUEaYfi9f/Y=
+			TL+LdGsuo8HzCTznbM+O/bMKX79MVR8o/NArZsuirII=
 			</data>
 		</dict>
 		<key>NewTaskController.storyboardc/fjn-gx-ul3-view-Vzr-fp-Pq0.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kMp9VZBPGCoAlBuR6N8DExsX0gw=
+			Jp3/Cy4uTku/MgRhF8mTL1cnJL0=
 			</data>
 			<key>hash2</key>
 			<data>
-			HvoLBJ29lZcrptlSXDXfxOU8u4+UlVEGEadPCS3DDk4=
+			sf5mkfBQgummCkMUKf0+t4cI5JuV3P9eCGSSRNdb0Mw=
 			</data>
 		</dict>
 		<key>Tasks.momd/Tasks.mom</key>

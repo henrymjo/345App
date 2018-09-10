@@ -27,6 +27,7 @@ depends-top-level:
 - "Int"
 - "NSManagedObjectContext"
 - "NewItem"
+- !private "ReminderViewController"
 - "StringLiteralType"
 - !private "Task"
 - !private "TimeViewController"
@@ -210,7 +211,6 @@ depends-member:
 - !private ["So8NSCodingP", "taskName"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "time"]
-- !private ["So8NSCodingP", "title"]
 - !private ["So8NSCodingP", "urgency"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So8NSCodingP", "yellow"]
@@ -230,7 +230,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "taskDesc"]
 - !private ["So26NSExtensionRequestHandlingP", "taskName"]
 - !private ["So26NSExtensionRequestHandlingP", "time"]
-- !private ["So26NSExtensionRequestHandlingP", "title"]
 - !private ["So26NSExtensionRequestHandlingP", "urgency"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So20NSFetchRequestResultP", "date"]
@@ -258,6 +257,7 @@ depends-member:
 - ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "NSManagedObjectContext"]
 - ["So8NSObjectC", "ReminderButton"]
+- !private ["So8NSObjectC", "ReminderViewController"]
 - !private ["So8NSObjectC", "Task"]
 - ["So8NSObjectC", "TimeButton"]
 - !private ["So8NSObjectC", "TimeViewController"]
@@ -324,6 +324,7 @@ depends-member:
 - ["10_45Project7NewItemC", "Int"]
 - ["10_45Project7NewItemC", "NSManagedObjectContext"]
 - ["10_45Project7NewItemC", "ReminderButton"]
+- !private ["10_45Project7NewItemC", "ReminderViewController"]
 - !private ["10_45Project7NewItemC", "Task"]
 - ["10_45Project7NewItemC", "TimeButton"]
 - !private ["10_45Project7NewItemC", "TimeViewController"]
@@ -345,11 +346,15 @@ depends-member:
 - ["10_45Project7NewItemC", "taskName"]
 - ["10_45Project7NewItemC", "textEditingDidChange"]
 - ["10_45Project7NewItemC", "time"]
-- !private ["10_45Project7NewItemC", "title"]
 - ["10_45Project7NewItemC", "urgency"]
 - ["10_45Project7NewItemC", "viewDidLoad"]
 - ["s26RangeReplaceableCollectionP", "init"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10_45Project22ReminderViewControllerC", "managedContext"]
+- !private ["10_45Project22ReminderViewControllerC", "reminderDate"]
+- !private ["10_45Project22ReminderViewControllerC", "taskDesc"]
+- !private ["10_45Project22ReminderViewControllerC", "time"]
+- !private ["10_45Project22ReminderViewControllerC", "urgency"]
 - ["s8SequenceP", "init"]
 - ["SS", "init"]
 - ["s14StringProtocolP", "init"]
@@ -360,6 +365,7 @@ depends-member:
 - !private ["10_45Project4TaskC", "urgency"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
+- !private ["10_45Project18TimeViewControllerC", "managedContext"]
 - !private ["10_45Project18TimeViewControllerC", "reminderDate"]
 - !private ["10_45Project18TimeViewControllerC", "taskDesc"]
 - !private ["10_45Project18TimeViewControllerC", "time"]
@@ -384,7 +390,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "taskName"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "time"]
-- !private ["So21UIAppearanceContainerP", "title"]
 - !private ["So21UIAppearanceContainerP", "urgency"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So8UIButtonC", "backgroundColor"]
@@ -404,7 +409,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "taskDesc"]
 - !private ["So18UIContentContainerP", "taskName"]
 - !private ["So18UIContentContainerP", "time"]
-- !private ["So18UIContentContainerP", "title"]
 - !private ["So18UIContentContainerP", "urgency"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
@@ -429,7 +433,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "taskName"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "time"]
-- !private ["So18UIFocusEnvironmentP", "title"]
 - !private ["So18UIFocusEnvironmentP", "urgency"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "backgroundColor"]
@@ -450,7 +453,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "taskName"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "time"]
-- !private ["So30UIPasteConfigurationSupportingP", "title"]
 - !private ["So30UIPasteConfigurationSupportingP", "urgency"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So11UIResponderC", "AddTaskButton"]
@@ -459,6 +461,7 @@ depends-member:
 - ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "NSManagedObjectContext"]
 - ["So11UIResponderC", "ReminderButton"]
+- !private ["So11UIResponderC", "ReminderViewController"]
 - !private ["So11UIResponderC", "Task"]
 - ["So11UIResponderC", "TimeButton"]
 - !private ["So11UIResponderC", "TimeViewController"]
@@ -481,7 +484,6 @@ depends-member:
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "textEditingDidChange"]
 - ["So11UIResponderC", "time"]
-- !private ["So11UIResponderC", "title"]
 - ["So11UIResponderC", "urgency"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", "Date"]
@@ -499,7 +501,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "taskName"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "time"]
-- !private ["So30UIResponderStandardEditActionsP", "title"]
 - !private ["So30UIResponderStandardEditActionsP", "urgency"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So20UIScrollViewDelegateP", "init"]
@@ -517,7 +518,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "taskDesc"]
 - !private ["So16UIStateRestoringP", "taskName"]
 - !private ["So16UIStateRestoringP", "time"]
-- !private ["So16UIStateRestoringP", "title"]
 - !private ["So16UIStateRestoringP", "urgency"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So17UIStoryboardSegueC", "destination"]
@@ -545,7 +545,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "taskName"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "time"]
-- !private ["So18UITraitEnvironmentP", "title"]
 - !private ["So18UITraitEnvironmentP", "urgency"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So6UIViewC", "backgroundColor"]
@@ -556,6 +555,7 @@ depends-member:
 - ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "NSManagedObjectContext"]
 - ["So16UIViewControllerC", "ReminderButton"]
+- !private ["So16UIViewControllerC", "ReminderViewController"]
 - !private ["So16UIViewControllerC", "Task"]
 - ["So16UIViewControllerC", "TimeButton"]
 - !private ["So16UIViewControllerC", "TimeViewController"]
@@ -577,9 +577,9 @@ depends-member:
 - ["So16UIViewControllerC", "taskName"]
 - ["So16UIViewControllerC", "textEditingDidChange"]
 - ["So16UIViewControllerC", "time"]
-- !private ["So16UIViewControllerC", "title"]
 - ["So16UIViewControllerC", "urgency"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["10_45Project17UrgencyControllerC", "managedContext"]
 - !private ["10_45Project17UrgencyControllerC", "reminderDate"]
 - !private ["10_45Project17UrgencyControllerC", "taskDesc"]
 - !private ["10_45Project17UrgencyControllerC", "time"]
@@ -662,6 +662,7 @@ depends-nominal:
 - "10_45Project7NewItemC"
 - "s26RangeReplaceableCollectionP"
 - "10Foundation20ReferenceConvertibleP"
+- !private "10_45Project22ReminderViewControllerC"
 - "s8SequenceP"
 - "SS"
 - "s14StringProtocolP"
@@ -742,4 +743,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "5997e75922319c20000d41ecb703efc9"
+interface-hash: "88439aa68a902a900525d4ac14d820a0"

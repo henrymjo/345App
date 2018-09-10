@@ -330,6 +330,20 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10_45Project22ReminderViewController")
+@interface ReminderViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified reminderToggle;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)dateChanged:(id _Nonnull)sender;
+- (IBAction)reminderToggled:(id _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
@@ -422,6 +436,7 @@ SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 @property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified scrollWheel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified hoursIcon;
 - (IBAction)scrolled:(UISlider * _Nonnull)sender;
+- (IBAction)dateChanged:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
