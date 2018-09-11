@@ -24,7 +24,6 @@ class CustomCells: UIViewController {
 }
 
 class highCell: UITableViewCell{
-    
     @IBOutlet weak var taskName: UILabel!
     
 }

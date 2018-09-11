@@ -555,10 +555,11 @@ SWIFT_CLASS("_TtC10_45Project18taskListController")
 ///
 /// \endcode
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-/// Manipulates the cell style and contents. Probably need to make changes here to make background
-/// colour = priority colour and length = time.
-/// use cell.contentView.backgroundColor = [UIColor redColor]; or could use a prototype cell for the
-/// 3 categories of priority
+/// cellForRow at goes through each cell in the table and assigns the title and chooses which
+/// customCell to use depending on the priority of the task.
+/// Cells are rounded and I have used a small hack to give a gap between the cells by making the border
+/// colour white. This makes it looks like they’re seperated. If we change the background colour
+/// cell.layer.borderColor will need to change too.
 /// *
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;

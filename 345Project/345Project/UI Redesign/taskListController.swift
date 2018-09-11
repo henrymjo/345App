@@ -34,6 +34,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         print("number of rows in section");
         return resultsController.sections?[section].numberOfObjects ?? 0
     }
+ 
+ 
+    
+   
     /** This goes through each tableViewCell and returns the height of each cell by looking at the index
      of the task and getting its 'time' value. The bigger the time, the taller the cell.
      
@@ -62,10 +66,11 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    /** Manipulates the cell style and contents. Probably need to make changes here to make background
-     colour = priority colour and length = time.
-     use cell.contentView.backgroundColor = [UIColor redColor]; or could use a prototype cell for the
-     3 categories of priority
+    /** cellForRow at goes through each cell in the table and assigns the title and chooses which
+        customCell to use depending on the priority of the task.
+        Cells are rounded and I have used a small hack to give a gap between the cells by making the border
+        colour white. This makes it looks like they're seperated. If we change the background colour
+        cell.layer.borderColor will need to change too.
      **/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,22 +81,30 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         let taskName = task.title;
         cell.textLabel?.text = taskName;
         
-        //let task = taskList[indexPath.row]
         
         switch task.urgency {
         case "high":
             let cell = tableView.dequeueReusableCell(withIdentifier: "high") as! highCell
             cell.taskName.text = taskName;
+            cell.layer.cornerRadius = 10
+            cell.layer.borderColor = UIColor.white.cgColor
+            cell.layer.borderWidth = 3
             return cell;
             
         case "medium":
             let cell = tableView.dequeueReusableCell(withIdentifier: "medium") as! mediumCell
             cell.taskName.text = taskName;
+            cell.layer.cornerRadius = 10
+            cell.layer.borderColor = UIColor.white.cgColor
+            cell.layer.borderWidth = 3
             return cell;
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "low") as! lowCell
             cell.taskName.text = taskName;
+            cell.layer.cornerRadius = 10
+            cell.layer.borderColor = UIColor.white.cgColor
+            cell.layer.borderWidth = 3
             return cell;
         }
     }
