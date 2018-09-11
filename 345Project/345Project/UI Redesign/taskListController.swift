@@ -43,24 +43,23 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
 
         print("heightforrowat")
-        return 140.0
-        /**
-        print("in heightforrow")
-        let thisTask: taskType = taskList[indexPath.row]
-        print("thisTask: \(thisTask)")
         
-        switch thisTask.time {
+        
+        //print("in heightforrow")
+        let task = resultsController.object(at: indexPath)
+        
+        switch task.time {
         case 0..<3:
-            return 1.0;
+            return 20.0;
         case 3..<5:
-            return 3.0
+            return 40.0
         case 5..<8:
-            return 5.0            // arbitrary numbers returned atm
+            return 60.0            // arbitrary numbers returned atm
         case 8..<13:
-            return 7.0
+            return 80.0
         default:
-            return 1.0
-        }**/
+            return 0.0
+        }
     }
     
     /** Manipulates the cell style and contents. Probably need to make changes here to make background
