@@ -50,13 +50,13 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch task.time {
         case 0..<3:
-            return 20.0;
+            return 60.0;
         case 3..<5:
-            return 40.0
+            return 100.0
         case 5..<8:
-            return 60.0            // arbitrary numbers returned atm
+            return 140.0            // arbitrary numbers returned atm
         case 8..<13:
-            return 80.0
+            return 180.0
         default:
             return 0.0
         }
