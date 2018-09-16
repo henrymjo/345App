@@ -19,7 +19,6 @@ depends-top-level:
 - "CastingPrecedence"
 - "Date"
 - "Float"
-- "Int"
 - "NSManagedObjectContext"
 - !private "NewItem"
 - "StringLiteralType"
@@ -150,7 +149,6 @@ depends-member:
 - ["So8NSObjectC", "Date"]
 - ["So8NSObjectC", "Float"]
 - ["So8NSObjectC", "HighButton"]
-- ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "LowButton"]
 - ["So8NSObjectC", "MedButton"]
 - ["So8NSObjectC", "NSManagedObjectContext"]
@@ -247,7 +245,6 @@ depends-member:
 - ["So11UIResponderC", "Date"]
 - ["So11UIResponderC", "Float"]
 - ["So11UIResponderC", "HighButton"]
-- ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "LowButton"]
 - ["So11UIResponderC", "MedButton"]
 - ["So11UIResponderC", "NSManagedObjectContext"]
@@ -306,7 +303,6 @@ depends-member:
 - ["So16UIViewControllerC", "Date"]
 - ["So16UIViewControllerC", "Float"]
 - ["So16UIViewControllerC", "HighButton"]
-- ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "LowButton"]
 - ["So16UIViewControllerC", "MedButton"]
 - ["So16UIViewControllerC", "NSManagedObjectContext"]
@@ -328,7 +324,6 @@ depends-member:
 - ["10_45Project17UrgencyControllerC", "Date"]
 - ["10_45Project17UrgencyControllerC", "Float"]
 - ["10_45Project17UrgencyControllerC", "HighButton"]
-- ["10_45Project17UrgencyControllerC", "Int"]
 - ["10_45Project17UrgencyControllerC", "LowButton"]
 - ["10_45Project17UrgencyControllerC", "MedButton"]
 - ["10_45Project17UrgencyControllerC", "NSManagedObjectContext"]
@@ -451,4 +446,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "30f6eb4787c2dcbedc9cdc8f061a5406"
+interface-hash: "7c36f6b58007b77278a77549686a6c5e"

@@ -24,7 +24,6 @@ depends-top-level:
 - "CastingPrecedence"
 - "Date"
 - "Float"
-- "Int"
 - "NSManagedObjectContext"
 - "NewItem"
 - !private "ReminderViewController"
@@ -254,7 +253,6 @@ depends-member:
 - ["So8NSObjectC", "AddTaskButton"]
 - ["So8NSObjectC", "Date"]
 - ["So8NSObjectC", "Float"]
-- ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "NSManagedObjectContext"]
 - ["So8NSObjectC", "ReminderButton"]
 - !private ["So8NSObjectC", "ReminderViewController"]
@@ -321,7 +319,6 @@ depends-member:
 - ["10_45Project7NewItemC", "AddTaskButton"]
 - ["10_45Project7NewItemC", "Date"]
 - ["10_45Project7NewItemC", "Float"]
-- ["10_45Project7NewItemC", "Int"]
 - ["10_45Project7NewItemC", "NSManagedObjectContext"]
 - ["10_45Project7NewItemC", "ReminderButton"]
 - !private ["10_45Project7NewItemC", "ReminderViewController"]
@@ -458,7 +455,6 @@ depends-member:
 - ["So11UIResponderC", "AddTaskButton"]
 - ["So11UIResponderC", "Date"]
 - ["So11UIResponderC", "Float"]
-- ["So11UIResponderC", "Int"]
 - ["So11UIResponderC", "NSManagedObjectContext"]
 - ["So11UIResponderC", "ReminderButton"]
 - !private ["So11UIResponderC", "ReminderViewController"]
@@ -552,7 +548,6 @@ depends-member:
 - ["So16UIViewControllerC", "AddTaskButton"]
 - ["So16UIViewControllerC", "Date"]
 - ["So16UIViewControllerC", "Float"]
-- ["So16UIViewControllerC", "Int"]
 - ["So16UIViewControllerC", "NSManagedObjectContext"]
 - ["So16UIViewControllerC", "ReminderButton"]
 - !private ["So16UIViewControllerC", "ReminderViewController"]
@@ -743,4 +738,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "88439aa68a902a900525d4ac14d820a0"
+interface-hash: "d04793373973f1b288793699171175dc"

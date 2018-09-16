@@ -330,15 +330,15 @@ SWIFT_CLASS("_TtC10_45Project17NewItemController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIStepper;
 
 SWIFT_CLASS("_TtC10_45Project22ReminderViewController")
 @interface ReminderViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified reminderToggle;
-@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dayLabel;
+@property (nonatomic, weak) IBOutlet UIStepper * _Null_unspecified stepper;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
-- (IBAction)dateChanged:(id _Nonnull)sender;
-- (IBAction)reminderToggled:(id _Nonnull)sender;
+- (IBAction)daysStepped:(id _Nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
