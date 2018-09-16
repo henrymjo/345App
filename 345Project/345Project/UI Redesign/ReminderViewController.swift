@@ -11,13 +11,14 @@ import CoreData
 
 class ReminderViewController: UIViewController {
     
-    @IBOutlet weak var reminderToggle: UIButton!
-    @IBOutlet weak var datePicker: UIDatePicker!
+
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
     
     var managedContext: NSManagedObjectContext!
     
     var taskDesc = "";
-    var urgency = 0;
+    var urgency = "low";
     var time: Float = 1.0;
     var reminderDate = Date();
 
@@ -31,20 +32,12 @@ class ReminderViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dateChanged(_ sender: Any) {
-        reminderDate = datePicker.date
+    @IBAction func daysStepped(_ sender: Any) {
+        dayLabel.text = "\(Int(stepper.value))"
+        let numberOfSeconds = (stepper.value * 24 * 60 * 60)
+        reminderDate = Date(timeIntervalSinceNow: numberOfSeconds)
     }
     
-    @IBAction func reminderToggled(_ sender: Any) {
-        if(reminderToggle.titleLabel?.text == "ON"){
-            reminderToggle.backgroundColor = UIColor.red
-            reminderToggle.setTitle("OFF", for: .normal)
-        }else{
-            reminderToggle.backgroundColor = UIColor.green
-            reminderToggle.setTitle("ON", for: .normal)
-        }
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("passing back")
         let homeController = segue.destination as? NewItem

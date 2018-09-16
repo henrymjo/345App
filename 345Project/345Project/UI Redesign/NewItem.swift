@@ -23,7 +23,7 @@ class NewItem: UIViewController {
     var managedContext: NSManagedObjectContext!
 
     var taskDesc = "" //String for task title
-    var urgency: Int = 0 // 0, 1, 2 representing urgency
+    var urgency = "low" // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 1.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
@@ -42,10 +42,10 @@ class NewItem: UIViewController {
         
         taskName.text = taskDesc;
         super.viewDidLoad()
-        if(urgency == 2){
+        if(urgency == "high"){
             UrgencyButton.backgroundColor = UIColor.red
         } else {
-            if(urgency == 1){
+            if(urgency == "medium"){
                 UrgencyButton.backgroundColor = UIColor.yellow
             } else {
                 UrgencyButton.backgroundColor = UIColor.green
@@ -70,7 +70,7 @@ class NewItem: UIViewController {
         
         let task = Task(context: managedContext)
         task.title = taskDesc
-        task.urgency = "high"
+        task.urgency = urgency
         task.time = time
         task.date = Date()
         

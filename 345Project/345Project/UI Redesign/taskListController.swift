@@ -9,14 +9,6 @@
 import UIKit
 import CoreData
 
-var taskList = [taskType]()
-
-struct taskType { // couldn't call it task because of other struct from previous design called task.
-    var taskName = "Hello";
-    var urgency = "low";
-    var reminderDate = Date();
-    var time: Float = 0.0;
-}
 
 //Core Data Properties
 var resultsController: NSFetchedResultsController<Task>!
@@ -111,10 +103,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         
-        if(editingStyle == UITableViewCellEditingStyle.delete){
+        /*if(editingStyle == UITableViewCellEditingStyle.delete){
             taskList.remove(at: indexPath.row)
             myTableView.reloadData()
-        }
+        }*/
     }
     
     override func viewDidLoad() {
@@ -158,7 +150,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
-    
 }
 
 extension taskListController: NSFetchedResultsControllerDelegate{

@@ -18,7 +18,6 @@ class CoreDataStack {
                 return
             }
         }
-        print(container.name)
         return container
     }
     

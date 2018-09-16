@@ -14,7 +14,7 @@ class TimeViewController: UIViewController {
     var managedContext: NSManagedObjectContext!
     
     var taskDesc = "";
-    var urgency = 0;
+    var urgency = "low";
     var time: Float = 1.0;
     var reminderDate = Date();
     

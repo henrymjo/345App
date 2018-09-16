@@ -14,7 +14,7 @@ class UrgencyController: UIViewController {
     var managedContext: NSManagedObjectContext!
     
     var taskDesc = "" //String for task title
-    var urgency: Int = 0 // 0, 1, 2 representing urgency
+    var urgency = "low" // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 1.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
 
@@ -45,7 +45,6 @@ class UrgencyController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editController = segue.destination as? NewItem
-        editController?.urgency = 2
         editController?.taskDesc = taskDesc;
         print("Set newItem.taskDesc = to: " + taskDesc);
         editController?.reminderDate = reminderDate;
@@ -54,13 +53,13 @@ class UrgencyController: UIViewController {
         
         
         if(segue.identifier == "high"){
-            editController?.urgency = 2
+            editController?.urgency = "high"
             // set urgency to high and colour to red
         } else if(segue.identifier == "med"){
-            editController?.urgency = 1
+            editController?.urgency = "medium"
             // set urgency to  med and set colour to yellow
         } else if(segue.identifier == "low"){
-            editController?.urgency = 0
+            editController?.urgency = "low"
             // set urgency to low and set colour to green
         }
     }

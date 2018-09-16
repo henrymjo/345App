@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OL-xa-gEv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3OL-xa-gEv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -288,64 +288,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-EU-fQC">
-                                <rect key="frame" x="0.0" y="155" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="556363106.01492095">
-                                    <!--2018-08-19 09:18:26 +0000-->
-                                </date>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9er-JK-qUy">
+                                <rect key="frame" x="16" y="150" width="343" height="166"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="144"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnI-wH-ovO">
+                                <rect key="frame" x="16" y="112" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zSb-NY-8IP">
+                                <rect key="frame" x="140" y="381" width="94" height="29"/>
                                 <connections>
-                                    <action selector="dateChanged:" destination="Oil-xj-Fqp" eventType="valueChanged" id="NWc-SH-lxU"/>
-                                    <action selector="dateChanged:" destination="YZA-xs-hQc" eventType="valueChanged" id="h4N-UQ-0JK"/>
+                                    <action selector="daysStepped:" destination="Oil-xj-Fqp" eventType="valueChanged" id="it9-vF-JPE"/>
                                 </connections>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-MK-DxF">
-                                <rect key="frame" x="16" y="450" width="343" height="80"/>
-                                <color key="backgroundColor" red="0.16862745098039217" green="0.90588235294117647" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-Ni-uiD">
+                                <rect key="frame" x="16" y="324" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbb-3p-dR0">
+                                <rect key="frame" x="0.0" y="575" width="375" height="92"/>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.84313725490000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Uqs-wQ-04G"/>
+                                    <constraint firstAttribute="width" secondItem="Qbb-3p-dR0" secondAttribute="height" multiplier="375:92" id="Qoh-Ln-B0Q"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="ON">
-                                            <attributes>
-                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="35" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="reminderToggled:" destination="Oil-xj-Fqp" eventType="touchUpInside" id="h5j-3k-WB6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frb-3l-qFi">
-                                <rect key="frame" x="22" y="20" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="ecD-dY-5HJ" kind="show" id="H8A-lN-ieq"/>
+                                    <segue destination="ecD-dY-5HJ" kind="show" id="AK8-1L-iJh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="M6c-MK-DxF" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="8yN-j9-rew"/>
-                            <constraint firstItem="UW7-EU-fQC" firstAttribute="trailing" secondItem="iNr-MZ-iNh" secondAttribute="trailing" id="EVW-k8-fzf"/>
-                            <constraint firstItem="M6c-MK-DxF" firstAttribute="top" secondItem="iNr-MZ-iNh" secondAttribute="top" constant="100" id="IaQ-WB-cnh"/>
-                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="M6c-MK-DxF" secondAttribute="trailing" constant="16" id="T0d-KH-tDA"/>
-                            <constraint firstItem="UW7-EU-fQC" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" id="d3j-dw-MAY"/>
-                            <constraint firstItem="UW7-EU-fQC" firstAttribute="top" secondItem="M6c-MK-DxF" secondAttribute="bottom" constant="75" id="zYW-5b-qAf"/>
+                            <constraint firstItem="zSb-NY-8IP" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="140" id="4Xr-cP-s7s"/>
+                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="dpq-Ni-uiD" secondAttribute="trailing" constant="16" id="CVZ-hv-UD1"/>
+                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="zSb-NY-8IP" secondAttribute="trailing" constant="141" id="FMQ-jM-0Bc"/>
+                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="PnI-wH-ovO" secondAttribute="trailing" constant="16" id="NYU-sc-xy5"/>
+                            <constraint firstItem="dpq-Ni-uiD" firstAttribute="top" secondItem="9er-JK-qUy" secondAttribute="bottom" constant="8" id="OqI-hg-05g"/>
+                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="9er-JK-qUy" secondAttribute="trailing" constant="16" id="OxV-AG-Qlb"/>
+                            <constraint firstItem="9er-JK-qUy" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="RfJ-Zy-N4P"/>
+                            <constraint firstItem="9er-JK-qUy" firstAttribute="top" secondItem="PnI-wH-ovO" secondAttribute="bottom" constant="8" id="dnr-H6-g9e"/>
+                            <constraint firstItem="Qbb-3p-dR0" firstAttribute="bottom" secondItem="iNr-MZ-iNh" secondAttribute="bottom" id="ebF-6X-68l"/>
+                            <constraint firstItem="PnI-wH-ovO" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="heb-KC-mQI"/>
+                            <constraint firstItem="Qbb-3p-dR0" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" id="noq-uu-21L"/>
+                            <constraint firstItem="zSb-NY-8IP" firstAttribute="top" secondItem="dpq-Ni-uiD" secondAttribute="bottom" constant="27" id="ssh-NC-lCj"/>
+                            <constraint firstItem="9er-JK-qUy" firstAttribute="top" secondItem="iNr-MZ-iNh" secondAttribute="top" constant="130" id="tq6-XA-RAm"/>
+                            <constraint firstItem="dpq-Ni-uiD" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="uiL-el-HQK"/>
+                            <constraint firstItem="Qbb-3p-dR0" firstAttribute="trailing" secondItem="iNr-MZ-iNh" secondAttribute="trailing" id="vcI-uG-vIp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iNr-MZ-iNh"/>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="UW7-EU-fQC" id="ksk-4U-eaJ"/>
-                        <outlet property="reminderToggle" destination="M6c-MK-DxF" id="Yih-N6-zL2"/>
+                        <outlet property="dayLabel" destination="9er-JK-qUy" id="Kbn-sO-DG2"/>
+                        <outlet property="stepper" destination="zSb-NY-8IP" id="Eao-po-cC7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1Q-eZ-DtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="YZA-xs-hQc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1421.5999999999999" y="-121.88905547226388"/>
         </scene>
@@ -417,6 +424,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uA8-d9-5I9"/>
+        <segue reference="AK8-1L-iJh"/>
     </inferredMetricsTieBreakers>
 </document>
