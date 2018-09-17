@@ -104,8 +104,13 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         
         if(editingStyle == UITableViewCellEditingStyle.delete){
-            taskList.remove(at: indexPath.row)
-            myTableView.reloadData()
+            let task = resultsController.object(at: indexPath)
+            resultsController.managedObjectContext.delete(task)
+            do{
+                try resultsController.managedObjectContext.save()
+            }catch{
+                print("Delete failed: \(error)")
+            }
         }
     }
     
@@ -164,6 +169,10 @@ extension taskListController: NSFetchedResultsControllerDelegate{
         case .insert:
             if let indexPath = newIndexPath {
                 myTableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        case .delete:
+            if let indexPath = indexPath{
+                myTableView.deleteRows(at: [indexPath], with: .automatic)
             }
         default:
             break
