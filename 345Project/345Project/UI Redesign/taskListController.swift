@@ -103,10 +103,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         
-        /*if(editingStyle == UITableViewCellEditingStyle.delete){
+        if(editingStyle == UITableViewCellEditingStyle.delete){
             taskList.remove(at: indexPath.row)
             myTableView.reloadData()
-        }*/
+        }
     }
     
     override func viewDidLoad() {

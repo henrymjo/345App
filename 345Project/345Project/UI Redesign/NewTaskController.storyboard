@@ -338,9 +338,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zSb-NY-8IP" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="140" id="4Xr-cP-s7s"/>
                             <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="dpq-Ni-uiD" secondAttribute="trailing" constant="16" id="CVZ-hv-UD1"/>
-                            <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="zSb-NY-8IP" secondAttribute="trailing" constant="141" id="FMQ-jM-0Bc"/>
                             <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="PnI-wH-ovO" secondAttribute="trailing" constant="16" id="NYU-sc-xy5"/>
                             <constraint firstItem="dpq-Ni-uiD" firstAttribute="top" secondItem="9er-JK-qUy" secondAttribute="bottom" constant="8" id="OqI-hg-05g"/>
                             <constraint firstItem="iNr-MZ-iNh" firstAttribute="trailing" secondItem="9er-JK-qUy" secondAttribute="trailing" constant="16" id="OxV-AG-Qlb"/>
@@ -349,6 +347,7 @@
                             <constraint firstItem="Qbb-3p-dR0" firstAttribute="bottom" secondItem="iNr-MZ-iNh" secondAttribute="bottom" id="ebF-6X-68l"/>
                             <constraint firstItem="PnI-wH-ovO" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="heb-KC-mQI"/>
                             <constraint firstItem="Qbb-3p-dR0" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" id="noq-uu-21L"/>
+                            <constraint firstItem="zSb-NY-8IP" firstAttribute="centerX" secondItem="iNr-MZ-iNh" secondAttribute="centerX" id="qDb-Og-IG8"/>
                             <constraint firstItem="zSb-NY-8IP" firstAttribute="top" secondItem="dpq-Ni-uiD" secondAttribute="bottom" constant="27" id="ssh-NC-lCj"/>
                             <constraint firstItem="9er-JK-qUy" firstAttribute="top" secondItem="iNr-MZ-iNh" secondAttribute="top" constant="130" id="tq6-XA-RAm"/>
                             <constraint firstItem="dpq-Ni-uiD" firstAttribute="leading" secondItem="iNr-MZ-iNh" secondAttribute="leading" constant="16" id="uiL-el-HQK"/>
@@ -433,6 +432,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AK8-1L-iJh"/>
+        <segue reference="uA8-d9-5I9"/>
     </inferredMetricsTieBreakers>
 </document>
