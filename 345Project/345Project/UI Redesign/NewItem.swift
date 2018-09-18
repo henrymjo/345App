@@ -20,8 +20,13 @@ class NewItem: UIViewController {
     
     
     //MARK: Properties
+    var currentTask: Task?
     var managedContext: NSManagedObjectContext!
-
+    
+    // if edit task is true, "add task" becomes "edit task" and we try and edit a task instead of creating a new one.
+    var editTask = false;
+    var taskIndex: IndexPath = []; // passed from taskListController, need better way to do this.
+    
     var taskDesc = "" //String for task title
     var urgency = "low" // 0, 1, 2 representing urgency
     var reminderDate = Date() // Will be a date or null.
@@ -37,11 +42,11 @@ class NewItem: UIViewController {
     
     /* on load set the urgency button colour. Default is red currently **/
     override func viewDidLoad() {
-        print("in view did load")
+        super.viewDidLoad()
+        
         print("task desc: " + taskDesc)
         
         taskName.text = taskDesc;
-        super.viewDidLoad()
         if(urgency == "high"){
             UrgencyButton.backgroundColor = UIColor.red
         } else {
@@ -50,6 +55,9 @@ class NewItem: UIViewController {
             } else {
                 UrgencyButton.backgroundColor = UIColor.green
             }
+        }
+        if(editTask){
+            AddTaskButton.setTitle("Edit Task", for: .normal) // add task becomes edit task.
         }
         // Do any additional setup after loading the view.
     }
@@ -68,16 +76,42 @@ class NewItem: UIViewController {
     @IBAction func addNewTask(_ sender: Any) {
         print("Task name: " + taskDesc)
         
-        let task = Task(context: managedContext)
-        task.title = taskDesc
-        task.urgency = urgency
-        task.time = time
-        task.date = Date()
-        
-        do{
-            try managedContext.save()
-        }catch{
-            print("Error saving todo: \(error)")
+        // if this is a new task, create a new task with the current context and save.
+        if(!editTask){
+            let task = Task(context: managedContext)
+            task.title = taskDesc
+            task.urgency = urgency
+            task.time = time
+            task.date = Date()
+            
+            do{
+                try managedContext.save()
+            }catch{
+                print("Error saving todo: \(error)")
+            }
+        } else {
+            /** if we are editing a task, get the task from the results list and edit the values.
+                Need Henry to help with this. It sort of edits the task but doesn't change the title in taskList
+                At the minute I don't have any taskIndex variables in the other view controllers so clicking into
+                one of those will fuck up the task index
+                Do we need to fetch using an ID or keep using the taskIndex from taskListController?
+                attempting to save the managed context also causes a crash
+             
+                Tried a couple of different things but usually get the same error*/
+            
+            currentTask?.title = taskDesc
+            currentTask?.time = time
+            currentTask?.urgency = urgency
+            currentTask?.date = Date()
+            //print("task: \(currentTask)");
+            
+            
+            do{
+                try managedContext.save()
+            }catch{
+                print("Error saving todo: \(error)")
+            }
+            
         }
     }
     
@@ -93,6 +127,7 @@ class NewItem: UIViewController {
             vc?.time = time
             vc?.reminderDate = reminderDate
             vc?.managedContext = managedContext
+            vc?.editTask = editTask
         break
         case "timeIdentifier":
             let vc = segue.destination as? TimeViewController
@@ -101,6 +136,7 @@ class NewItem: UIViewController {
             vc?.time = time
             vc?.reminderDate = reminderDate
             vc?.managedContext = managedContext
+            vc?.editTask = editTask
         break
         case "reminderIdentifier":
             let vc = segue.destination as? ReminderViewController
@@ -109,6 +145,7 @@ class NewItem: UIViewController {
             vc?.time = time
             vc?.reminderDate = reminderDate
             vc?.managedContext = managedContext
+            vc?.editTask = editTask
         break
         default:
             print("passing to table view")

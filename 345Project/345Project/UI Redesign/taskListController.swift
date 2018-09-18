@@ -20,10 +20,13 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var myTableView: UITableView!
     
+    @IBAction func addTask(_ sender: UIButton) {
+        performSegue(withIdentifier: "newTask", sender: self)
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("number of rows in section");
+        
         return resultsController.sections?[section].numberOfObjects ?? 0
     }
  
@@ -38,10 +41,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
 
-        print("heightforrowat")
-        
-        
-        //print("in heightforrow")
         let task = resultsController.object(at: indexPath)
         
         switch task.time {
@@ -114,6 +113,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "editTask", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let request: NSFetchRequest<Task> = Task.fetchRequest()
@@ -146,6 +149,35 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        switch(segue.identifier){
+        case "editTask":
+            if let indexPath = myTableView.indexPathForSelectedRow{
+                let selectedRow = indexPath;
+                let vc = segue.destination as? NewItem
+                let task = resultsController.object(at: selectedRow)
+                //vc?.managedContext = task;
+                vc?.currentTask = task
+                vc?.taskDesc = task.title!
+                vc?.urgency = task.urgency!
+                vc?.time = task.time
+                vc?.editTask = true;
+                vc?.taskIndex = selectedRow
+                print("editing task at index: \(indexPath.row)")
+            }
+        break
+        case "newTask":
+            let vc = segue.destination as? NewItem
+            vc?.managedContext = resultsController.managedObjectContext
+            vc?.editTask = false;
+            if(vc?.managedContext == nil){
+                print("Managed context = nil")
+            }
+        break
+        default:
+            print("No segue found");
+        }
+        
+        /**
         if let _ = sender as? UIButton, let vc = segue.destination as? NewItem {
             vc.managedContext = resultsController.managedObjectContext
             if(vc.managedContext == nil){
@@ -153,7 +185,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             }
             print("passing")
         }
-        
+        **/
     }
 }
 

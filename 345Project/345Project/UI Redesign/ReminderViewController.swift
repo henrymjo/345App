@@ -16,6 +16,7 @@ class ReminderViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     
     var managedContext: NSManagedObjectContext!
+    var editTask = false;
     
     var taskDesc = "";
     var urgency = "low";
@@ -46,5 +47,6 @@ class ReminderViewController: UIViewController {
         homeController?.urgency = urgency;
         homeController?.reminderDate = reminderDate;
         homeController?.managedContext = managedContext
+        homeController?.editTask = editTask
     }
 }

@@ -12,6 +12,7 @@ import CoreData
 class UrgencyController: UIViewController {
     
     var managedContext: NSManagedObjectContext!
+    var editTask = false;
     
     var taskDesc = "" //String for task title
     var urgency = "low" // 0, 1, 2 representing urgency
@@ -50,7 +51,7 @@ class UrgencyController: UIViewController {
         editController?.reminderDate = reminderDate;
         editController?.time = time;
         editController?.managedContext = managedContext
-        
+        editController?.editTask = editTask
         
         if(segue.identifier == "high"){
             editController?.urgency = "high"

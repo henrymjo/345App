@@ -12,6 +12,7 @@ import CoreData
 class TimeViewController: UIViewController {
     
     var managedContext: NSManagedObjectContext!
+    var editTask = false;
     
     var taskDesc = "";
     var urgency = "low";
@@ -50,12 +51,12 @@ class TimeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let homeController = segue.destination as? NewItem
-        homeController?.time = time;
-        homeController?.taskDesc = taskDesc;
-        homeController?.urgency = urgency;
-        homeController?.reminderDate = reminderDate;
+        homeController?.time = time
+        homeController?.taskDesc = taskDesc
+        homeController?.urgency = urgency
+        homeController?.reminderDate = reminderDate
         homeController?.managedContext = managedContext
-        
+        homeController?.editTask = editTask
     }
     
     /*

@@ -109,7 +109,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ecD-dY-5HJ" kind="show" id="uA8-d9-5I9"/>
+                                    <action selector="addTask:" destination="3OL-xa-gEv" eventType="touchUpInside" id="zy9-uO-CCL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,6 +124,8 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="UFW-q6-Qxl" id="LJC-CJ-KhV"/>
+                        <segue destination="ecD-dY-5HJ" kind="show" identifier="editTask" id="03W-ns-M1F"/>
+                        <segue destination="ecD-dY-5HJ" kind="show" identifier="newTask" id="3fo-oB-I24"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22Q-xb-KVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +434,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uA8-d9-5I9"/>
+        <segue reference="3fo-oB-I24"/>
     </inferredMetricsTieBreakers>
 </document>
