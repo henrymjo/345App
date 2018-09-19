@@ -161,7 +161,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
                 vc?.urgency = task.urgency!
                 vc?.time = task.time
                 vc?.editTask = true;
-                vc?.taskIndex = selectedRow
+                vc?.indexPath = selectedRow
                 print("editing task at index: \(indexPath.row)")
             }
         break

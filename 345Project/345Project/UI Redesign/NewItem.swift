@@ -11,9 +11,6 @@ import CoreData
 
 let taskManager: taskListController = taskListController()
 
-/** biggest problem now is having the task description keep showing the types words.
-    Looks like variables don't get saved when we transition to another controller.
- **/
 
 
 class NewItem: UIViewController {
@@ -25,7 +22,7 @@ class NewItem: UIViewController {
     
     // if edit task is true, "add task" becomes "edit task" and we try and edit a task instead of creating a new one.
     var editTask = false;
-    var taskIndex: IndexPath = []; // passed from taskListController, need better way to do this.
+    var indexPath: IndexPath = []; // passed from taskListController, need better way to do this.
     
     var taskDesc = "" //String for task title
     var urgency = "low" // 0, 1, 2 representing urgency
@@ -58,6 +55,10 @@ class NewItem: UIViewController {
         }
         if(editTask){
             AddTaskButton.setTitle("Edit Task", for: .normal) // add task becomes edit task.
+            // pull task from managed context. let task = resultsController
+            let task = resultsController.object(at: indexPath)
+            currentTask = task
+            
         }
         // Do any additional setup after loading the view.
     }
@@ -82,7 +83,7 @@ class NewItem: UIViewController {
             task.title = taskDesc
             task.urgency = urgency
             task.time = time
-            task.date = Date()
+            task.date = reminderDate;
             
             do{
                 try managedContext.save()
@@ -107,7 +108,7 @@ class NewItem: UIViewController {
             
             
             do{
-                try managedContext.save()
+                try managedContext.save() // this causes crash too
             }catch{
                 print("Error saving todo: \(error)")
             }

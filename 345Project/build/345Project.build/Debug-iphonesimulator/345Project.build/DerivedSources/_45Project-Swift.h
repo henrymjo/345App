@@ -227,12 +227,6 @@ SWIFT_CLASS("_TtC10_45Project11CustomCells")
 @class UITextField;
 @class UIStoryboardSegue;
 
-/// biggest problem now is having the task description keep showing the types words.
-/// Looks like variables don’t get saved when we transition to another controller.
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
 SWIFT_CLASS("_TtC10_45Project7NewItem")
 @interface NewItem : UIViewController
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified UrgencyButton;
