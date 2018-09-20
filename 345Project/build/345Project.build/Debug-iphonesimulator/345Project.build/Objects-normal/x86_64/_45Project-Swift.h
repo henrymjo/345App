@@ -251,6 +251,7 @@ SWIFT_CLASS("_TtC10_45Project22ReminderViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dayLabel;
 @property (nonatomic, weak) IBOutlet UIStepper * _Null_unspecified stepper;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)daysStepped:(id _Nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
@@ -272,78 +273,6 @@ SWIFT_CLASS_NAMED("Task")
 @property (nonatomic) float time;
 @property (nonatomic, copy) NSString * _Nullable title;
 @property (nonatomic, copy) NSString * _Nullable urgency;
-@end
-
-@class UISwitch;
-@class UISegmentedControl;
-@class UIDatePicker;
-
-/// Edit task page controller.
-/// Shows all currect settings for a task and makes them alterable
-/// UI should be improved for Accessibily purposes.
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
-SWIFT_CLASS("_TtC10_45Project22TaskEditViewController")
-@interface TaskEditViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UILabel * _Nullable taskName;
-@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified InitialReminder;
-@property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified InitialRepeat;
-@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicked;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified showDateSelected;
-/// Called if the date in the date picker wheel is changed.
-/// Updates the date variable and shows the current current date chosen below the picker
-/// (For disability purposes)
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
-- (IBAction)datePicker:(UIDatePicker * _Nonnull)sender;
-/// Called if reminders switch is toggled
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
-- (IBAction)reminderSwitch:(id _Nonnull)sender;
-/// Called if the repeats selector (Once, daily, weekly) is changed
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
-- (IBAction)repeatSelector:(UISegmentedControl * _Nonnull)sender;
-/// Called when “Edit task” button is pressed,
-/// tests to see if any details have changed,
-/// if yes then update them and segue back to task list
-/// *
-- (IBAction)editTask:(UIButton * _Nonnull)sender;
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
-/// When the view appears set all the correct values for that task
-/// <ul>
-///   <li>
-///   </li>
-/// </ul>
-- (void)viewDidAppear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-/// TaskManager class deals with all task actions:
-/// <ul>
-///   <li>
-///     Creating, Deleting, Editing and getting task values.
-///   </li>
-///   <li>
-///     accessed through taskMgr instance
-///   </li>
-///   <li>
-///   </li>
-/// </ul>
-SWIFT_CLASS("_TtC10_45Project11TaskManager")
-@interface TaskManager : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UISlider;

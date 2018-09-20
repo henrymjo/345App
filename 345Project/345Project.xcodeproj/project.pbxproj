@@ -120,7 +120,6 @@
 				BAF581ED213F46E300F2A525 /* Core Data */,
 				35BBBBA920F30002004C3AF5 /* AppDelegate.swift */,
 				4FE512BD20FB0FB500CB7012 /* TaskEditViewController.swift */,
-				4F1C37C6210482B2007A09FA /* AlertCenter.swift */,
 				4FAF04E421227CC30099E8AC /* UI Redesign */,
 				4F60040820F46D7000A36ED9 /* TaskManager.swift */,
 				35BBBBB020F30004004C3AF5 /* Assets.xcassets */,
@@ -151,6 +150,7 @@
 		4FAF04E421227CC30099E8AC /* UI Redesign */ = {
 			isa = PBXGroup;
 			children = (
+				4F1C37C6210482B2007A09FA /* AlertCenter.swift */,
 				4FAF04E521227CE50099E8AC /* NewTaskController.storyboard */,
 				4FAF04E921227F180099E8AC /* NewItem.swift */,
 				4FAF04EB212280200099E8AC /* UrgencyController.swift */,

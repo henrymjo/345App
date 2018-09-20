@@ -52,7 +52,6 @@ depends-member:
 - !private ["s7CVarArgP", "dateFormat"]
 - !private ["s7CVarArgP", "datePicked"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
-- !private ["s7CVarArgP", "editTask"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isOn"]
 - !private ["s7CVarArgP", "myDateFormatter"]
@@ -79,7 +78,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
 - !private ["s28CustomDebugStringConvertibleP", "datePicked"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
-- !private ["s28CustomDebugStringConvertibleP", "editTask"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isOn"]
 - !private ["s28CustomDebugStringConvertibleP", "myDateFormatter"]
@@ -109,7 +107,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "dateFormat"]
 - !private ["s23CustomStringConvertibleP", "datePicked"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
-- !private ["s23CustomStringConvertibleP", "editTask"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isOn"]
 - !private ["s23CustomStringConvertibleP", "myDateFormatter"]
@@ -143,7 +140,6 @@ depends-member:
 - !private ["s9EquatableP", "dateFormat"]
 - !private ["s9EquatableP", "datePicked"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
-- !private ["s9EquatableP", "editTask"]
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "isOn"]
 - !private ["s9EquatableP", "myDateFormatter"]
@@ -176,7 +172,6 @@ depends-member:
 - !private ["s8HashableP", "dateFormat"]
 - !private ["s8HashableP", "datePicked"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
-- !private ["s8HashableP", "editTask"]
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "isOn"]
 - !private ["s8HashableP", "myDateFormatter"]
@@ -285,7 +280,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "dateFormat"]
 - !private ["So16NSObjectProtocolP", "datePicked"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
-- !private ["So16NSObjectProtocolP", "editTask"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "isOn"]
 - !private ["So16NSObjectProtocolP", "myDateFormatter"]
@@ -336,7 +330,6 @@ depends-member:
 - ["10_45Project22TaskEditViewControllerC", "taskName"]
 - ["10_45Project22TaskEditViewControllerC", "viewDidAppear"]
 - ["10_45Project22TaskEditViewControllerC", "viewDidLoad"]
-- !private ["10_45Project11TaskManagerC", "editTask"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "date"]
@@ -604,7 +597,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "datePicked"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "editTask"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isOn"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "myDateFormatter"]
@@ -657,7 +649,6 @@ depends-nominal:
 - "SS"
 - "s14StringProtocolP"
 - "10_45Project22TaskEditViewControllerC"
-- !private "10_45Project11TaskManagerC"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"

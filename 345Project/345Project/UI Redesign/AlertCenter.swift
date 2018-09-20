@@ -38,7 +38,7 @@ class AlertCenter: NSObject{
       * Depending on what repeating choice user makes it will alert the same time daily, weekly or just once.
       * Alert title is the name of the task.
     **/
-    func createAlert(title: String, subtitle: String, body: String, date: Date, repeats: Int){
+    func createAlert(title: String, subtitle: String, body: String, date: Date){
         
         
         let content = UNMutableNotificationContent()
@@ -46,32 +46,13 @@ class AlertCenter: NSObject{
         content.subtitle = ""
         content.body = ""
         content.badge = 1;
-        var repeatsAreOn = false
-        if(repeats != 0){
-            repeatsAreOn = true
-        }
-        if(compareTime(reminderDate: date)){ // true task time is further than 15 minutes away
-            // if repeats are once. this effectively sets it to yearly, but reminder should be deleted along with task
-            var triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-            triggerDate.minute = triggerDate.minute! - 15
-            if(repeats == 1){ // If repeats are daily
-                triggerDate = Calendar.current.dateComponents([.day, .hour, .minute], from: date)
-                triggerDate.minute = triggerDate.minute! - 15
-                
-            } else {
-                if(repeats == 2){ // If repeats are weekly
-                    triggerDate = Calendar.current.dateComponents([.weekday, .day, .hour, .minute], from: date)
-                    triggerDate.minute = triggerDate.minute! - 15
-                    
-                }
-            }
-            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: repeatsAreOn)
+        
+        var triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        triggerDate.hour = 10 // reminder is set for 10am.
             
-            /** Adds alert to the device alerts **/
-            addAlert(trigger: trigger, content: content)
-        } else {
-            print("Task too close to remind"); // debugging purposes only,
-            }                                  //communicating this with user is done in the viewControllers.
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false);
+
+        addAlert(trigger: trigger, content: content)
     }
     
     /** adds the alert to the users device.
@@ -90,14 +71,4 @@ class AlertCenter: NSObject{
         })
     }
     
-    /** Tests to see whether the task time is further than 15 minutes into the future
-      * return true if it is
-    **/
-    func compareTime(reminderDate: Date) -> Bool{
-        
-        if(reminderDate.timeIntervalSinceNow > ((15*60) + 20)){ // if reminder time is further than 15 minutes + 20 seconds away then we can make the reminder.
-            return true;
-        }
-        return false;
-    }
 }

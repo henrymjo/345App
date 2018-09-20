@@ -17,15 +17,24 @@ class ReminderViewController: UIViewController {
     
     var managedContext: NSManagedObjectContext!
     var editTask = false;
-    
     var taskDesc = "";
     var urgency = "low";
     var time: Float = 1.0;
     var reminderDate = Date();
+    var defaultDays = 0; // This changes depending on if the user has already set a day, and has come back to this screen.
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("taskDesc: \(taskDesc)")
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let days = daysFromNow(reminderDate: reminderDate)
+        dayLabel.text = "\(days)";
+        defaultDays = days;
+        stepper.value = Double(defaultDays)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,5 +57,21 @@ class ReminderViewController: UIViewController {
         homeController?.reminderDate = reminderDate;
         homeController?.managedContext = managedContext
         homeController?.editTask = editTask
+    }
+    
+    func daysFromNow(reminderDate: Date) -> Int{
+        
+        let currentDate = Date()
+        let calendar = NSCalendar.current
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDay(for: currentDate)
+        let date2 = calendar.startOfDay(for: reminderDate)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        if(components.day != nil){
+            return components.day!;
+        }
+        return 0;
     }
 }

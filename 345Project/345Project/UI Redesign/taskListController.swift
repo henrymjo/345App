@@ -47,11 +47,15 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         case 0..<3:
             return 60.0;
         case 3..<5:
-            return 100.0
-        case 5..<8:
-            return 140.0            // arbitrary numbers returned atm
-        case 8..<13:
+            return 90.0
+        case 5..<7:
+            return 120.0            // every two hours increments 30 points
+        case 7..<9:
+            return 150.0
+        case 9..<11:
             return 180.0
+        case 11..<13:
+            return 210.0
         default:
             return 0.0
         }
@@ -140,6 +144,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         myTableView.reloadData()
+        requestAlerts.requestAlerts()
     }
     
     override func didReceiveMemoryWarning() {

@@ -84,6 +84,11 @@ class NewItem: UIViewController {
             task.urgency = urgency
             task.time = time
             task.date = reminderDate;
+            if(isFutureDate(date: reminderDate)){
+                
+                requestAlerts.createAlert(title: taskDesc, subtitle: taskDesc, body: taskDesc, date: reminderDate);
+            
+            }
             
             do{
                 try managedContext.save()
@@ -152,5 +157,12 @@ class NewItem: UIViewController {
             print("passing to table view")
         }
     }
-
+    
+    func isFutureDate(date: Date) -> Bool{
+        if(date.timeIntervalSinceNow > (60*60)*4){
+            return true;
+    }
+        
+        return false;
+    }
 }
