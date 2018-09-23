@@ -37,7 +37,9 @@ class NewItem: UIViewController {
     @IBOutlet weak var taskName: UITextField!
     
     
-    /* on load set the urgency button colour. Default is red currently **/
+    /** On load, set the urgency colour to the colour selected.
+        Also, if we are editing a task, change the "Add Task" button to "Edit Task"
+    **/
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +65,8 @@ class NewItem: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    /** update task description when text is changed in the text box
+    **/
     @IBAction func textEditingDidChange(_ sender: UITextField) {
         taskDesc = sender.text!
     }
@@ -73,7 +77,9 @@ class NewItem: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    /** Conform new task/ confirm edit of existing task.
+        Saves all variables to CoreData as a Task. Or updates existing variables of a CoreData task.
+    **/
     @IBAction func addNewTask(_ sender: Any) {
         print("Task name: " + taskDesc)
         
@@ -121,8 +127,13 @@ class NewItem: UIViewController {
         }
     }
     
-    // MARK: - Navigation
-
+    
+    /**
+        4 possible segues from here.
+        Urgency page, time page, reminder page or going back to the initial task view page.
+        Variables get passed between pages so that if we revisit a page to change the last chosen value,
+        The page remembers that value and the counters will continue on from it.
+     **/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch(segue.identifier){

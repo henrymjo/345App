@@ -19,6 +19,9 @@ class UrgencyController: UIViewController {
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 1.0;  // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
 
+    /** All three of these functions are almost the same.
+        If a button is pressed, perform a segue using that buttons identifier.
+     **/
     @IBAction func HighButton(_ sender: UIButton) {
         performSegue(withIdentifier: "high", sender: sender)
     }
@@ -31,12 +34,9 @@ class UrgencyController: UIViewController {
         performSegue(withIdentifier: "low", sender: sender)
     }
     
-    
+    /** Load the view **/
     override func viewDidLoad() {
-        print("taskDesc: " + taskDesc)
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +44,9 @@ class UrgencyController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /** we are only segueing to once controller so we update all variables first.
+        Update the urgency variable depending on which button what clicked.
+    **/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editController = segue.destination as? NewItem
         editController?.taskDesc = taskDesc;

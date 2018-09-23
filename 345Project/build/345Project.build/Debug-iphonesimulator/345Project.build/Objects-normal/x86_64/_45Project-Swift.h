@@ -234,10 +234,35 @@ SWIFT_CLASS("_TtC10_45Project7NewItem")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified TimeButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified AddTaskButton;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified taskName;
+/// On load, set the urgency colour to the colour selected.
+/// Also, if we are editing a task, change the “Add Task” button to “Edit Task”
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidLoad;
+/// update task description when text is changed in the text box
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)textEditingDidChange:(UITextField * _Nonnull)sender;
 - (void)didReceiveMemoryWarning;
+/// Conform new task/ confirm edit of existing task.
+/// Saves all variables to CoreData as a Task. Or updates existing variables of a CoreData task.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)addNewTask:(id _Nonnull)sender;
+/// 4 possible segues from here.
+/// Urgency page, time page, reminder page or going back to the initial task view page.
+/// Variables get passed between pages so that if we revisit a page to change the last chosen value,
+/// The page remembers that value and the counters will continue on from it.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -293,11 +318,21 @@ SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 
 SWIFT_CLASS("_TtC10_45Project17UrgencyController")
 @interface UrgencyController : UIViewController
+/// All three of these functions are almost the same.
+/// If a button is pressed, perform a segue using that buttons identifier.
+/// *
 - (IBAction)HighButton:(UIButton * _Nonnull)sender;
 - (IBAction)MedButton:(UIButton * _Nonnull)sender;
 - (IBAction)LowButton:(UIButton * _Nonnull)sender;
+/// Load the view *
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+/// we are only segueing to once controller so we update all variables first.
+/// Update the urgency variable depending on which button what clicked.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -332,7 +367,11 @@ SWIFT_CLASS("_TtC10_45Project10mediumCell")
 SWIFT_CLASS("_TtC10_45Project18taskListController")
 @interface taskListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
+/// add task button is clicked, perform with identifier “newTask”
+/// *
 - (IBAction)addTask:(UIButton * _Nonnull)sender;
+/// Sets the number of rows in the tableView to the number of tasks in our coreData storage.
+/// *
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 /// This goes through each tableViewCell and returns the height of each cell by looking at the index
 /// of the task and getting its ‘time’ value. The bigger the time, the taller the cell.
@@ -349,11 +388,45 @@ SWIFT_CLASS("_TtC10_45Project18taskListController")
 /// cell.layer.borderColor will need to change too.
 /// *
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// Method for deleting tasks.
+/// Deletes the task from CoreData and deletes the reminder
+/// @param tableView is the tableView on the controller
+/// @param editingStyle is a left swipe on the task in the table view.
+/// @param indexPath is the index of the task in the tableView
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+/// If an item is selected, make a segue to the newItem page with the identifier “editTask”
+/// This means we use the same newItem controller but it doesn’t create a new item, just edits
+/// the selected one.
+/// @param tableView is the tbaleView in the controller.
+/// @param indexPath is the index of the task selected.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+/// Method does setup for the table when the tableView controller is loaded.
+/// Fetches from core data and reloads data.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidLoad;
+/// Once view did appear, reload data.
+/// Also request to send alerts if not done so already.
+/// *
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+/// Two possible segues from this controller.
+/// We either want to create a new item or edit an existing item.
+/// If editing, set all variables to the selected index. Change “Add Task” button to “Edit Task”
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

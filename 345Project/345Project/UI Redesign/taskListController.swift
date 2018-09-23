@@ -18,13 +18,16 @@ let coreDataStack = CoreDataStack()
 class taskListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var myTableView: UITableView! // tableView, centerpiece of this controller.
     
+    /** add task button is clicked, perform with identifier "newTask"
+     **/
     @IBAction func addTask(_ sender: UIButton) {
         performSegue(withIdentifier: "newTask", sender: self)
     }
     
-    
+    /** Sets the number of rows in the tableView to the number of tasks in our coreData storage.
+     **/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return resultsController.sections?[section].numberOfObjects ?? 0
@@ -103,7 +106,13 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             return cell;
         }
     }
-    
+    /**
+        Method for deleting tasks.
+        Deletes the task from CoreData and deletes the reminder
+        @param tableView is the tableView on the controller
+        @param editingStyle is a left swipe on the task in the table view.
+        @param indexPath is the index of the task in the tableView
+    **/
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         
         if(editingStyle == UITableViewCellEditingStyle.delete){
@@ -119,10 +128,22 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    /**
+        If an item is selected, make a segue to the newItem page with the identifier "editTask"
+        This means we use the same newItem controller but it doesn't create a new item, just edits
+        the selected one.
+        @param tableView is the tbaleView in the controller.
+        @param indexPath is the index of the task selected.
+     **/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "editTask", sender: self)
     }
     
+    
+    /**
+        Method does setup for the table when the tableView controller is loaded.
+        Fetches from core data and reloads data.
+    **/
     override func viewDidLoad() {
         super.viewDidLoad()
         let request: NSFetchRequest<Task> = Task.fetchRequest()
@@ -144,6 +165,9 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
     
+    /** Once view did appear, reload data.
+        Also request to send alerts if not done so already.
+     **/
     override func viewDidAppear(_ animated: Bool) {
         myTableView.reloadData()
         requestAlerts.requestAlerts()
@@ -154,6 +178,11 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    
+    /** Two possible segues from this controller.
+        We either want to create a new item or edit an existing item.
+        If editing, set all variables to the selected index. Change "Add Task" button to "Edit Task"
+    **/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch(segue.identifier){
@@ -183,16 +212,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         default:
             print("No segue found");
         }
-        
-        /**
-        if let _ = sender as? UIButton, let vc = segue.destination as? NewItem {
-            vc.managedContext = resultsController.managedObjectContext
-            if(vc.managedContext == nil){
-                print("managedContext = nil")
-            }
-            print("passing")
-        }
-        **/
     }
 }
 
