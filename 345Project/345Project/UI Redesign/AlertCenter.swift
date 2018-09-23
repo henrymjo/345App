@@ -15,12 +15,13 @@ var requestAlerts: AlertCenter = AlertCenter()
 /** center is needed to request notifications and to add notifications to list*/
 let center = UNUserNotificationCenter.current()
 
-
 /** AlertCenter class deals with all things relating to notifications and alerts.
  TODO: give alerts specific indexes so we can remove them if the task gets deleted
  **/
 
 class AlertCenter: NSObject{
+    
+    
     
     func toggleAlerts(){
         
@@ -52,16 +53,15 @@ class AlertCenter: NSObject{
             
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false);
 
-        addAlert(trigger: trigger, content: content)
+        addAlert(trigger: trigger, content: content, identifier: title)
     }
     
     /** adds the alert to the users device.
       * Possibly make the identifier unique so we can delete reminders.
       * TODO: Change the alert date/time when a task date is edited.
      **/
-    func addAlert(trigger: UNCalendarNotificationTrigger, content: UNMutableNotificationContent){
+    func addAlert(trigger: UNCalendarNotificationTrigger, content: UNMutableNotificationContent, identifier: String){
         
-        let identifier = "UYLLocalNotification"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         center.add(request, withCompletionHandler: { (error) in

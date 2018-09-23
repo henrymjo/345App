@@ -109,6 +109,8 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         if(editingStyle == UITableViewCellEditingStyle.delete){
             let task = resultsController.object(at: indexPath)
             resultsController.managedObjectContext.delete(task)
+            let taskIdentifier = task.title!
+            center.removePendingNotificationRequests(withIdentifiers: [taskIdentifier])
             do{
                 try resultsController.managedObjectContext.save()
             }catch{
