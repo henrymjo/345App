@@ -45,10 +45,10 @@ class NewItem: UIViewController {
         print("task desc: " + taskDesc)
         
         taskName.text = taskDesc;
-        if(urgency == "high"){
+        if(urgency == "a"){
             UrgencyButton.backgroundColor = UIColor.red
         } else {
-            if(urgency == "medium"){
+            if(urgency == "b"){
                 UrgencyButton.backgroundColor = UIColor.yellow
             } else {
                 UrgencyButton.backgroundColor = UIColor.green

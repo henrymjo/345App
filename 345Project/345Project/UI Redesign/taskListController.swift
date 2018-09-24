@@ -81,7 +81,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         switch task.urgency {
-        case "high":
+        case "a":
             let cell = tableView.dequeueReusableCell(withIdentifier: "high") as! highCell
             cell.taskName.text = taskName;
             cell.layer.cornerRadius = 10
@@ -89,7 +89,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             cell.layer.borderWidth = 3
             return cell;
             
-        case "medium":
+        case "b":
             let cell = tableView.dequeueReusableCell(withIdentifier: "medium") as! mediumCell
             cell.taskName.text = taskName;
             cell.layer.cornerRadius = 10
@@ -147,7 +147,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         let request: NSFetchRequest<Task> = Task.fetchRequest()
-        let sortDescriptors = NSSortDescriptor(key: "date", ascending: true)
+        let sortDescriptors = NSSortDescriptor(key: "urgency", ascending: true)
         request.sortDescriptors = [sortDescriptors]
         resultsController = NSFetchedResultsController(
             fetchRequest: request,

@@ -57,13 +57,13 @@ class UrgencyController: UIViewController {
         editController?.editTask = editTask
         
         if(segue.identifier == "high"){
-            editController?.urgency = "high"
+            editController?.urgency = "a"
             // set urgency to high and colour to red
         } else if(segue.identifier == "med"){
-            editController?.urgency = "medium"
+            editController?.urgency = "b"
             // set urgency to  med and set colour to yellow
         } else if(segue.identifier == "low"){
-            editController?.urgency = "low"
+            editController?.urgency = "c"
             // set urgency to low and set colour to green
         }
     }
