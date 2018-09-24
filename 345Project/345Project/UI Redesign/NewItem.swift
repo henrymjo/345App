@@ -22,7 +22,6 @@ class NewItem: UIViewController {
     
     // if edit task is true, "add task" becomes "edit task" and we try and edit a task instead of creating a new one.
     var editTask = false;
-    var indexPath: IndexPath = []; // passed from taskListController, need better way to do this.
     
     var taskDesc = "" //String for task title
     var urgency = "low" // 0, 1, 2 representing urgency
@@ -58,8 +57,6 @@ class NewItem: UIViewController {
         if(editTask){
             AddTaskButton.setTitle("Edit Task", for: .normal) // add task becomes edit task.
             // pull task from managed context. let task = resultsController
-            let task = resultsController.object(at: indexPath)
-            currentTask = task
             
         }
         // Do any additional setup after loading the view.
@@ -82,48 +79,18 @@ class NewItem: UIViewController {
     **/
     @IBAction func addNewTask(_ sender: Any) {
         print("Task name: " + taskDesc)
-        
-        // if this is a new task, create a new task with the current context and save.
-        if(!editTask){
-            let task = Task(context: managedContext)
-            task.title = taskDesc
-            task.urgency = urgency
-            task.time = time
-            task.date = reminderDate;
-            if(isFutureDate(date: reminderDate)){
-                
-                requestAlerts.createAlert(title: taskDesc, subtitle: taskDesc, body: taskDesc, date: reminderDate);
-            
-            }
-            
-            do{
-                try managedContext.save()
-            }catch{
-                print("Error saving todo: \(error)")
-            }
-        } else {
-            /** if we are editing a task, get the task from the results list and edit the values.
-                Need Henry to help with this. It sort of edits the task but doesn't change the title in taskList
-                At the minute I don't have any taskIndex variables in the other view controllers so clicking into
-                one of those will fuck up the task index
-                Do we need to fetch using an ID or keep using the taskIndex from taskListController?
-                attempting to save the managed context also causes a crash
-             
-                Tried a couple of different things but usually get the same error*/
-            
-            currentTask?.title = taskDesc
-            currentTask?.time = time
-            currentTask?.urgency = urgency
-            currentTask?.date = Date()
-            //print("task: \(currentTask)");
-            
-            
-            do{
-                try managedContext.save() // this causes crash too
-            }catch{
-                print("Error saving todo: \(error)")
-            }
-            
+        let task = Task(context: managedContext)
+        task.title = taskDesc
+        task.urgency = urgency
+        task.time = time
+        task.date = reminderDate;
+        if(isFutureDate(date: reminderDate)){
+            requestAlerts.createAlert(title: taskDesc, subtitle: taskDesc, body: taskDesc, date: reminderDate);
+        }
+        do{
+            try managedContext.save()
+        }catch{
+            print("Error saving todo: \(error)")
         }
     }
     

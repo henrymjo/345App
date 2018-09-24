@@ -191,13 +191,21 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
                 let selectedRow = indexPath;
                 let vc = segue.destination as? NewItem
                 let task = resultsController.object(at: selectedRow)
-                //vc?.managedContext = task;
+                vc?.managedContext = resultsController.managedObjectContext;
                 vc?.currentTask = task
+                vc?.reminderDate = task.date!
                 vc?.taskDesc = task.title!
                 vc?.urgency = task.urgency!
                 vc?.time = task.time
                 vc?.editTask = true;
-                vc?.indexPath = selectedRow
+                resultsController.managedObjectContext.delete(task)
+                let taskIdentifier = task.title!
+                center.removePendingNotificationRequests(withIdentifiers: [taskIdentifier])
+                do{
+                    try resultsController.managedObjectContext.save()
+                }catch{
+                    print("Delete failed: \(error)")
+                }
                 print("editing task at index: \(indexPath.row)")
             }
         break
