@@ -306,12 +306,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9er-JK-qUy">
                                 <rect key="frame" x="16" y="150" width="343" height="166"/>
+                                <accessibility key="accessibilityConfiguration" hint="Displays how many days away you would like a reminder for." label="Days Label"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="144"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnI-wH-ovO">
                                 <rect key="frame" x="16" y="112" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Title"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -324,6 +326,7 @@
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-Ni-uiD">
                                 <rect key="frame" x="16" y="324" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Days label"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -331,6 +334,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbb-3p-dR0">
                                 <rect key="frame" x="0.0" y="575" width="375" height="92"/>
                                 <color key="backgroundColor" red="0.47843137250000001" green="0.84313725490000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="Confirm Button"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Qbb-3p-dR0" secondAttribute="height" multiplier="375:92" id="Qoh-Ln-B0Q"/>
                                 </constraints>
@@ -382,6 +386,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncR-Yg-bwm">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Will confirm the hours attribute for the task and take you back to the add task menu." label="Confirm Button"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ncR-Yg-bwm" secondAttribute="height" multiplier="15:4" id="QcT-tF-LQB"/>
                                 </constraints>
@@ -395,6 +400,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-3w-62y">
                                 <rect key="frame" x="147" y="150" width="81" height="166"/>
+                                <accessibility key="accessibilityConfiguration" hint="Displays how many hours the task is expected to take." label="Hours Label"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
                                         <attributes>
@@ -407,6 +413,7 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-wo-VRw">
                                 <rect key="frame" x="33" y="467" width="309" height="31"/>
+                                <accessibility key="accessibilityConfiguration" hint="Scroll up or down to change the number of hours you expect the task to take." label="Hours Scroll"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Y5V-wo-VRw" secondAttribute="height" multiplier="61:6" id="EGc-CX-85s"/>
                                 </constraints>
@@ -416,6 +423,7 @@
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEx-zJ-AqE">
                                 <rect key="frame" x="16" y="316" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Hours label"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uEx-zJ-AqE" secondAttribute="height" multiplier="343:30" id="Zbj-Rb-dlW"/>
                                 </constraints>
@@ -425,6 +433,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This should take:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gb-5s-mz0">
                                 <rect key="frame" x="16" y="120" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Title"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Gb-5s-mz0" secondAttribute="height" multiplier="343:30" id="6le-E9-KMH"/>
                                 </constraints>
@@ -464,6 +473,6 @@
         <image name="Image-1" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pnw-up-IjH"/>
+        <segue reference="AK8-1L-iJh"/>
     </inferredMetricsTieBreakers>
 </document>
