@@ -1,5 +1,5 @@
 //
-//  Task+CoreDataClass.swift
+//  Tasks+CoreDataModel.swift
 //  
 //
 //  Created by Ryan Spear on 9/26/18.
@@ -10,7 +10,4 @@
 import Foundation
 import CoreData
 
-@objc(Task)
-public class Task: NSManagedObject {
 
-}
