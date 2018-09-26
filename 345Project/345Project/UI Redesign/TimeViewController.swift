@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+/** Class controls the updating and presenting of the time taken to perform the given task.
+    Uses a scrollWheel to adjust time.
+**/
+
 class TimeViewController: UIViewController {
     
     var managedContext: NSManagedObjectContext!
@@ -20,28 +24,32 @@ class TimeViewController: UIViewController {
     var reminderDate = Date();
     
     
+    // Scroll wheel, moved to chose number of hours
     @IBOutlet weak var scrollWheel: UISlider!
     
+    // shows the currently selected number of hours.
     @IBOutlet weak var hoursIcon: UILabel!
     
+    // Hours counter increments in 0.5 steps.
     let step: Float = 0.5;
+    
+    /** Called when scroll wheel is moved.
+        sets the time and displays the number moved to.
+        @param sender the scrollWheel
+    **/
     @IBAction func scrolled(_ sender: UISlider){
         let roundedValue = round(sender.value/step) * step;
         //let hours: Float = scrollWheel.value
         hoursIcon.text = "\(roundedValue)"
-        time = roundedValue;
-        print("Scroller moved to: \(roundedValue)")
+        time = roundedValue; 
     }
     
-    @IBAction func dateChanged(_ sender: Any) {
-    }
-    
+    /** sets time to display the previously chosen time when entering back into the controller.
+    **/
     override func viewDidLoad() {
         super.viewDidLoad()
         
         hoursIcon.text = "\(time)"
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,24 +57,17 @@ class TimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /** Only one segue to prepare for out of this controller, back to the newItem controller.
+        Update all variables and perform segue.
+     **/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let homeController = segue.destination as? NewItem
-        homeController?.time = time
-        homeController?.taskDesc = taskDesc
-        homeController?.urgency = urgency
-        homeController?.reminderDate = reminderDate
-        homeController?.managedContext = managedContext
-        homeController?.editTask = editTask
+        let newItemController = segue.destination as? NewItem
+        newItemController?.time = time
+        newItemController?.taskDesc = taskDesc
+        newItemController?.urgency = urgency
+        newItemController?.reminderDate = reminderDate
+        newItemController?.managedContext = managedContext
+        newItemController?.editTask = editTask
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }

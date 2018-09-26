@@ -1,0 +1,744 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ReminderViewController"
+provides-nominal:
+- "10_45Project22ReminderViewControllerC"
+provides-member:
+- ["10_45Project22ReminderViewControllerC", ""]
+provides-dynamic-lookup:
+- "dayLabel"
+- "daysStepped"
+- "didReceiveMemoryWarning"
+- "prepare"
+- "stepper"
+- "viewDidAppear"
+- "viewDidLoad"
+depends-top-level:
+- !private "!="
+- !private "*"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Date"
+- !private "Double"
+- "Float"
+- "Int"
+- !private "NSCalendar"
+- "NSManagedObjectContext"
+- !private "NewItem"
+- "ReminderViewController"
+- "StringLiteralType"
+- "UILabel"
+- "UIStepper"
+- "UIStoryboardSegue"
+- "UIViewController"
+- !private "print"
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["So15CALayerDelegateP", "value"]
+- ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "NSCalendar"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "dayLabel"]
+- !private ["s7CVarArgP", "daysFromNow"]
+- !private ["s7CVarArgP", "defaultDays"]
+- !private ["s7CVarArgP", "destination"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "editTask"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "managedContext"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reminderDate"]
+- !private ["s7CVarArgP", "stepper"]
+- !private ["s7CVarArgP", "taskDesc"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "time"]
+- !private ["s7CVarArgP", "urgency"]
+- !private ["s7CVarArgP", "value"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["10Foundation8CalendarV", "dateComponents"]
+- !private ["10Foundation8CalendarV", "startOfDay"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- !private ["10Foundation8CalendarV9ComponentO", "day"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "NSCalendar"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "dateComponents"]
+- !private ["s28CustomDebugStringConvertibleP", "day"]
+- !private ["s28CustomDebugStringConvertibleP", "dayLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "daysFromNow"]
+- !private ["s28CustomDebugStringConvertibleP", "defaultDays"]
+- !private ["s28CustomDebugStringConvertibleP", "destination"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "editTask"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "managedContext"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reminderDate"]
+- !private ["s28CustomDebugStringConvertibleP", "startOfDay"]
+- !private ["s28CustomDebugStringConvertibleP", "stepper"]
+- !private ["s28CustomDebugStringConvertibleP", "taskDesc"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "time"]
+- !private ["s28CustomDebugStringConvertibleP", "urgency"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "dateComponents"]
+- !private ["s17CustomReflectableP", "day"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "startOfDay"]
+- ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "NSCalendar"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "dateComponents"]
+- !private ["s23CustomStringConvertibleP", "day"]
+- !private ["s23CustomStringConvertibleP", "dayLabel"]
+- !private ["s23CustomStringConvertibleP", "daysFromNow"]
+- !private ["s23CustomStringConvertibleP", "defaultDays"]
+- !private ["s23CustomStringConvertibleP", "destination"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "editTask"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "managedContext"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reminderDate"]
+- !private ["s23CustomStringConvertibleP", "startOfDay"]
+- !private ["s23CustomStringConvertibleP", "stepper"]
+- !private ["s23CustomStringConvertibleP", "taskDesc"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "time"]
+- !private ["s23CustomStringConvertibleP", "urgency"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["10Foundation4DateV", "init"]
+- !private ["10Foundation14DateComponentsV", "day"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "dateComponents"]
+- !private ["s9DecodableP", "day"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "startOfDay"]
+- !private ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "dateComponents"]
+- !private ["s9EncodableP", "day"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "startOfDay"]
+- ["s9EquatableP", "Date"]
+- !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "Int"]
+- !private ["s9EquatableP", "NSCalendar"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "current"]
+- !private ["s9EquatableP", "dateComponents"]
+- !private ["s9EquatableP", "day"]
+- !private ["s9EquatableP", "dayLabel"]
+- !private ["s9EquatableP", "daysFromNow"]
+- !private ["s9EquatableP", "defaultDays"]
+- !private ["s9EquatableP", "destination"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "editTask"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "managedContext"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "reminderDate"]
+- !private ["s9EquatableP", "startOfDay"]
+- !private ["s9EquatableP", "stepper"]
+- !private ["s9EquatableP", "taskDesc"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "time"]
+- !private ["s9EquatableP", "urgency"]
+- !private ["s9EquatableP", "value"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s13FloatingPointP", "init"]
+- ["s8HashableP", "Date"]
+- !private ["s8HashableP", "Double"]
+- !private ["s8HashableP", "Int"]
+- !private ["s8HashableP", "NSCalendar"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "current"]
+- !private ["s8HashableP", "dateComponents"]
+- !private ["s8HashableP", "day"]
+- !private ["s8HashableP", "dayLabel"]
+- !private ["s8HashableP", "daysFromNow"]
+- !private ["s8HashableP", "defaultDays"]
+- !private ["s8HashableP", "destination"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "editTask"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "managedContext"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "reminderDate"]
+- !private ["s8HashableP", "startOfDay"]
+- !private ["s8HashableP", "stepper"]
+- !private ["s8HashableP", "taskDesc"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "time"]
+- !private ["s8HashableP", "urgency"]
+- !private ["s8HashableP", "value"]
+- !private ["s8HashableP", "viewDidLoad"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["So10NSCalendarC", "current"]
+- ["So8NSCodingP", "Date"]
+- !private ["So8NSCodingP", "Double"]
+- !private ["So8NSCodingP", "Int"]
+- !private ["So8NSCodingP", "NSCalendar"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "current"]
+- !private ["So8NSCodingP", "dayLabel"]
+- !private ["So8NSCodingP", "daysFromNow"]
+- !private ["So8NSCodingP", "defaultDays"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "editTask"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "managedContext"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "reminderDate"]
+- !private ["So8NSCodingP", "stepper"]
+- !private ["So8NSCodingP", "taskDesc"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "time"]
+- !private ["So8NSCodingP", "urgency"]
+- !private ["So8NSCodingP", "value"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So9NSCopyingP", "current"]
+- ["So26NSExtensionRequestHandlingP", "Date"]
+- !private ["So26NSExtensionRequestHandlingP", "Double"]
+- !private ["So26NSExtensionRequestHandlingP", "Int"]
+- !private ["So26NSExtensionRequestHandlingP", "NSCalendar"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "dayLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "daysFromNow"]
+- !private ["So26NSExtensionRequestHandlingP", "defaultDays"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "editTask"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "managedContext"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "reminderDate"]
+- !private ["So26NSExtensionRequestHandlingP", "stepper"]
+- !private ["So26NSExtensionRequestHandlingP", "taskDesc"]
+- !private ["So26NSExtensionRequestHandlingP", "time"]
+- !private ["So26NSExtensionRequestHandlingP", "urgency"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Date"]
+- !private ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Float"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "NSCalendar"]
+- ["So8NSObjectC", "NSManagedObjectContext"]
+- !private ["So8NSObjectC", "NewItem"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UIStepper"]
+- ["So8NSObjectC", "UIStoryboardSegue"]
+- !private ["So8NSObjectC", "current"]
+- ["So8NSObjectC", "dayLabel"]
+- ["So8NSObjectC", "daysFromNow"]
+- ["So8NSObjectC", "daysStepped"]
+- ["So8NSObjectC", "defaultDays"]
+- !private ["So8NSObjectC", "destination"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "editTask"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "managedContext"]
+- ["So8NSObjectC", "prepare"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "reminderDate"]
+- ["So8NSObjectC", "stepper"]
+- ["So8NSObjectC", "taskDesc"]
+- !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "time"]
+- ["So8NSObjectC", "urgency"]
+- !private ["So8NSObjectC", "value"]
+- ["So8NSObjectC", "viewDidAppear"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So16NSObjectProtocolP", "Date"]
+- !private ["So16NSObjectProtocolP", "Double"]
+- !private ["So16NSObjectProtocolP", "Int"]
+- !private ["So16NSObjectProtocolP", "NSCalendar"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "current"]
+- !private ["So16NSObjectProtocolP", "dayLabel"]
+- !private ["So16NSObjectProtocolP", "daysFromNow"]
+- !private ["So16NSObjectProtocolP", "defaultDays"]
+- !private ["So16NSObjectProtocolP", "destination"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "editTask"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "managedContext"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "reminderDate"]
+- !private ["So16NSObjectProtocolP", "stepper"]
+- !private ["So16NSObjectProtocolP", "taskDesc"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "time"]
+- !private ["So16NSObjectProtocolP", "urgency"]
+- !private ["So16NSObjectProtocolP", "value"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "current"]
+- !private ["10_45Project7NewItemC", "editTask"]
+- !private ["10_45Project7NewItemC", "managedContext"]
+- !private ["10_45Project7NewItemC", "reminderDate"]
+- !private ["10_45Project7NewItemC", "taskDesc"]
+- !private ["10_45Project7NewItemC", "time"]
+- !private ["10_45Project7NewItemC", "urgency"]
+- !private ["s7NumericP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "dateComponents"]
+- !private ["10Foundation20ReferenceConvertibleP", "day"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "startOfDay"]
+- ["10_45Project22ReminderViewControllerC", "Bool"]
+- ["10_45Project22ReminderViewControllerC", "Date"]
+- !private ["10_45Project22ReminderViewControllerC", "Double"]
+- ["10_45Project22ReminderViewControllerC", "Float"]
+- ["10_45Project22ReminderViewControllerC", "Int"]
+- !private ["10_45Project22ReminderViewControllerC", "NSCalendar"]
+- ["10_45Project22ReminderViewControllerC", "NSManagedObjectContext"]
+- !private ["10_45Project22ReminderViewControllerC", "NewItem"]
+- ["10_45Project22ReminderViewControllerC", "UILabel"]
+- ["10_45Project22ReminderViewControllerC", "UIStepper"]
+- ["10_45Project22ReminderViewControllerC", "UIStoryboardSegue"]
+- ["10_45Project22ReminderViewControllerC", "dayLabel"]
+- ["10_45Project22ReminderViewControllerC", "daysFromNow"]
+- ["10_45Project22ReminderViewControllerC", "daysStepped"]
+- ["10_45Project22ReminderViewControllerC", "defaultDays"]
+- ["10_45Project22ReminderViewControllerC", "deinit"]
+- ["10_45Project22ReminderViewControllerC", "didReceiveMemoryWarning"]
+- ["10_45Project22ReminderViewControllerC", "editTask"]
+- ["10_45Project22ReminderViewControllerC", "init"]
+- ["10_45Project22ReminderViewControllerC", "managedContext"]
+- ["10_45Project22ReminderViewControllerC", "prepare"]
+- !private ["10_45Project22ReminderViewControllerC", "print"]
+- ["10_45Project22ReminderViewControllerC", "reminderDate"]
+- ["10_45Project22ReminderViewControllerC", "stepper"]
+- ["10_45Project22ReminderViewControllerC", "taskDesc"]
+- ["10_45Project22ReminderViewControllerC", "time"]
+- ["10_45Project22ReminderViewControllerC", "urgency"]
+- ["10_45Project22ReminderViewControllerC", "viewDidAppear"]
+- ["10_45Project22ReminderViewControllerC", "viewDidLoad"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So29UIAccessibilityIdentificationP", "value"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So12UIAppearanceP", "value"]
+- ["So21UIAppearanceContainerP", "Date"]
+- !private ["So21UIAppearanceContainerP", "Double"]
+- !private ["So21UIAppearanceContainerP", "Int"]
+- !private ["So21UIAppearanceContainerP", "NSCalendar"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "dayLabel"]
+- !private ["So21UIAppearanceContainerP", "daysFromNow"]
+- !private ["So21UIAppearanceContainerP", "defaultDays"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "editTask"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "managedContext"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "reminderDate"]
+- !private ["So21UIAppearanceContainerP", "stepper"]
+- !private ["So21UIAppearanceContainerP", "taskDesc"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "time"]
+- !private ["So21UIAppearanceContainerP", "urgency"]
+- !private ["So21UIAppearanceContainerP", "value"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", "Date"]
+- !private ["So18UIContentContainerP", "Double"]
+- !private ["So18UIContentContainerP", "Int"]
+- !private ["So18UIContentContainerP", "NSCalendar"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "dayLabel"]
+- !private ["So18UIContentContainerP", "daysFromNow"]
+- !private ["So18UIContentContainerP", "defaultDays"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "editTask"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "managedContext"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "reminderDate"]
+- !private ["So18UIContentContainerP", "stepper"]
+- !private ["So18UIContentContainerP", "taskDesc"]
+- !private ["So18UIContentContainerP", "time"]
+- !private ["So18UIContentContainerP", "urgency"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "value"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So17UICoordinateSpaceP", "value"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So13UIDynamicItemP", "value"]
+- ["So18UIFocusEnvironmentP", "Date"]
+- !private ["So18UIFocusEnvironmentP", "Double"]
+- !private ["So18UIFocusEnvironmentP", "Int"]
+- !private ["So18UIFocusEnvironmentP", "NSCalendar"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "dayLabel"]
+- !private ["So18UIFocusEnvironmentP", "daysFromNow"]
+- !private ["So18UIFocusEnvironmentP", "defaultDays"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "editTask"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "managedContext"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "reminderDate"]
+- !private ["So18UIFocusEnvironmentP", "stepper"]
+- !private ["So18UIFocusEnvironmentP", "taskDesc"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "time"]
+- !private ["So18UIFocusEnvironmentP", "urgency"]
+- !private ["So18UIFocusEnvironmentP", "value"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So11UIFocusItemP", "value"]
+- !private ["So7UILabelC", "text"]
+- ["So30UIPasteConfigurationSupportingP", "Date"]
+- !private ["So30UIPasteConfigurationSupportingP", "Double"]
+- !private ["So30UIPasteConfigurationSupportingP", "Int"]
+- !private ["So30UIPasteConfigurationSupportingP", "NSCalendar"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "dayLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "daysFromNow"]
+- !private ["So30UIPasteConfigurationSupportingP", "defaultDays"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "editTask"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "managedContext"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "reminderDate"]
+- !private ["So30UIPasteConfigurationSupportingP", "stepper"]
+- !private ["So30UIPasteConfigurationSupportingP", "taskDesc"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "time"]
+- !private ["So30UIPasteConfigurationSupportingP", "urgency"]
+- !private ["So30UIPasteConfigurationSupportingP", "value"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "Date"]
+- !private ["So11UIResponderC", "Double"]
+- ["So11UIResponderC", "Float"]
+- ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", "NSCalendar"]
+- ["So11UIResponderC", "NSManagedObjectContext"]
+- !private ["So11UIResponderC", "NewItem"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UIStepper"]
+- ["So11UIResponderC", "UIStoryboardSegue"]
+- ["So11UIResponderC", "dayLabel"]
+- ["So11UIResponderC", "daysFromNow"]
+- ["So11UIResponderC", "daysStepped"]
+- ["So11UIResponderC", "defaultDays"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "editTask"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "managedContext"]
+- ["So11UIResponderC", "prepare"]
+- !private ["So11UIResponderC", "print"]
+- ["So11UIResponderC", "reminderDate"]
+- ["So11UIResponderC", "stepper"]
+- ["So11UIResponderC", "taskDesc"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "time"]
+- ["So11UIResponderC", "urgency"]
+- !private ["So11UIResponderC", "value"]
+- ["So11UIResponderC", "viewDidAppear"]
+- ["So11UIResponderC", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", "Date"]
+- !private ["So30UIResponderStandardEditActionsP", "Double"]
+- !private ["So30UIResponderStandardEditActionsP", "Int"]
+- !private ["So30UIResponderStandardEditActionsP", "NSCalendar"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "dayLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "daysFromNow"]
+- !private ["So30UIResponderStandardEditActionsP", "defaultDays"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "editTask"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "managedContext"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "reminderDate"]
+- !private ["So30UIResponderStandardEditActionsP", "stepper"]
+- !private ["So30UIResponderStandardEditActionsP", "taskDesc"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "time"]
+- !private ["So30UIResponderStandardEditActionsP", "urgency"]
+- !private ["So30UIResponderStandardEditActionsP", "value"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So16UIStateRestoringP", "Date"]
+- !private ["So16UIStateRestoringP", "Double"]
+- !private ["So16UIStateRestoringP", "Int"]
+- !private ["So16UIStateRestoringP", "NSCalendar"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "dayLabel"]
+- !private ["So16UIStateRestoringP", "daysFromNow"]
+- !private ["So16UIStateRestoringP", "defaultDays"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "editTask"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "managedContext"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "reminderDate"]
+- !private ["So16UIStateRestoringP", "stepper"]
+- !private ["So16UIStateRestoringP", "taskDesc"]
+- !private ["So16UIStateRestoringP", "time"]
+- !private ["So16UIStateRestoringP", "urgency"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So9UIStepperC", "value"]
+- !private ["So17UIStoryboardSegueC", "destination"]
+- ["So18UITraitEnvironmentP", "Date"]
+- !private ["So18UITraitEnvironmentP", "Double"]
+- !private ["So18UITraitEnvironmentP", "Int"]
+- !private ["So18UITraitEnvironmentP", "NSCalendar"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "dayLabel"]
+- !private ["So18UITraitEnvironmentP", "daysFromNow"]
+- !private ["So18UITraitEnvironmentP", "defaultDays"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "editTask"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "managedContext"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "reminderDate"]
+- !private ["So18UITraitEnvironmentP", "stepper"]
+- !private ["So18UITraitEnvironmentP", "taskDesc"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "time"]
+- !private ["So18UITraitEnvironmentP", "urgency"]
+- !private ["So18UITraitEnvironmentP", "value"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So6UIViewC", "text"]
+- !private ["So6UIViewC", "value"]
+- ["So16UIViewControllerC", "Bool"]
+- ["So16UIViewControllerC", "Date"]
+- !private ["So16UIViewControllerC", "Double"]
+- ["So16UIViewControllerC", "Float"]
+- ["So16UIViewControllerC", "Int"]
+- !private ["So16UIViewControllerC", "NSCalendar"]
+- ["So16UIViewControllerC", "NSManagedObjectContext"]
+- !private ["So16UIViewControllerC", "NewItem"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UIStepper"]
+- ["So16UIViewControllerC", "UIStoryboardSegue"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "dayLabel"]
+- ["So16UIViewControllerC", "daysFromNow"]
+- ["So16UIViewControllerC", "daysStepped"]
+- ["So16UIViewControllerC", "defaultDays"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "editTask"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "managedContext"]
+- ["So16UIViewControllerC", "prepare"]
+- !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "reminderDate"]
+- ["So16UIViewControllerC", "stepper"]
+- ["So16UIViewControllerC", "taskDesc"]
+- ["So16UIViewControllerC", "time"]
+- ["So16UIViewControllerC", "urgency"]
+- ["So16UIViewControllerC", "viewDidAppear"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "value"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "current"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSCalendar"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dayLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "daysFromNow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultDays"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "editTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "managedContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reminderDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stepper"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "taskDesc"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "time"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "urgency"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation14_MutableBoxingP", "dateComponents"]
+- !private ["10Foundation14_MutableBoxingP", "day"]
+- !private ["10Foundation14_MutableBoxingP", "startOfDay"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "dateComponents"]
+- !private ["s21_ObjectiveCBridgeableP", "day"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "startOfDay"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "10Foundation8CalendarV"
+- "s10CollectionP"
+- "s10ComparableP"
+- !private "10Foundation8CalendarV9ComponentO"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DateV"
+- !private "10Foundation14DateComponentsV"
+- "s9DecodableP"
+- !private "Sd"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "s13FloatingPointP"
+- "s8HashableP"
+- !private "Si"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "So10NSCalendarC"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "10_45Project7NewItemC"
+- !private "s7NumericP"
+- "s26RangeReplaceableCollectionP"
+- "10Foundation20ReferenceConvertibleP"
+- "10_45Project22ReminderViewControllerC"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So9UIStepperC"
+- !private "So17UIStoryboardSegueC"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s18_BitwiseOperationsP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation14_MutableBoxingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "ad195885d92c982965860508c312e451"

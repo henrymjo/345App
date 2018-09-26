@@ -2,7 +2,7 @@
 //  Task+CoreDataProperties.swift
 //  
 //
-//  Created by Ryan Spear on 9/18/18.
+//  Created by Ryan Spear on 9/26/18.
 //
 //  This file was automatically generated and should not be edited.
 //

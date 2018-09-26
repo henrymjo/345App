@@ -276,9 +276,25 @@ SWIFT_CLASS("_TtC10_45Project22ReminderViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dayLabel;
 @property (nonatomic, weak) IBOutlet UIStepper * _Null_unspecified stepper;
 - (void)viewDidLoad;
+/// Finds how many days from now the date was previously set to.
+/// If it hasn’t already been set the days from now will be 0, the default value to show.
+/// Also give the stepper value that number of days, otherwise changing the days will reset back to 0.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+/// The day has been increased/decreased using the buttons.
+/// Update the the label and the reminderDate.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)daysStepped:(id _Nonnull)sender;
+/// Prepare for segue back to newItem.
+/// Update all variables.
+/// *
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -302,14 +318,34 @@ SWIFT_CLASS_NAMED("Task")
 
 @class UISlider;
 
+/// Class controls the updating and presenting of the time taken to perform the given task.
+/// Uses a scrollWheel to adjust time.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 @interface TimeViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified scrollWheel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified hoursIcon;
+/// Called when scroll wheel is moved.
+/// sets the time and displays the number moved to.
+/// @param sender the scrollWheel
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (IBAction)scrolled:(UISlider * _Nonnull)sender;
-- (IBAction)dateChanged:(id _Nonnull)sender;
+/// sets time to display the previously chosen time when entering back into the controller.
+/// <ul>
+///   <li>
+///   </li>
+/// </ul>
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+/// Only one segue to prepare for out of this controller, back to the newItem controller.
+/// Update all variables and perform segue.
+/// *
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -339,6 +375,14 @@ SWIFT_CLASS("_TtC10_45Project17UrgencyController")
 @end
 
 
+/// Three classes identical other than a unique identifier is associated with each
+/// <ul>
+///   <li>
+///     class. This identifier is used to adjust backgrounds later on.
+///   </li>
+///   <li>
+///   </li>
+/// </ul>
 SWIFT_CLASS("_TtC10_45Project8highCell")
 @interface highCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified taskName;
@@ -367,7 +411,7 @@ SWIFT_CLASS("_TtC10_45Project10mediumCell")
 SWIFT_CLASS("_TtC10_45Project18taskListController")
 @interface taskListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
-/// add task button is clicked, perform with identifier “newTask”
+/// add task button is clicked, perform segue with identifier “newTask”
 /// *
 - (IBAction)addTask:(UIButton * _Nonnull)sender;
 /// Sets the number of rows in the tableView to the number of tasks in our coreData storage.

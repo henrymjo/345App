@@ -1,0 +1,529 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TimeViewController"
+provides-nominal:
+- "10_45Project18TimeViewControllerC"
+provides-member:
+- ["10_45Project18TimeViewControllerC", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "hoursIcon"
+- "prepare"
+- "scrollWheel"
+- "scrolled"
+- "viewDidLoad"
+depends-top-level:
+- !private "*"
+- !private "/"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Date"
+- "Float"
+- "NSManagedObjectContext"
+- !private "NewItem"
+- "StringLiteralType"
+- "TimeViewController"
+- "UILabel"
+- "UISlider"
+- "UIStoryboardSegue"
+- "UIViewController"
+- !private "round"
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["So15CALayerDelegateP", "value"]
+- ["s7CVarArgP", "Date"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "destination"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "editTask"]
+- !private ["s7CVarArgP", "hoursIcon"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "managedContext"]
+- !private ["s7CVarArgP", "reminderDate"]
+- !private ["s7CVarArgP", "round"]
+- !private ["s7CVarArgP", "step"]
+- !private ["s7CVarArgP", "taskDesc"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "time"]
+- !private ["s7CVarArgP", "urgency"]
+- !private ["s7CVarArgP", "value"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "Date"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "destination"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "editTask"]
+- !private ["s28CustomDebugStringConvertibleP", "hoursIcon"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "managedContext"]
+- !private ["s28CustomDebugStringConvertibleP", "reminderDate"]
+- !private ["s28CustomDebugStringConvertibleP", "round"]
+- !private ["s28CustomDebugStringConvertibleP", "step"]
+- !private ["s28CustomDebugStringConvertibleP", "taskDesc"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "time"]
+- !private ["s28CustomDebugStringConvertibleP", "urgency"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "Date"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "destination"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "editTask"]
+- !private ["s23CustomStringConvertibleP", "hoursIcon"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "managedContext"]
+- !private ["s23CustomStringConvertibleP", "reminderDate"]
+- !private ["s23CustomStringConvertibleP", "round"]
+- !private ["s23CustomStringConvertibleP", "step"]
+- !private ["s23CustomStringConvertibleP", "taskDesc"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "time"]
+- !private ["s23CustomStringConvertibleP", "urgency"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["10Foundation4DateV", "init"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "Date"]
+- ["s9EquatableP", ""]
+- !private ["s9EquatableP", "destination"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "editTask"]
+- !private ["s9EquatableP", "hoursIcon"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "managedContext"]
+- !private ["s9EquatableP", "reminderDate"]
+- !private ["s9EquatableP", "round"]
+- !private ["s9EquatableP", "step"]
+- !private ["s9EquatableP", "taskDesc"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "time"]
+- !private ["s9EquatableP", "urgency"]
+- !private ["s9EquatableP", "value"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "Date"]
+- ["s8HashableP", ""]
+- !private ["s8HashableP", "destination"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "editTask"]
+- !private ["s8HashableP", "hoursIcon"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "managedContext"]
+- !private ["s8HashableP", "reminderDate"]
+- !private ["s8HashableP", "round"]
+- !private ["s8HashableP", "step"]
+- !private ["s8HashableP", "taskDesc"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "time"]
+- !private ["s8HashableP", "urgency"]
+- !private ["s8HashableP", "value"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "Date"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "editTask"]
+- !private ["So8NSCodingP", "hoursIcon"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "managedContext"]
+- !private ["So8NSCodingP", "reminderDate"]
+- !private ["So8NSCodingP", "round"]
+- !private ["So8NSCodingP", "step"]
+- !private ["So8NSCodingP", "taskDesc"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "time"]
+- !private ["So8NSCodingP", "urgency"]
+- !private ["So8NSCodingP", "value"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", "Date"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "editTask"]
+- !private ["So26NSExtensionRequestHandlingP", "hoursIcon"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "managedContext"]
+- !private ["So26NSExtensionRequestHandlingP", "reminderDate"]
+- !private ["So26NSExtensionRequestHandlingP", "round"]
+- !private ["So26NSExtensionRequestHandlingP", "step"]
+- !private ["So26NSExtensionRequestHandlingP", "taskDesc"]
+- !private ["So26NSExtensionRequestHandlingP", "time"]
+- !private ["So26NSExtensionRequestHandlingP", "urgency"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "Float"]
+- ["So8NSObjectC", "NSManagedObjectContext"]
+- !private ["So8NSObjectC", "NewItem"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UISlider"]
+- ["So8NSObjectC", "UIStoryboardSegue"]
+- !private ["So8NSObjectC", "destination"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "editTask"]
+- ["So8NSObjectC", "hoursIcon"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "managedContext"]
+- ["So8NSObjectC", "prepare"]
+- ["So8NSObjectC", "reminderDate"]
+- !private ["So8NSObjectC", "round"]
+- ["So8NSObjectC", "scrollWheel"]
+- ["So8NSObjectC", "scrolled"]
+- ["So8NSObjectC", "step"]
+- ["So8NSObjectC", "taskDesc"]
+- !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "time"]
+- ["So8NSObjectC", "urgency"]
+- !private ["So8NSObjectC", "value"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So16NSObjectProtocolP", "Date"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "destination"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "editTask"]
+- !private ["So16NSObjectProtocolP", "hoursIcon"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "managedContext"]
+- !private ["So16NSObjectProtocolP", "reminderDate"]
+- !private ["So16NSObjectProtocolP", "round"]
+- !private ["So16NSObjectProtocolP", "step"]
+- !private ["So16NSObjectProtocolP", "taskDesc"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "time"]
+- !private ["So16NSObjectProtocolP", "urgency"]
+- !private ["So16NSObjectProtocolP", "value"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["10_45Project7NewItemC", "editTask"]
+- !private ["10_45Project7NewItemC", "managedContext"]
+- !private ["10_45Project7NewItemC", "reminderDate"]
+- !private ["10_45Project7NewItemC", "taskDesc"]
+- !private ["10_45Project7NewItemC", "time"]
+- !private ["10_45Project7NewItemC", "urgency"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["s8SequenceP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["10_45Project18TimeViewControllerC", "Date"]
+- ["10_45Project18TimeViewControllerC", "Float"]
+- ["10_45Project18TimeViewControllerC", "NSManagedObjectContext"]
+- !private ["10_45Project18TimeViewControllerC", "NewItem"]
+- ["10_45Project18TimeViewControllerC", "UILabel"]
+- ["10_45Project18TimeViewControllerC", "UISlider"]
+- ["10_45Project18TimeViewControllerC", "UIStoryboardSegue"]
+- ["10_45Project18TimeViewControllerC", "deinit"]
+- ["10_45Project18TimeViewControllerC", "didReceiveMemoryWarning"]
+- ["10_45Project18TimeViewControllerC", "editTask"]
+- ["10_45Project18TimeViewControllerC", "hoursIcon"]
+- ["10_45Project18TimeViewControllerC", "init"]
+- ["10_45Project18TimeViewControllerC", "managedContext"]
+- ["10_45Project18TimeViewControllerC", "prepare"]
+- ["10_45Project18TimeViewControllerC", "reminderDate"]
+- !private ["10_45Project18TimeViewControllerC", "round"]
+- ["10_45Project18TimeViewControllerC", "scrollWheel"]
+- ["10_45Project18TimeViewControllerC", "scrolled"]
+- ["10_45Project18TimeViewControllerC", "step"]
+- ["10_45Project18TimeViewControllerC", "taskDesc"]
+- ["10_45Project18TimeViewControllerC", "time"]
+- ["10_45Project18TimeViewControllerC", "urgency"]
+- ["10_45Project18TimeViewControllerC", "viewDidLoad"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So29UIAccessibilityIdentificationP", "value"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So12UIAppearanceP", "value"]
+- ["So21UIAppearanceContainerP", "Date"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "editTask"]
+- !private ["So21UIAppearanceContainerP", "hoursIcon"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "managedContext"]
+- !private ["So21UIAppearanceContainerP", "reminderDate"]
+- !private ["So21UIAppearanceContainerP", "round"]
+- !private ["So21UIAppearanceContainerP", "step"]
+- !private ["So21UIAppearanceContainerP", "taskDesc"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "time"]
+- !private ["So21UIAppearanceContainerP", "urgency"]
+- !private ["So21UIAppearanceContainerP", "value"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", "Date"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "editTask"]
+- !private ["So18UIContentContainerP", "hoursIcon"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "managedContext"]
+- !private ["So18UIContentContainerP", "reminderDate"]
+- !private ["So18UIContentContainerP", "round"]
+- !private ["So18UIContentContainerP", "step"]
+- !private ["So18UIContentContainerP", "taskDesc"]
+- !private ["So18UIContentContainerP", "time"]
+- !private ["So18UIContentContainerP", "urgency"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "value"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So17UICoordinateSpaceP", "value"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So13UIDynamicItemP", "value"]
+- ["So18UIFocusEnvironmentP", "Date"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "editTask"]
+- !private ["So18UIFocusEnvironmentP", "hoursIcon"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "managedContext"]
+- !private ["So18UIFocusEnvironmentP", "reminderDate"]
+- !private ["So18UIFocusEnvironmentP", "round"]
+- !private ["So18UIFocusEnvironmentP", "step"]
+- !private ["So18UIFocusEnvironmentP", "taskDesc"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "time"]
+- !private ["So18UIFocusEnvironmentP", "urgency"]
+- !private ["So18UIFocusEnvironmentP", "value"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So11UIFocusItemP", "value"]
+- !private ["So7UILabelC", "text"]
+- ["So30UIPasteConfigurationSupportingP", "Date"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "editTask"]
+- !private ["So30UIPasteConfigurationSupportingP", "hoursIcon"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "managedContext"]
+- !private ["So30UIPasteConfigurationSupportingP", "reminderDate"]
+- !private ["So30UIPasteConfigurationSupportingP", "round"]
+- !private ["So30UIPasteConfigurationSupportingP", "step"]
+- !private ["So30UIPasteConfigurationSupportingP", "taskDesc"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "time"]
+- !private ["So30UIPasteConfigurationSupportingP", "urgency"]
+- !private ["So30UIPasteConfigurationSupportingP", "value"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Date"]
+- ["So11UIResponderC", "Float"]
+- ["So11UIResponderC", "NSManagedObjectContext"]
+- !private ["So11UIResponderC", "NewItem"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UISlider"]
+- ["So11UIResponderC", "UIStoryboardSegue"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "editTask"]
+- ["So11UIResponderC", "hoursIcon"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "managedContext"]
+- ["So11UIResponderC", "prepare"]
+- ["So11UIResponderC", "reminderDate"]
+- !private ["So11UIResponderC", "round"]
+- ["So11UIResponderC", "scrollWheel"]
+- ["So11UIResponderC", "scrolled"]
+- ["So11UIResponderC", "step"]
+- ["So11UIResponderC", "taskDesc"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "time"]
+- ["So11UIResponderC", "urgency"]
+- !private ["So11UIResponderC", "value"]
+- ["So11UIResponderC", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", "Date"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "editTask"]
+- !private ["So30UIResponderStandardEditActionsP", "hoursIcon"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "managedContext"]
+- !private ["So30UIResponderStandardEditActionsP", "reminderDate"]
+- !private ["So30UIResponderStandardEditActionsP", "round"]
+- !private ["So30UIResponderStandardEditActionsP", "step"]
+- !private ["So30UIResponderStandardEditActionsP", "taskDesc"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "time"]
+- !private ["So30UIResponderStandardEditActionsP", "urgency"]
+- !private ["So30UIResponderStandardEditActionsP", "value"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So8UISliderC", "value"]
+- ["So16UIStateRestoringP", "Date"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "editTask"]
+- !private ["So16UIStateRestoringP", "hoursIcon"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "managedContext"]
+- !private ["So16UIStateRestoringP", "reminderDate"]
+- !private ["So16UIStateRestoringP", "round"]
+- !private ["So16UIStateRestoringP", "step"]
+- !private ["So16UIStateRestoringP", "taskDesc"]
+- !private ["So16UIStateRestoringP", "time"]
+- !private ["So16UIStateRestoringP", "urgency"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So17UIStoryboardSegueC", "destination"]
+- ["So18UITraitEnvironmentP", "Date"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "editTask"]
+- !private ["So18UITraitEnvironmentP", "hoursIcon"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "managedContext"]
+- !private ["So18UITraitEnvironmentP", "reminderDate"]
+- !private ["So18UITraitEnvironmentP", "round"]
+- !private ["So18UITraitEnvironmentP", "step"]
+- !private ["So18UITraitEnvironmentP", "taskDesc"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "time"]
+- !private ["So18UITraitEnvironmentP", "urgency"]
+- !private ["So18UITraitEnvironmentP", "value"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So6UIViewC", "text"]
+- !private ["So6UIViewC", "value"]
+- ["So16UIViewControllerC", "Date"]
+- ["So16UIViewControllerC", "Float"]
+- ["So16UIViewControllerC", "NSManagedObjectContext"]
+- !private ["So16UIViewControllerC", "NewItem"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UISlider"]
+- ["So16UIViewControllerC", "UIStoryboardSegue"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "editTask"]
+- ["So16UIViewControllerC", "hoursIcon"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "managedContext"]
+- ["So16UIViewControllerC", "prepare"]
+- ["So16UIViewControllerC", "reminderDate"]
+- !private ["So16UIViewControllerC", "round"]
+- ["So16UIViewControllerC", "scrollWheel"]
+- ["So16UIViewControllerC", "scrolled"]
+- ["So16UIViewControllerC", "step"]
+- ["So16UIViewControllerC", "taskDesc"]
+- ["So16UIViewControllerC", "time"]
+- ["So16UIViewControllerC", "urgency"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "value"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "editTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hoursIcon"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "managedContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reminderDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "round"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "step"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "taskDesc"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "time"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "urgency"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DateV"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "10_45Project7NewItemC"
+- "s26RangeReplaceableCollectionP"
+- "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "10_45Project18TimeViewControllerC"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So8UISliderC"
+- "So16UIStateRestoringP"
+- !private "So17UIStoryboardSegueC"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "687d3b6a0da114ffeeaa3fbcd66ec8e2"

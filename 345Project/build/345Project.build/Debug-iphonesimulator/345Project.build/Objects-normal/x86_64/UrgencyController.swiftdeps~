@@ -26,6 +26,7 @@ depends-top-level:
 - "UIButton"
 - "UIStoryboardSegue"
 - "UIViewController"
+- !private "UnicodeScalarType"
 - "UrgencyController"
 - !private "print"
 depends-member:

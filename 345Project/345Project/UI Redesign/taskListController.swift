@@ -20,7 +20,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var myTableView: UITableView! // tableView, centerpiece of this controller.
     
-    /** add task button is clicked, perform with identifier "newTask"
+    /** add task button is clicked, perform segue with identifier "newTask"
      **/
     @IBAction func addTask(_ sender: UIButton) {
         performSegue(withIdentifier: "newTask", sender: self)
@@ -79,7 +79,9 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         let taskName = task.title;
         cell.textLabel?.text = taskName;
         
-        
+        /** Default case is low urgency
+            Borders are added and coloured white as to make the cells look rounded
+        **/
         switch task.urgency {
         case "a":
             let cell = tableView.dequeueReusableCell(withIdentifier: "high") as! highCell
@@ -206,7 +208,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
                 }catch{
                     print("Delete failed: \(error)")
                 }
-                print("editing task at index: \(indexPath.row)")
             }
         break
         case "newTask":

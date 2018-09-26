@@ -57,7 +57,7 @@ class AlertCenter: NSObject{
     }
     
     /** adds the alert to the users device.
-      * Possibly make the identifier unique so we can delete reminders.
+      *
       * TODO: Change the alert date/time when a task date is edited.
      **/
     func addAlert(trigger: UNCalendarNotificationTrigger, content: UNMutableNotificationContent, identifier: String){
@@ -66,7 +66,8 @@ class AlertCenter: NSObject{
         
         center.add(request, withCompletionHandler: { (error) in
             if error != nil {
-                //something fucked up
+                //something went wrong
+                print("Error adding alert: \(String(describing: error))")
             }
         })
     }

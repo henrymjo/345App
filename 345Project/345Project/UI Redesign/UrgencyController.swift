@@ -50,7 +50,6 @@ class UrgencyController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editController = segue.destination as? NewItem
         editController?.taskDesc = taskDesc;
-        print("Set newItem.taskDesc = to: " + taskDesc);
         editController?.reminderDate = reminderDate;
         editController?.time = time;
         editController?.managedContext = managedContext

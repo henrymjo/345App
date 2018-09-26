@@ -12,8 +12,8 @@ import CoreData
 class ReminderViewController: UIViewController {
     
 
-    @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var dayLabel: UILabel! // Label displaying the currently chosen day
+    @IBOutlet weak var stepper: UIStepper! // The buttons used to increase/decrease days.
     
     var managedContext: NSManagedObjectContext!
     var editTask = false;
@@ -29,6 +29,10 @@ class ReminderViewController: UIViewController {
         
     }
     
+    /** Finds how many days from now the date was previously set to.
+        If it hasn't already been set the days from now will be 0, the default value to show.
+        Also give the stepper value that number of days, otherwise changing the days will reset back to 0.
+    **/
     override func viewDidAppear(_ animated: Bool) {
         let days = daysFromNow(reminderDate: reminderDate)
         dayLabel.text = "\(days)";
@@ -42,23 +46,33 @@ class ReminderViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /** The day has been increased/decreased using the buttons.
+        Update the the label and the reminderDate.
+    **/
     @IBAction func daysStepped(_ sender: Any) {
         dayLabel.text = "\(Int(stepper.value))"
         let numberOfSeconds = (stepper.value * 24 * 60 * 60)
         reminderDate = Date(timeIntervalSinceNow: numberOfSeconds)
     }
     
+    /** Prepare for segue back to newItem.
+        Update all variables.
+     **/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("passing back")
-        let homeController = segue.destination as? NewItem
-        homeController?.time = time;
-        homeController?.taskDesc = taskDesc;
-        homeController?.urgency = urgency;
-        homeController?.reminderDate = reminderDate;
-        homeController?.managedContext = managedContext
-        homeController?.editTask = editTask
+        let newItemController = segue.destination as? NewItem
+        newItemController?.time = time;
+        newItemController?.taskDesc = taskDesc;
+        newItemController?.urgency = urgency;
+        newItemController?.reminderDate = reminderDate;
+        newItemController?.managedContext = managedContext
+        newItemController?.editTask = editTask
     }
     
+    /** finds how many days from now reminderDate is.
+        Counts from both day's midnight as to not get middle of the day confusion.
+        @param reminderDate the date the reminder is set for.
+        @return Int the number of days the date is from now. 0 if the same day.
+    **/
     func daysFromNow(reminderDate: Date) -> Int{
         
         let currentDate = Date()

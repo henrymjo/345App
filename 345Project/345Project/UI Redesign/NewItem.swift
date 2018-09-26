@@ -42,8 +42,6 @@ class NewItem: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("task desc: " + taskDesc)
-        
         taskName.text = taskDesc;
         if(urgency == "a"){
             UrgencyButton.backgroundColor = UIColor.red
@@ -78,7 +76,6 @@ class NewItem: UIViewController {
         Saves all variables to CoreData as a Task. Or updates existing variables of a CoreData task.
     **/
     @IBAction func addNewTask(_ sender: Any) {
-        print("Task name: " + taskDesc)
         let task = Task(context: managedContext)
         task.title = taskDesc
         task.urgency = urgency
@@ -122,7 +119,7 @@ class NewItem: UIViewController {
             vc?.managedContext = managedContext
             vc?.editTask = editTask
         break
-        case "reminderIdentifier":
+        default:
             let vc = segue.destination as? ReminderViewController
             vc?.taskDesc = taskDesc
             vc?.urgency = urgency
@@ -130,12 +127,11 @@ class NewItem: UIViewController {
             vc?.reminderDate = reminderDate
             vc?.managedContext = managedContext
             vc?.editTask = editTask
-        break
-        default:
-            print("passing to table view")
         }
     }
     
+    /** Test if the date is not today.
+    **/
     func isFutureDate(date: Date) -> Bool{
         if(date.timeIntervalSinceNow > (60*60)*4){
             return true;

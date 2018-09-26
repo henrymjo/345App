@@ -12,8 +12,6 @@ class CustomCells: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +21,9 @@ class CustomCells: UIViewController {
 
 }
 
+/** Three classes identical other than a unique identifier is associated with each
+  * class. This identifier is used to adjust backgrounds later on.
+ **/
 class highCell: UITableViewCell{
     @IBOutlet weak var taskName: UILabel!
     

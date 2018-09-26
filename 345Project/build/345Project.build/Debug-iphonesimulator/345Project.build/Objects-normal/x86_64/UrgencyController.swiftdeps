@@ -13,7 +13,6 @@ provides-dynamic-lookup:
 - "prepare"
 - "viewDidLoad"
 depends-top-level:
-- !private "+"
 - !private "=="
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
@@ -26,8 +25,8 @@ depends-top-level:
 - "UIButton"
 - "UIStoryboardSegue"
 - "UIViewController"
+- !private "UnicodeScalarType"
 - "UrgencyController"
-- !private "print"
 depends-member:
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
@@ -41,7 +40,6 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "managedContext"]
 - !private ["s7CVarArgP", "performSegue"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "reminderDate"]
 - !private ["s7CVarArgP", "taskDesc"]
 - !private ["s7CVarArgP", "time"]
@@ -58,7 +56,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "managedContext"]
 - !private ["s28CustomDebugStringConvertibleP", "performSegue"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "reminderDate"]
 - !private ["s28CustomDebugStringConvertibleP", "taskDesc"]
 - !private ["s28CustomDebugStringConvertibleP", "time"]
@@ -78,7 +75,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "managedContext"]
 - !private ["s23CustomStringConvertibleP", "performSegue"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "reminderDate"]
 - !private ["s23CustomStringConvertibleP", "taskDesc"]
 - !private ["s23CustomStringConvertibleP", "time"]
@@ -99,7 +95,6 @@ depends-member:
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "managedContext"]
 - !private ["s9EquatableP", "performSegue"]
-- !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "reminderDate"]
 - !private ["s9EquatableP", "taskDesc"]
 - !private ["s9EquatableP", "time"]
@@ -119,7 +114,6 @@ depends-member:
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "managedContext"]
 - !private ["s8HashableP", "performSegue"]
-- !private ["s8HashableP", "print"]
 - !private ["s8HashableP", "reminderDate"]
 - !private ["s8HashableP", "taskDesc"]
 - !private ["s8HashableP", "time"]
@@ -135,7 +129,6 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "managedContext"]
 - !private ["So8NSCodingP", "performSegue"]
-- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "reminderDate"]
 - !private ["So8NSCodingP", "taskDesc"]
 - !private ["So8NSCodingP", "time"]
@@ -148,7 +141,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "managedContext"]
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
-- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "reminderDate"]
 - !private ["So26NSExtensionRequestHandlingP", "taskDesc"]
 - !private ["So26NSExtensionRequestHandlingP", "time"]
@@ -171,7 +163,6 @@ depends-member:
 - ["So8NSObjectC", "managedContext"]
 - !private ["So8NSObjectC", "performSegue"]
 - ["So8NSObjectC", "prepare"]
-- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "reminderDate"]
 - ["So8NSObjectC", "taskDesc"]
 - ["So8NSObjectC", "time"]
@@ -186,7 +177,6 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "managedContext"]
 - !private ["So16NSObjectProtocolP", "performSegue"]
-- !private ["So16NSObjectProtocolP", "print"]
 - !private ["So16NSObjectProtocolP", "reminderDate"]
 - !private ["So16NSObjectProtocolP", "taskDesc"]
 - !private ["So16NSObjectProtocolP", "time"]
@@ -212,7 +202,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "managedContext"]
 - !private ["So21UIAppearanceContainerP", "performSegue"]
-- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "reminderDate"]
 - !private ["So21UIAppearanceContainerP", "taskDesc"]
 - !private ["So21UIAppearanceContainerP", "time"]
@@ -225,7 +214,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "managedContext"]
 - !private ["So18UIContentContainerP", "performSegue"]
-- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "reminderDate"]
 - !private ["So18UIContentContainerP", "taskDesc"]
 - !private ["So18UIContentContainerP", "time"]
@@ -238,7 +226,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "managedContext"]
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
-- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "reminderDate"]
 - !private ["So18UIFocusEnvironmentP", "taskDesc"]
 - !private ["So18UIFocusEnvironmentP", "time"]
@@ -251,7 +238,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "managedContext"]
 - !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
-- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "reminderDate"]
 - !private ["So30UIPasteConfigurationSupportingP", "taskDesc"]
 - !private ["So30UIPasteConfigurationSupportingP", "time"]
@@ -272,7 +258,6 @@ depends-member:
 - ["So11UIResponderC", "managedContext"]
 - !private ["So11UIResponderC", "performSegue"]
 - ["So11UIResponderC", "prepare"]
-- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "reminderDate"]
 - ["So11UIResponderC", "taskDesc"]
 - ["So11UIResponderC", "time"]
@@ -285,7 +270,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "managedContext"]
 - !private ["So30UIResponderStandardEditActionsP", "performSegue"]
-- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "reminderDate"]
 - !private ["So30UIResponderStandardEditActionsP", "taskDesc"]
 - !private ["So30UIResponderStandardEditActionsP", "time"]
@@ -298,7 +282,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "managedContext"]
 - !private ["So16UIStateRestoringP", "performSegue"]
-- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "reminderDate"]
 - !private ["So16UIStateRestoringP", "taskDesc"]
 - !private ["So16UIStateRestoringP", "time"]
@@ -313,7 +296,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "managedContext"]
 - !private ["So18UITraitEnvironmentP", "performSegue"]
-- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "reminderDate"]
 - !private ["So18UITraitEnvironmentP", "taskDesc"]
 - !private ["So18UITraitEnvironmentP", "time"]
@@ -335,7 +317,6 @@ depends-member:
 - ["So16UIViewControllerC", "managedContext"]
 - !private ["So16UIViewControllerC", "performSegue"]
 - ["So16UIViewControllerC", "prepare"]
-- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "reminderDate"]
 - ["So16UIViewControllerC", "taskDesc"]
 - ["So16UIViewControllerC", "time"]
@@ -357,7 +338,6 @@ depends-member:
 - ["10_45Project17UrgencyControllerC", "managedContext"]
 - !private ["10_45Project17UrgencyControllerC", "performSegue"]
 - ["10_45Project17UrgencyControllerC", "prepare"]
-- !private ["10_45Project17UrgencyControllerC", "print"]
 - ["10_45Project17UrgencyControllerC", "reminderDate"]
 - ["10_45Project17UrgencyControllerC", "taskDesc"]
 - ["10_45Project17UrgencyControllerC", "time"]
@@ -378,7 +358,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "managedContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reminderDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "taskDesc"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "time"]
