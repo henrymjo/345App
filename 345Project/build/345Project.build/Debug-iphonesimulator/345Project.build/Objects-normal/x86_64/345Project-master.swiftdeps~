@@ -1,8 +1,8 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "40679c5c9aba18ebb3eaaf215d5726d0"
-build_time: [1537922474, 146673000]
+build_time: [1537922654, 791887000]
 inputs:
-  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/AlertCenter.swift": [1537921589, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/AlertCenter.swift": [1537922610, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/ReminderViewController.swift": [1537922277, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/UrgencyController.swift": [1537922333, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/NewItem.swift": [1537922463, 0]
@@ -10,7 +10,7 @@ inputs:
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/Core Data/CoreDataStack.swift": [1537919354, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/taskListController.swift": [1537922319, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/AppDelegate.swift": [1537919354, 0]
-  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/CustomCells.swift": [1537922186, 0]
+  "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/CustomCells.swift": [1537922643, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/345Project/UI Redesign/TimeViewController.swift": [1537922291, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/build/345Project.build/Debug-iphonesimulator/345Project.build/DerivedSources/CoreDataGenerated/Tasks/Task+CoreDataClass.swift": [1537919422, 0]
   "/home/cshome/r/rspear/Documents/GitHub/345App/345Project/build/345Project.build/Debug-iphonesimulator/345Project.build/DerivedSources/CoreDataGenerated/Tasks/Task+CoreDataProperties.swift": [1537919423, 0]
