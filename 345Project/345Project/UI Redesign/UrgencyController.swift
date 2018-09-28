@@ -19,6 +19,10 @@ class UrgencyController: UIViewController {
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 1.0;  // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
 
+    @IBOutlet weak var highButton: UIButton!
+    @IBOutlet weak var medButton: UIButton!
+    @IBOutlet weak var lowButton: UIButton!
+    @IBOutlet weak var background: UIView!
     /** All three of these functions are almost the same.
         If a button is pressed, perform a segue using that buttons identifier.
      **/
@@ -36,6 +40,7 @@ class UrgencyController: UIViewController {
     
     /** Load the view **/
     override func viewDidLoad() {
+        checkForNightMode()
         super.viewDidLoad()
     }
 
@@ -64,6 +69,21 @@ class UrgencyController: UIViewController {
         } else if(segue.identifier == "low"){
             editController?.urgency = "c"
             // set urgency to low and set colour to green
+        }
+    }
+    
+    func checkForNightMode(){
+        if(UserDefaults.standard.integer(forKey: "mode") == 1){
+            background.backgroundColor = UIColor.black
+            highButton.backgroundColor = UIColor.gray
+            medButton.backgroundColor = UIColor.gray
+            lowButton.backgroundColor = UIColor.gray
+            
+        } else {
+            background.backgroundColor = UIColor.white
+            highButton.backgroundColor = UIColor.red
+            medButton.backgroundColor = UIColor.yellow
+            lowButton.backgroundColor = UIColor.green
         }
     }
 

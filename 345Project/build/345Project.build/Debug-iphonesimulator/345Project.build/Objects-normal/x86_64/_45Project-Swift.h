@@ -223,12 +223,14 @@ SWIFT_CLASS("_TtC10_45Project11CustomCells")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
 @class UIButton;
 @class UITextField;
 @class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC10_45Project7NewItem")
 @interface NewItem : UIViewController
+@property (nonatomic, strong) IBOutlet UIView * _Null_unspecified background;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified UrgencyButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified ReminderButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified TimeButton;
@@ -275,6 +277,7 @@ SWIFT_CLASS("_TtC10_45Project22ReminderViewController")
 @interface ReminderViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dayLabel;
 @property (nonatomic, weak) IBOutlet UIStepper * _Null_unspecified stepper;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified confirmButton;
 - (void)viewDidLoad;
 /// Finds how many days from now the date was previously set to.
 /// If it hasn’t already been set the days from now will be 0, the default value to show.
@@ -326,6 +329,7 @@ SWIFT_CLASS_NAMED("Task")
 /// </ul>
 SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 @interface TimeViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified confirmButton;
 @property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified scrollWheel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified hoursIcon;
 /// Called when scroll wheel is moved.
@@ -354,6 +358,10 @@ SWIFT_CLASS("_TtC10_45Project18TimeViewController")
 
 SWIFT_CLASS("_TtC10_45Project17UrgencyController")
 @interface UrgencyController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified highButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified medButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified lowButton;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified background;
 /// All three of these functions are almost the same.
 /// If a button is pressed, perform a segue using that buttons identifier.
 /// *
@@ -411,12 +419,16 @@ SWIFT_CLASS("_TtC10_45Project10mediumCell")
 SWIFT_CLASS("_TtC10_45Project18taskListController")
 @interface taskListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified myTableView;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified background;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified newTaskButton;
 /// add task button is clicked, perform segue with identifier “newTask”
 /// *
 - (IBAction)addTask:(UIButton * _Nonnull)sender;
 /// Sets the number of rows in the tableView to the number of tasks in our coreData storage.
 /// *
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)viewDidAppear:(BOOL)animated;
+- (IBAction)nightMode:(UIButton * _Nonnull)sender;
 /// This goes through each tableViewCell and returns the height of each cell by looking at the index
 /// of the task and getting its ‘time’ value. The bigger the time, the taller the cell.
 /// \code
@@ -462,7 +474,6 @@ SWIFT_CLASS("_TtC10_45Project18taskListController")
 /// Once view did appear, reload data.
 /// Also request to send alerts if not done so already.
 /// *
-- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 /// Two possible segues from this controller.
 /// We either want to create a new item or edit an existing item.

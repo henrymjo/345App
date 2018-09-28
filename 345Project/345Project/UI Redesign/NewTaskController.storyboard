@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-6N-lIU" userLabel="Background">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iB-6z-TgA">
+                                        <rect key="frame" x="18" y="8" width="122" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Colourblind mode"/>
+                                        <connections>
+                                            <action selector="nightMode:" destination="3OL-xa-gEv" eventType="touchUpInside" id="VIH-PL-M1A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UFW-q6-Qxl">
                                 <rect key="frame" x="16" y="110" width="343" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,7 +128,7 @@
                                     <outlet property="delegate" destination="3OL-xa-gEv" id="ibt-1I-ynO"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-Uc-o8w">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-Uc-o8w" userLabel="New Task">
                                 <rect key="frame" x="289" y="32" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Tap to create a new task" label="New Task">
@@ -136,15 +151,21 @@
                             <constraint firstItem="851-QJ-rxa" firstAttribute="trailing" secondItem="UFW-q6-Qxl" secondAttribute="trailing" constant="16" id="1uq-GP-o76"/>
                             <constraint firstItem="UFW-q6-Qxl" firstAttribute="leading" secondItem="851-QJ-rxa" secondAttribute="leading" constant="16" id="3El-vH-NBv"/>
                             <constraint firstItem="eLk-Uc-o8w" firstAttribute="top" secondItem="851-QJ-rxa" secondAttribute="top" constant="12" id="7PB-lV-SAW"/>
+                            <constraint firstItem="fpN-6N-lIU" firstAttribute="top" secondItem="851-QJ-rxa" secondAttribute="top" id="95B-TF-ggU"/>
+                            <constraint firstItem="fpN-6N-lIU" firstAttribute="bottom" secondItem="851-QJ-rxa" secondAttribute="bottom" id="CEK-wg-R1z"/>
                             <constraint firstItem="UFW-q6-Qxl" firstAttribute="top" secondItem="851-QJ-rxa" secondAttribute="top" constant="90" id="HGn-we-Qpd"/>
                             <constraint firstItem="UFW-q6-Qxl" firstAttribute="top" secondItem="eLk-Uc-o8w" secondAttribute="bottom" constant="8" id="QZo-Lh-0IZ"/>
+                            <constraint firstItem="fpN-6N-lIU" firstAttribute="leading" secondItem="851-QJ-rxa" secondAttribute="leading" id="iXk-B2-ypO"/>
                             <constraint firstItem="851-QJ-rxa" firstAttribute="bottom" secondItem="UFW-q6-Qxl" secondAttribute="bottom" constant="20" id="mCE-6K-93T"/>
+                            <constraint firstItem="fpN-6N-lIU" firstAttribute="trailing" secondItem="851-QJ-rxa" secondAttribute="trailing" id="qlZ-S8-xlx"/>
                             <constraint firstItem="851-QJ-rxa" firstAttribute="trailing" secondItem="eLk-Uc-o8w" secondAttribute="trailing" constant="16" id="rXb-Gb-XYt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="851-QJ-rxa"/>
                     </view>
                     <connections>
+                        <outlet property="background" destination="fpN-6N-lIU" id="pob-je-2Es"/>
                         <outlet property="myTableView" destination="UFW-q6-Qxl" id="LJC-CJ-KhV"/>
+                        <outlet property="newTaskButton" destination="eLk-Uc-o8w" id="xN8-BC-UTk"/>
                         <segue destination="ecD-dY-5HJ" kind="show" identifier="editTask" id="03W-ns-M1F"/>
                         <segue destination="ecD-dY-5HJ" kind="show" identifier="newTask" id="3fo-oB-I24"/>
                     </connections>
@@ -161,6 +182,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWr-ox-cIU" userLabel="background">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vky-c8-i3k">
                                 <rect key="frame" x="0.0" y="150" width="375" height="517"/>
                                 <subviews>
@@ -231,6 +256,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QWr-ox-cIU" firstAttribute="top" secondItem="6mB-9g-Llf" secondAttribute="topMargin" id="2Kj-pu-hbM"/>
+                            <constraint firstItem="QWr-ox-cIU" firstAttribute="bottom" secondItem="Ied-8c-qQL" secondAttribute="bottom" id="2X2-7b-902"/>
+                            <constraint firstItem="QWr-ox-cIU" firstAttribute="leading" secondItem="Ied-8c-qQL" secondAttribute="leading" id="3JJ-b0-npO"/>
+                            <constraint firstItem="QWr-ox-cIU" firstAttribute="trailing" secondItem="Ied-8c-qQL" secondAttribute="trailing" id="LnL-jy-4E7"/>
                             <constraint firstItem="Ied-8c-qQL" firstAttribute="trailing" secondItem="vky-c8-i3k" secondAttribute="trailing" id="aI5-RU-Fy2"/>
                             <constraint firstItem="kfd-zN-3mp" firstAttribute="trailing" secondItem="Ied-8c-qQL" secondAttribute="trailing" id="dT6-gH-j9X"/>
                             <constraint firstItem="vky-c8-i3k" firstAttribute="top" secondItem="kfd-zN-3mp" secondAttribute="bottom" constant="10" id="hUo-IA-ajx"/>
@@ -246,6 +275,7 @@
                         <outlet property="ReminderButton" destination="B2b-eF-fk8" id="yKm-nU-Otm"/>
                         <outlet property="TimeButton" destination="W8m-Pk-Ayp" id="bX3-Ha-6rt"/>
                         <outlet property="UrgencyButton" destination="57T-Sp-pfD" id="qhT-oo-Wjv"/>
+                        <outlet property="background" destination="QWr-ox-cIU" id="ZbW-1E-Rip"/>
                         <outlet property="taskName" destination="kfd-zN-3mp" id="C9G-lX-8kh"/>
                     </connections>
                 </viewController>
@@ -261,6 +291,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlO-go-rE0" userLabel="background">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Vvt-pv-uJi">
                                 <rect key="frame" x="20" y="70" width="335" height="547"/>
                                 <subviews>
@@ -314,15 +348,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rlO-go-rE0" firstAttribute="top" secondItem="SsM-AB-wf8" secondAttribute="topMargin" id="8FT-Hb-PaD"/>
                             <constraint firstItem="AWa-qS-qOF" firstAttribute="trailing" secondItem="Vvt-pv-uJi" secondAttribute="trailing" constant="20" id="Hhg-8T-Mid"/>
+                            <constraint firstItem="rlO-go-rE0" firstAttribute="trailing" secondItem="AWa-qS-qOF" secondAttribute="trailing" id="IRW-TQ-yld"/>
+                            <constraint firstItem="rlO-go-rE0" firstAttribute="leading" secondItem="AWa-qS-qOF" secondAttribute="leading" id="L2b-OM-Cez"/>
+                            <constraint firstItem="rlO-go-rE0" firstAttribute="bottom" secondItem="AWa-qS-qOF" secondAttribute="bottom" id="ZSi-oS-aTb"/>
                             <constraint firstItem="AWa-qS-qOF" firstAttribute="bottom" secondItem="Vvt-pv-uJi" secondAttribute="bottom" constant="50" id="eq3-2t-fsc"/>
                             <constraint firstItem="Vvt-pv-uJi" firstAttribute="leading" secondItem="AWa-qS-qOF" secondAttribute="leading" constant="20" id="ilo-eB-FxV"/>
                             <constraint firstItem="Vvt-pv-uJi" firstAttribute="top" secondItem="AWa-qS-qOF" secondAttribute="top" constant="50" id="t2J-kp-bkJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AWa-qS-qOF"/>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="rlO-go-rE0" id="L0z-nG-hPn"/>
+                        <outlet property="highButton" destination="sjU-yQ-DLi" id="3sv-Od-loV"/>
+                        <outlet property="lowButton" destination="RJs-du-d02" id="umu-6Q-Ul9"/>
+                        <outlet property="medButton" destination="gtI-oq-uzF" id="UzD-HI-Mgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nf6-DD-8cX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="NsU-pb-OSH">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="8VV-X6-cGb"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="-455.62218890554726"/>
         </scene>
@@ -399,6 +449,7 @@
                         <viewLayoutGuide key="safeArea" id="iNr-MZ-iNh"/>
                     </view>
                     <connections>
+                        <outlet property="confirmButton" destination="Qbb-3p-dR0" id="or7-U5-zLS"/>
                         <outlet property="dayLabel" destination="9er-JK-qUy" id="Kbn-sO-DG2"/>
                         <outlet property="stepper" destination="zSb-NY-8IP" id="Eao-po-cC7"/>
                     </connections>
@@ -494,6 +545,7 @@
                     </view>
                     <connections>
                         <outlet property="HoursIcon" destination="fgo-3w-62y" id="0HC-0Z-VWq"/>
+                        <outlet property="confirmButton" destination="ncR-Yg-bwm" id="L5B-AC-Yem"/>
                         <outlet property="hoursIcon" destination="fgo-3w-62y" id="e7h-yM-OJQ"/>
                         <outlet property="scrollWheel" destination="Y5V-wo-VRw" id="AJN-5r-iBJ"/>
                     </connections>

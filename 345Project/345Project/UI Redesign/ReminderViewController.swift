@@ -15,6 +15,8 @@ class ReminderViewController: UIViewController {
     @IBOutlet weak var dayLabel: UILabel! // Label displaying the currently chosen day
     @IBOutlet weak var stepper: UIStepper! // The buttons used to increase/decrease days.
     
+    @IBOutlet weak var confirmButton: UIButton!
+    
     var managedContext: NSManagedObjectContext!
     var editTask = false;
     var taskDesc = "";
@@ -24,6 +26,7 @@ class ReminderViewController: UIViewController {
     var defaultDays = 0; // This changes depending on if the user has already set a day, and has come back to this screen.
 
     override func viewDidLoad() {
+        checkForNightMode()
         super.viewDidLoad()
         
         
@@ -87,5 +90,19 @@ class ReminderViewController: UIViewController {
             return components.day!;
         }
         return 0;
+    }
+    
+    func checkForNightMode(){
+        
+        let red: CGFloat = 106.0
+        let green: CGFloat = 207.0
+        let blue: CGFloat = 255.0
+        let bluecolour = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1)
+        
+        if(UserDefaults.standard.integer(forKey: "mode") == 1){
+            confirmButton.backgroundColor = UIColor.gray
+        } else {
+            confirmButton.backgroundColor = bluecolour
+        }
     }
 }

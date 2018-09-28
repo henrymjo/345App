@@ -23,6 +23,7 @@ class TimeViewController: UIViewController {
     var time: Float = 1.0;
     var reminderDate = Date();
     
+    @IBOutlet weak var confirmButton: UIButton!
     
     // Scroll wheel, moved to chose number of hours
     @IBOutlet weak var scrollWheel: UISlider!
@@ -48,8 +49,8 @@ class TimeViewController: UIViewController {
     **/
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         hoursIcon.text = "\(time)"
+        checkForNightMode()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +69,20 @@ class TimeViewController: UIViewController {
         newItemController?.reminderDate = reminderDate
         newItemController?.managedContext = managedContext
         newItemController?.editTask = editTask
+    }
+    
+    func checkForNightMode(){
+        
+        let red: CGFloat = 106.0
+        let green: CGFloat = 207.0
+        let blue: CGFloat = 255.0
+        let bluecolour = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1)
+        
+        if(UserDefaults.standard.integer(forKey: "mode") == 1){
+            confirmButton.backgroundColor = UIColor.gray
+        } else {
+            confirmButton.backgroundColor = bluecolour
+        }
     }
  
 }

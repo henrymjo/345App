@@ -17,8 +17,11 @@ let coreDataStack = CoreDataStack()
 
 class taskListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var colourNumber = 0;
     
     @IBOutlet weak var myTableView: UITableView! // tableView, centerpiece of this controller.
+    @IBOutlet weak var background: UIView!
+    @IBOutlet weak var newTaskButton: UIButton!
     
     /** add task button is clicked, perform segue with identifier "newTask"
      **/
@@ -32,8 +35,28 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         
         return resultsController.sections?[section].numberOfObjects ?? 0
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("ViewdidAppear")
+        myTableView.reloadData()
+        requestAlerts.requestAlerts()
+        print("user default: \(UserDefaults.standard.integer(forKey: "mode"))")
+    }
  
  
+    @IBAction func nightMode(_ sender: UIButton) {
+        if(colourNumber == 1){
+            colourNumber = 0
+        } else {
+            colourNumber = 1
+        }
+        
+        UserDefaults.standard.set(colourNumber, forKey: "mode")
+        checkForNightMode()
+        myTableView.reloadData()
+
+    }
     
    
     /** This goes through each tableViewCell and returns the height of each cell by looking at the index
@@ -85,25 +108,48 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         switch task.urgency {
         case "a":
             let cell = tableView.dequeueReusableCell(withIdentifier: "high") as! highCell
+            cell.layer.borderColor = UIColor.white.cgColor
+            
+            if(UserDefaults.standard.integer(forKey: "mode") == 1){
+                cell.backgroundColor = UIColor.gray
+                cell.layer.borderColor = UIColor.black.cgColor
+            } else {
+                cell.backgroundColor = UIColor.red
+                cell.layer.borderColor = UIColor.white.cgColor
+            }
             cell.taskName.text = taskName;
             cell.layer.cornerRadius = 10
-            cell.layer.borderColor = UIColor.white.cgColor
             cell.layer.borderWidth = 3
             return cell;
             
         case "b":
             let cell = tableView.dequeueReusableCell(withIdentifier: "medium") as! mediumCell
+            cell.layer.borderColor = UIColor.white.cgColor
+            if(UserDefaults.standard.integer(forKey: "mode") == 1){
+                cell.backgroundColor = UIColor.gray
+                cell.layer.borderColor = UIColor.black.cgColor
+            } else {
+                cell.backgroundColor = UIColor.yellow
+                cell.layer.borderColor = UIColor.white.cgColor
+            }
             cell.taskName.text = taskName;
             cell.layer.cornerRadius = 10
-            cell.layer.borderColor = UIColor.white.cgColor
             cell.layer.borderWidth = 3
             return cell;
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "low") as! lowCell
+            cell.layer.borderColor = UIColor.white.cgColor
+            
+            if(UserDefaults.standard.integer(forKey: "mode") == 1){
+                cell.backgroundColor = UIColor.gray
+                cell.layer.borderColor = UIColor.black.cgColor
+            } else {
+                cell.backgroundColor = UIColor.green
+                cell.layer.borderColor = UIColor.white.cgColor
+            }
             cell.taskName.text = taskName;
             cell.layer.cornerRadius = 10
-            cell.layer.borderColor = UIColor.white.cgColor
             cell.layer.borderWidth = 3
             return cell;
         }
@@ -147,7 +193,9 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         Fetches from core data and reloads data.
     **/
     override func viewDidLoad() {
+        print("viewdidload")
         super.viewDidLoad()
+        checkForNightMode()
         let request: NSFetchRequest<Task> = Task.fetchRequest()
         let sortDescriptors = NSSortDescriptor(key: "urgency", ascending: true)
         request.sortDescriptors = [sortDescriptors]
@@ -170,10 +218,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     /** Once view did appear, reload data.
         Also request to send alerts if not done so already.
      **/
-    override func viewDidAppear(_ animated: Bool) {
-        myTableView.reloadData()
-        requestAlerts.requestAlerts()
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -222,6 +267,26 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             print("No segue found");
         }
     }
+    
+    
+    func checkForNightMode(){
+        if(UserDefaults.standard.integer(forKey: "mode") == 1){
+            colourNumber = 1;
+            background.backgroundColor = UIColor.black
+            myTableView.backgroundColor = UIColor.black
+            let image = #imageLiteral(resourceName: "Image-2")
+            newTaskButton.setImage(image, for: .normal)
+        } else {
+            colourNumber = 0
+            background.backgroundColor = UIColor.white
+            myTableView.backgroundColor = UIColor.white
+            let image = #imageLiteral(resourceName: "Image-1")
+            newTaskButton.setImage(image, for: .normal)
+        }
+        
+    }
+    
+    
 }
 
 extension taskListController: NSFetchedResultsControllerDelegate{

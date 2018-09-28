@@ -20,6 +20,7 @@ class NewItem: UIViewController {
     var currentTask: Task?
     var managedContext: NSManagedObjectContext!
     
+    @IBOutlet var background: UIView!
     // if edit task is true, "add task" becomes "edit task" and we try and edit a task instead of creating a new one.
     var editTask = false;
     
@@ -52,6 +53,9 @@ class NewItem: UIViewController {
                 UrgencyButton.backgroundColor = UIColor.green
             }
         }
+        
+        checkForNightMode()
+        
         if(editTask){
             AddTaskButton.setTitle("Edit Task", for: .normal) // add task becomes edit task.
             // pull task from managed context. let task = resultsController
@@ -76,6 +80,7 @@ class NewItem: UIViewController {
         Saves all variables to CoreData as a Task. Or updates existing variables of a CoreData task.
     **/
     @IBAction func addNewTask(_ sender: Any) {
+        if(taskDesc != ""){
         let task = Task(context: managedContext)
         task.title = taskDesc
         task.urgency = urgency
@@ -88,6 +93,7 @@ class NewItem: UIViewController {
             try managedContext.save()
         }catch{
             print("Error saving todo: \(error)")
+        }
         }
     }
     
@@ -129,6 +135,31 @@ class NewItem: UIViewController {
             vc?.editTask = editTask
         }
     }
+    
+    
+    func checkForNightMode(){
+        let red: CGFloat = 106.0
+        let green: CGFloat = 207.0
+        let blue: CGFloat = 255.0
+        let bluecolour = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1)
+        
+        if(UserDefaults.standard.integer(forKey: "mode") == 1){
+            background.backgroundColor = UIColor.black
+            UrgencyButton.backgroundColor = UIColor.gray
+            ReminderButton.backgroundColor = UIColor.gray
+            TimeButton.backgroundColor = UIColor.gray
+            AddTaskButton.backgroundColor = UIColor.gray
+            taskName.backgroundColor = UIColor.white
+
+        } else {
+            background.backgroundColor = UIColor.white
+            UrgencyButton.backgroundColor = bluecolour
+            ReminderButton.backgroundColor = bluecolour
+            TimeButton.backgroundColor = bluecolour
+            AddTaskButton.backgroundColor = bluecolour
+        }
+    }
+    
     
     /** Test if the date is not today.
     **/
