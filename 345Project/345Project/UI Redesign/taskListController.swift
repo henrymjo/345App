@@ -10,11 +10,21 @@ import UIKit
 import CoreData
 
 
-//Core Data Properties
+//MARK: Core Data Properties
 var resultsController: NSFetchedResultsController<Task>!
 let coreDataStack = CoreDataStack()
 
-
+/**
+ Subclass of UIViewController, responsible for controlling the Task List view.
+ Uses data stored in the CoreDataStack to populate table view.
+ 
+ Contains buttons and controls for changing colour scheme and adding a new task.
+ 
+ Swiping left on a cell will delete the corresponding Task from the results controller and tapping a cell
+ will allow user to edit a task.
+ 
+ Cell heights are adjustable depending on a Task object's 'time' attribute.
+ */
 class taskListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var colourNumber = 0;
@@ -24,27 +34,24 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var newTaskButton: UIButton!
     
-    /** add task button is clicked, perform segue with identifier "newTask"
-     **/
+    // When add task button is clicked, perform segue with identifier "newTask".
     @IBAction func addTask(_ sender: UIButton) {
         performSegue(withIdentifier: "newTask", sender: self)
     }
     
-    /** Sets the number of rows in the tableView to the number of tasks in our coreData storage.
-     **/
+    // Sets the number of rows in the tableView to the number of tasks in our coreData storage.
+    // If no task objects are contained in the results controller, number of rows is set to zero.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return resultsController.sections?[section].numberOfObjects ?? 0
     }
     
     
+    //Once view did appear, reload data. Also request to send alerts if not done so already.
     override func viewDidAppear(_ animated: Bool) {
-        print("ViewdidAppear")
         myTableView.reloadData()
         requestAlerts.requestAlerts()
         print("user default: \(UserDefaults.standard.integer(forKey: "mode"))")
     }
- 
  
     @IBAction func nightMode(_ sender: Any) {
         if(colourNumber == 1){
@@ -56,16 +63,12 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         UserDefaults.standard.set(colourNumber, forKey: "mode")
         checkForNightMode()
         myTableView.reloadData()
-
     }
     
    
     /** This goes through each tableViewCell and returns the height of each cell by looking at the index
      of the task and getting its 'time' value. The bigger the time, the taller the cell.
-     
-     For some reason this method never gets called, although it should in the tableset up or reloadData().
-     **/
-    
+    */
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
 
         let task = resultsController.object(at: indexPath)
@@ -93,8 +96,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         Cells are rounded and I have used a small hack to give a gap between the cells by making the border
         colour white. This makes it looks like they're seperated. If we change the background colour
         cell.layer.borderColor will need to change too.
-     **/
-    
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
@@ -155,13 +157,15 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             return cell;
         }
     }
+    
+    
     /**
         Method for deleting tasks.
         Deletes the task from CoreData and deletes the reminder
         @param tableView is the tableView on the controller
         @param editingStyle is a left swipe on the task in the table view.
         @param indexPath is the index of the task in the tableView
-    **/
+    */
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         
         if(editingStyle == UITableViewCellEditingStyle.delete){
@@ -183,7 +187,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         the selected one.
         @param tableView is the tbaleView in the controller.
         @param indexPath is the index of the task selected.
-     **/
+     */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "editTask", sender: self)
     }
@@ -192,7 +196,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     /**
         Method does setup for the table when the tableView controller is loaded.
         Fetches from core data and reloads data.
-    **/
+    */
     override func viewDidLoad() {
         print("viewdidload")
         super.viewDidLoad()
@@ -216,10 +220,6 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
     
-    /** Once view did appear, reload data.
-        Also request to send alerts if not done so already.
-     **/
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -230,7 +230,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     /** Two possible segues from this controller.
         We either want to create a new item or edit an existing item.
         If editing, set all variables to the selected index. Change "Add Task" button to "Edit Task"
-    **/
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch(segue.identifier){
@@ -292,6 +292,10 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
 }
 
+/**
+ Extensions responsible for refreshing, inserting and deleting rows in the table view based on the
+ contents of Core Data and actions of the user.
+ */
 extension taskListController: NSFetchedResultsControllerDelegate{
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         myTableView.beginUpdates()
