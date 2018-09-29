@@ -19,6 +19,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     var colourNumber = 0;
     
+    @IBOutlet weak var colourBlindLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView! // tableView, centerpiece of this controller.
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var newTaskButton: UIButton!
@@ -45,7 +46,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     }
  
  
-    @IBAction func nightMode(_ sender: UIButton) {
+    @IBAction func nightMode(_ sender: Any) {
         if(colourNumber == 1){
             colourNumber = 0
         } else {
@@ -271,6 +272,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
     
     func checkForNightMode(){
         if(UserDefaults.standard.integer(forKey: "mode") == 1){
+            colourBlindLabel.textColor = UIColor.white
             colourNumber = 1;
             background.backgroundColor = UIColor.black
             myTableView.backgroundColor = UIColor.black
@@ -278,6 +280,7 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
             newTaskButton.setImage(image, for: .normal)
         } else {
             colourNumber = 0
+            colourBlindLabel.textColor = UIColor.black
             background.backgroundColor = UIColor.white
             myTableView.backgroundColor = UIColor.white
             let image = #imageLiteral(resourceName: "Image-1")
