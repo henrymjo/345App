@@ -12,7 +12,18 @@ import CoreData
 let taskManager: taskListController = taskListController()
 
 
-
+/**
+ Subclass of UIViewController, controls the New Item View.
+ User can edit the task name through the UITextField outlet as well
+ as segue to other views, containing controls for time, urgency and reminder variables that are
+ associated with a given task.
+ 
+ When NewItem is called from an edit action (tapping a cell in Task List View), editTask variable becomes true
+ and taskDesc, urgency, reminderDate and time variables are loaded with the selected task's attributes.
+ 
+ Upon pressing add/edit task, a new Task object is created and added to the managedContext for Core Data
+ conformity.
+ */
 class NewItem: UIViewController {
     
     
@@ -21,15 +32,15 @@ class NewItem: UIViewController {
     var managedContext: NSManagedObjectContext!
     
     @IBOutlet var background: UIView!
-    // if edit task is true, "add task" becomes "edit task" and we try and edit a task instead of creating a new one.
+   
     var editTask = false;
     
     var taskDesc = "" //String for task title}
     var urgency = "c" // a, b, c representing urgency in descending order
-    var reminderDate = Date() // Will be a date or null.
+    var reminderDate = Date() // Date for the reminder.
     var time: Float = 1.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
-
+    //Mark: Outlets
     @IBOutlet weak var UrgencyButton: UIButton!
     @IBOutlet weak var ReminderButton: UIButton!
     @IBOutlet weak var TimeButton: UIButton!
@@ -59,14 +70,11 @@ class NewItem: UIViewController {
         
         if(editTask){
             AddTaskButton.setTitle("Edit Task", for: .normal) // add task becomes edit task.
-            // pull task from managed context. let task = resultsController
             
         }
-        // Do any additional setup after loading the view.
     }
 
-    /** update task description when text is changed in the text box
-    **/
+    // Update task description when text is changed in the text box.
     @IBAction func textEditingDidChange(_ sender: UITextField) {
         taskDesc = sender.text!
     }
@@ -77,9 +85,8 @@ class NewItem: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /** Conform new task/ confirm edit of existing task.
-        Saves all variables to CoreData as a Task. Or updates existing variables of a CoreData task.
-    **/
+    //Confirm new task/ confirm edit of existing task.
+    //Saves all variables to CoreData as a Task. Or updates existing variables of a CoreData task.
     @IBAction func addNewTask(_ sender: Any) {
         if(taskDesc != ""){
         let task = Task(context: managedContext)
@@ -104,7 +111,7 @@ class NewItem: UIViewController {
         Urgency page, time page, reminder page or going back to the initial task view page.
         Variables get passed between pages so that if we revisit a page to change the last chosen value,
         The page remembers that value and the counters will continue on from it.
-     **/
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch(segue.identifier){
@@ -162,8 +169,7 @@ class NewItem: UIViewController {
     }
     
     
-    /** Test if the date is not today.
-    **/
+    //Test if the date is not today.
     func isFutureDate(date: Date) -> Bool{
         if(date.timeIntervalSinceNow > (60*60)*4){
             return true;
