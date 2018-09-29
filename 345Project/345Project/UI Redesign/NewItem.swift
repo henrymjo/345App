@@ -24,8 +24,8 @@ class NewItem: UIViewController {
     // if edit task is true, "add task" becomes "edit task" and we try and edit a task instead of creating a new one.
     var editTask = false;
     
-    var taskDesc = "" //String for task title
-    var urgency = "low" // 0, 1, 2 representing urgency
+    var taskDesc = "" //String for task title}
+    var urgency = "c" // a, b, c representing urgency in descending order
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 1.0; // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
     
@@ -44,6 +44,7 @@ class NewItem: UIViewController {
         super.viewDidLoad()
         
         taskName.text = taskDesc;
+
         if(urgency == "a"){
             UrgencyButton.backgroundColor = UIColor.red
         } else {

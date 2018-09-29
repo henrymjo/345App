@@ -15,7 +15,7 @@ class UrgencyController: UIViewController {
     var editTask = false;
     
     var taskDesc = "" //String for task title
-    var urgency = "low" // 0, 1, 2 representing urgency
+    var urgency = "c" // a, b, c representing urgency from high to low
     var reminderDate = Date() // Will be a date or null.
     var time: Float = 1.0;  // hours as a decimal. eg, 3.5 = 3 hours 30 minutes.
 

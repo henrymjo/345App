@@ -19,7 +19,7 @@ class TimeViewController: UIViewController {
     var editTask = false;
     
     var taskDesc = "";
-    var urgency = "low";
+    var urgency = "c";
     var time: Float = 1.0;
     var reminderDate = Date();
     

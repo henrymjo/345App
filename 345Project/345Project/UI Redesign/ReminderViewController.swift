@@ -20,7 +20,7 @@ class ReminderViewController: UIViewController {
     var managedContext: NSManagedObjectContext!
     var editTask = false;
     var taskDesc = "";
-    var urgency = "low";
+    var urgency = "c";
     var time: Float = 1.0;
     var reminderDate = Date();
     var defaultDays = 0; // This changes depending on if the user has already set a day, and has come back to this screen.
