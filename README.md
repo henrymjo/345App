@@ -56,10 +56,10 @@ The Reminder view is accessed through the NewItem view and is similar in appeara
 The view is controlled via the ReminderViewController.swift file, a subclass of UIViewController. This file contains code for updating the days label in the view, setting the task's reminderDate variable and also code responsible for passing the task's attributes and NSManageObjectContext variables back to the NewItem.swift ViewController upon confirmation
 
 ### AlertCenter.swift
-Insert details about how alertcenter.swift works
+Alert center is responsible for creating, adding and requesting alerts. Firstly, the requestAlerts method displays a popup for the user on the app's initial opening. This allows us to send reminders to the user about their tasks. Secondly, the createAlert method takes the task title, how long until the user wants to be reminded and creates a trigger. Finally, addAlert adds the created trigger to the list of user notifications. The title of the task is used as the alert identifier, this is used to delete alerts when tasks are deleted. 
 
 ### CustomCells.swift
-Insert details about what CustomCells Swift is used for.
+Custom cells is another way of giving the cells colours. Each cell class represents and is connected to a prototype cell. We chose to do it this way for future ease. Instead of adjusting each cells format on each tableView load we just call one of the three prototype cells from this class. Future formatting changes to the tasks should be done within these classes. 
 
 ### Unit Tests
 Currently, unit testing exists only for checking whether the program can successfully pass task information between NewItem and the ViewControllers responsible for customising task data. These tests can be run though using command+U in the Xcode project. 
