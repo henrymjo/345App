@@ -18,10 +18,13 @@ let taskManager: taskListController = taskListController()
  as segue to other views, containing controls for time, urgency and reminder variables that are
  associated with a given task.
  
- When NewItem is called from an edit action (tapping a cell in Task List View), editTask variable becomes true
- and taskDesc, urgency, reminderDate and time variables are loaded with the selected task's attributes.
+ When segue-ing to another view, the class will set the task's attribute variables in the destination view controller,
+ as well as passing the managed context so that the full list of Task Objects is always kept in scope.
  
- Upon pressing add/edit task, a new Task object is created and added to the managedContext for Core Data
+ When NewItem is called from an edit action (tapping a cell in Task List View), editTask variable becomes true
+ and taskDesc, urgency, reminderDate and time variables are set to the selected task's attribute values.
+ 
+ Upon pressing add/edit task, a new Task object is created and added to the managedContext object for Core Data
  conformity.
  */
 class NewItem: UIViewController {

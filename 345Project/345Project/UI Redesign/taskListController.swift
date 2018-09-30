@@ -24,6 +24,8 @@ let coreDataStack = CoreDataStack()
  will allow user to edit a task.
  
  Cell heights are adjustable depending on a Task object's 'time' attribute.
+ 
+ Also conforms to UITableViewDelegate and UITableViewDataSource and thus, contains multiple methods for pulling and displaying Task object data in the table view.
  */
 class taskListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

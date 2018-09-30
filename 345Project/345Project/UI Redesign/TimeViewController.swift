@@ -9,15 +9,20 @@
 import UIKit
 import CoreData
 
-/** Class controls the updating and presenting of the time taken to perform the given task.
-    Uses a scrollWheel to adjust time.
-**/
-
+/**
+ Subclass of UIViewControllerClass, responsible for controlling the Time view.
+ The view controlled is accessed through the NewItem view and allows a user to associate an expected length of time to the task.
+ 
+ View contains a scrollwheel, which allows a user to scroll between time values of 0.0 and 12.0, moving up in steps of 0.5.
+ Upon 'confirming' a time, the controller will pass the stored task data to the NewItem ViewController, including the updated time value.
+*/
 class TimeViewController: UIViewController {
+    
     
     var managedContext: NSManagedObjectContext!
     var editTask = false;
     
+    //MARK: Task data
     var taskDesc = "";
     var urgency = "c";
     var time: Float = 1.0;

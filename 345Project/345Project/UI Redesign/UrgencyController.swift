@@ -13,8 +13,7 @@ import CoreData
  UIViewController Subclass, responsible for controlling the Urgency View.
  
  View contains 3 buttons, referred to via the outlets.
- Clicking any single button will segue back to the NewItem view, setting the task data along with
- the updated urgency.
+ Clicking any single button will segue back to the NewItem view, setting the urgency variable in the NewItem View Controller.
  */
 class UrgencyController: UIViewController {
     
