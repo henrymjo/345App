@@ -84,6 +84,10 @@ class UrgencyController: UIViewController {
         }
     }
     
+    
+    /** checks to see if Colourblind mode is turned on.
+        Changes the button colours if so.
+    **/
     func checkForNightMode(){
         if(UserDefaults.standard.integer(forKey: "mode") == 1){
             background.backgroundColor = UIColor.black

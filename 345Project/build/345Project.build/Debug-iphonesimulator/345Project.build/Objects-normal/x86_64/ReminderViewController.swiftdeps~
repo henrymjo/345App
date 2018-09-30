@@ -40,6 +40,7 @@ depends-top-level:
 - "UIStepper"
 - "UIStoryboardSegue"
 - "UIViewController"
+- "UnicodeScalarType"
 - !private "UserDefaults"
 depends-member:
 - ["s23BidirectionalCollectionP", "init"]
@@ -889,4 +890,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "9ea59628afff724940c51df2a2a66a6d"
+interface-hash: "53e3617d29ba129b1027aa627b297f08"

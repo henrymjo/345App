@@ -22,34 +22,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-6N-lIU" userLabel="Background">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R4W-hc-OPG">
-                                        <rect key="frame" x="18" y="44" width="51" height="31"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Will change the display to black and white theme." label="Colourblind Switch"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="R4W-hc-OPG" secondAttribute="height" multiplier="49:31" id="VwY-FJ-wdH"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqA-8N-AVC">
+                                        <rect key="frame" x="0.0" y="8" width="102" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Toggle color blind mode on or off" label="Color blind button"/>
+                                        <state key="normal" title="Button" image="Image"/>
                                         <connections>
-                                            <action selector="nightMode:" destination="3OL-xa-gEv" eventType="valueChanged" id="Ve2-97-GqU"/>
+                                            <action selector="nightMode:" destination="3OL-xa-gEv" eventType="touchUpInside" id="Zwz-Fj-2Ei"/>
                                         </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colourblind Mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5K-cW-BxG">
-                                        <rect key="frame" x="18" y="15" width="157" height="23"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Header for the colourblind switch." label="Colourblind switch label"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="G5K-cW-BxG" secondAttribute="height" multiplier="157:23" id="yDf-r3-Pqt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="R4W-hc-OPG" firstAttribute="leading" secondItem="fpN-6N-lIU" secondAttribute="leading" constant="18" id="4zv-W3-rJT"/>
-                                    <constraint firstItem="R4W-hc-OPG" firstAttribute="top" secondItem="G5K-cW-BxG" secondAttribute="bottom" constant="6" id="Czv-5q-kMp"/>
-                                    <constraint firstItem="G5K-cW-BxG" firstAttribute="leading" secondItem="fpN-6N-lIU" secondAttribute="leading" constant="18" id="Ei3-1r-Wlp"/>
-                                    <constraint firstItem="G5K-cW-BxG" firstAttribute="top" secondItem="fpN-6N-lIU" secondAttribute="top" constant="15" id="Yl7-lP-AOb"/>
-                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UFW-q6-Qxl">
                                 <rect key="frame" x="16" y="110" width="343" height="537"/>
@@ -153,7 +136,6 @@
                                     <accessibilityTraits key="traits" button="YES" causesPageTurn="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="eLk-Uc-o8w" secondAttribute="height" multiplier="1:1" id="0uj-cE-zEi"/>
                                     <constraint firstAttribute="width" secondItem="eLk-Uc-o8w" secondAttribute="height" multiplier="1:1" id="Md9-aC-o7E"/>
                                 </constraints>
                                 <state key="normal" image="Image-1">
@@ -182,7 +164,7 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="fpN-6N-lIU" id="pob-je-2Es"/>
-                        <outlet property="colourBlindLabel" destination="G5K-cW-BxG" id="jxs-E2-6ii"/>
+                        <outlet property="colourBlindButton" destination="KqA-8N-AVC" id="5UV-Nb-Zgw"/>
                         <outlet property="myTableView" destination="UFW-q6-Qxl" id="LJC-CJ-KhV"/>
                         <outlet property="newTaskButton" destination="eLk-Uc-o8w" id="xN8-BC-UTk"/>
                         <segue destination="ecD-dY-5HJ" kind="show" identifier="editTask" id="03W-ns-M1F"/>
@@ -575,6 +557,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="512" height="411"/>
         <image name="Image-1" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>

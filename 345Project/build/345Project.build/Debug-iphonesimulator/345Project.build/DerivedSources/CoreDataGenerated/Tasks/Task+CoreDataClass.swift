@@ -2,7 +2,7 @@
 //  Task+CoreDataClass.swift
 //  
 //
-//  Created by Ryan Spear on 9/26/18.
+//  Created by Ryan Spear on 9/30/18.
 //
 //  This file was automatically generated and should not be edited.
 //

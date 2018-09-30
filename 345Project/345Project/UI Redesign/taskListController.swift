@@ -30,11 +30,11 @@ let coreDataStack = CoreDataStack()
 class taskListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var colourNumber = 0;
-    
-    @IBOutlet weak var colourBlindLabel: UILabel!
+
     @IBOutlet weak var myTableView: UITableView! // tableView, centerpiece of this controller.
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var newTaskButton: UIButton!
+    @IBOutlet weak var colourBlindButton: UIButton!
     
     // When add task button is clicked, perform segue with identifier "newTask".
     @IBAction func addTask(_ sender: UIButton) {
@@ -271,22 +271,26 @@ class taskListController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
+    /** Checks to see if the user has enabled colour blind mode.
+        If they have the app changes to a grey scale representation.
+    **/
     func checkForNightMode(){
         if(UserDefaults.standard.integer(forKey: "mode") == 1){
-            colourBlindLabel.textColor = UIColor.white
             colourNumber = 1;
             background.backgroundColor = UIColor.black
             myTableView.backgroundColor = UIColor.black
             let image = #imageLiteral(resourceName: "Image-2")
+            let eye = #imageLiteral(resourceName: "Image-3")
             newTaskButton.setImage(image, for: .normal)
+            colourBlindButton.setImage(eye, for: .normal)
         } else {
             colourNumber = 0
-            colourBlindLabel.textColor = UIColor.black
             background.backgroundColor = UIColor.white
             myTableView.backgroundColor = UIColor.white
             let image = #imageLiteral(resourceName: "Image-1")
             newTaskButton.setImage(image, for: .normal)
+            let eye = #imageLiteral(resourceName: "Image")
+            colourBlindButton.setImage(eye, for: .normal)
         }
         
     }

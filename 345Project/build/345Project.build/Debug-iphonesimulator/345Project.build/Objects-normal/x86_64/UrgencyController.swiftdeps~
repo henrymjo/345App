@@ -31,7 +31,7 @@ depends-top-level:
 - "UIStoryboardSegue"
 - "UIView"
 - "UIViewController"
-- !private "UnicodeScalarType"
+- "UnicodeScalarType"
 - "UrgencyController"
 - !private "UserDefaults"
 depends-member:
@@ -752,4 +752,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "874663a9dcb1aec31c76576b3d604ed7"
+interface-hash: "741e2ec4e2705d8564d2c78e470d4541"

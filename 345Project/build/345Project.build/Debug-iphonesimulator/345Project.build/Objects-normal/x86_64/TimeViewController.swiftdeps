@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["10_45Project18TimeViewControllerC", ""]
 provides-dynamic-lookup:
+- "confirmButton"
 - "didReceiveMemoryWarning"
 - "hoursIcon"
 - "prepare"
@@ -15,8 +16,10 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "*"
 - !private "/"
+- !private "=="
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
+- !private "CGFloat"
 - "CastingPrecedence"
 - "Date"
 - "Float"
@@ -24,25 +27,40 @@ depends-top-level:
 - !private "NewItem"
 - "StringLiteralType"
 - "TimeViewController"
+- "UIButton"
+- !private "UIColor"
 - "UILabel"
 - "UISlider"
 - "UIStoryboardSegue"
 - "UIViewController"
+- "UnicodeScalarType"
+- !private "UserDefaults"
 - !private "round"
 depends-member:
 - ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "value"]
 - ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "UIColor"]
+- !private ["s7CVarArgP", "UserDefaults"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "checkForNightMode"]
+- !private ["s7CVarArgP", "confirmButton"]
 - !private ["s7CVarArgP", "destination"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
 - !private ["s7CVarArgP", "editTask"]
+- !private ["s7CVarArgP", "gray"]
 - !private ["s7CVarArgP", "hoursIcon"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "integer"]
 - !private ["s7CVarArgP", "managedContext"]
 - !private ["s7CVarArgP", "reminderDate"]
 - !private ["s7CVarArgP", "round"]
+- !private ["s7CVarArgP", "standard"]
 - !private ["s7CVarArgP", "step"]
 - !private ["s7CVarArgP", "taskDesc"]
 - !private ["s7CVarArgP", "text"]
@@ -53,15 +71,23 @@ depends-member:
 - ["s10CollectionP", "init"]
 - ["s10ComparableP", "init"]
 - ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "UserDefaults"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "checkForNightMode"]
+- !private ["s28CustomDebugStringConvertibleP", "confirmButton"]
 - !private ["s28CustomDebugStringConvertibleP", "destination"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s28CustomDebugStringConvertibleP", "editTask"]
+- !private ["s28CustomDebugStringConvertibleP", "gray"]
 - !private ["s28CustomDebugStringConvertibleP", "hoursIcon"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "integer"]
 - !private ["s28CustomDebugStringConvertibleP", "managedContext"]
 - !private ["s28CustomDebugStringConvertibleP", "reminderDate"]
 - !private ["s28CustomDebugStringConvertibleP", "round"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
 - !private ["s28CustomDebugStringConvertibleP", "step"]
 - !private ["s28CustomDebugStringConvertibleP", "taskDesc"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
@@ -69,18 +95,29 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "urgency"]
 - !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - ["s17CustomReflectableP", "init"]
 - ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
+- !private ["s23CustomStringConvertibleP", "UserDefaults"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "checkForNightMode"]
+- !private ["s23CustomStringConvertibleP", "confirmButton"]
 - !private ["s23CustomStringConvertibleP", "destination"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
 - !private ["s23CustomStringConvertibleP", "editTask"]
+- !private ["s23CustomStringConvertibleP", "gray"]
 - !private ["s23CustomStringConvertibleP", "hoursIcon"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "integer"]
 - !private ["s23CustomStringConvertibleP", "managedContext"]
 - !private ["s23CustomStringConvertibleP", "reminderDate"]
 - !private ["s23CustomStringConvertibleP", "round"]
+- !private ["s23CustomStringConvertibleP", "standard"]
 - !private ["s23CustomStringConvertibleP", "step"]
 - !private ["s23CustomStringConvertibleP", "taskDesc"]
 - !private ["s23CustomStringConvertibleP", "text"]
@@ -89,18 +126,29 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["10Foundation4DateV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - ["s9EncodableP", "init"]
 - ["s9EquatableP", "Date"]
+- !private ["s9EquatableP", "UIColor"]
+- !private ["s9EquatableP", "UserDefaults"]
 - ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "backgroundColor"]
+- !private ["s9EquatableP", "checkForNightMode"]
+- !private ["s9EquatableP", "confirmButton"]
 - !private ["s9EquatableP", "destination"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
 - !private ["s9EquatableP", "editTask"]
+- !private ["s9EquatableP", "gray"]
 - !private ["s9EquatableP", "hoursIcon"]
 - ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "integer"]
 - !private ["s9EquatableP", "managedContext"]
 - !private ["s9EquatableP", "reminderDate"]
 - !private ["s9EquatableP", "round"]
+- !private ["s9EquatableP", "standard"]
 - !private ["s9EquatableP", "step"]
 - !private ["s9EquatableP", "taskDesc"]
 - !private ["s9EquatableP", "text"]
@@ -108,19 +156,29 @@ depends-member:
 - !private ["s9EquatableP", "urgency"]
 - !private ["s9EquatableP", "value"]
 - !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s8HashableP", "Date"]
+- !private ["s8HashableP", "UIColor"]
+- !private ["s8HashableP", "UserDefaults"]
 - ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "backgroundColor"]
+- !private ["s8HashableP", "checkForNightMode"]
+- !private ["s8HashableP", "confirmButton"]
 - !private ["s8HashableP", "destination"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
 - !private ["s8HashableP", "editTask"]
+- !private ["s8HashableP", "gray"]
 - !private ["s8HashableP", "hoursIcon"]
 - ["s8HashableP", "init"]
+- !private ["s8HashableP", "integer"]
 - !private ["s8HashableP", "managedContext"]
 - !private ["s8HashableP", "reminderDate"]
 - !private ["s8HashableP", "round"]
+- !private ["s8HashableP", "standard"]
 - !private ["s8HashableP", "step"]
 - !private ["s8HashableP", "taskDesc"]
 - !private ["s8HashableP", "text"]
@@ -128,12 +186,19 @@ depends-member:
 - !private ["s8HashableP", "urgency"]
 - !private ["s8HashableP", "value"]
 - !private ["s8HashableP", "viewDidLoad"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", "Date"]
+- !private ["So8NSCodingP", "UIColor"]
+- !private ["So8NSCodingP", "UserDefaults"]
 - ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "checkForNightMode"]
+- !private ["So8NSCodingP", "confirmButton"]
 - !private ["So8NSCodingP", "didReceiveMemoryWarning"]
 - !private ["So8NSCodingP", "editTask"]
+- !private ["So8NSCodingP", "gray"]
 - !private ["So8NSCodingP", "hoursIcon"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "managedContext"]
@@ -146,8 +211,14 @@ depends-member:
 - !private ["So8NSCodingP", "urgency"]
 - !private ["So8NSCodingP", "value"]
 - !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So9NSCopyingP", "gray"]
+- !private ["So9NSCopyingP", "init"]
 - ["So26NSExtensionRequestHandlingP", "Date"]
+- !private ["So26NSExtensionRequestHandlingP", "UIColor"]
+- !private ["So26NSExtensionRequestHandlingP", "UserDefaults"]
 - ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "checkForNightMode"]
+- !private ["So26NSExtensionRequestHandlingP", "confirmButton"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
 - !private ["So26NSExtensionRequestHandlingP", "editTask"]
 - !private ["So26NSExtensionRequestHandlingP", "hoursIcon"]
@@ -160,24 +231,38 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "time"]
 - !private ["So26NSExtensionRequestHandlingP", "urgency"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So21NSItemProviderReadingP", "gray"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "gray"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So8NSObjectC", "CGFloat"]
 - ["So8NSObjectC", "Date"]
 - ["So8NSObjectC", "Float"]
 - ["So8NSObjectC", "NSManagedObjectContext"]
 - !private ["So8NSObjectC", "NewItem"]
+- ["So8NSObjectC", "UIButton"]
+- !private ["So8NSObjectC", "UIColor"]
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "UISlider"]
 - ["So8NSObjectC", "UIStoryboardSegue"]
+- !private ["So8NSObjectC", "UserDefaults"]
+- !private ["So8NSObjectC", "backgroundColor"]
+- ["So8NSObjectC", "checkForNightMode"]
+- ["So8NSObjectC", "confirmButton"]
 - !private ["So8NSObjectC", "destination"]
 - ["So8NSObjectC", "didReceiveMemoryWarning"]
 - ["So8NSObjectC", "editTask"]
+- !private ["So8NSObjectC", "gray"]
 - ["So8NSObjectC", "hoursIcon"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "integer"]
 - ["So8NSObjectC", "managedContext"]
 - ["So8NSObjectC", "prepare"]
 - ["So8NSObjectC", "reminderDate"]
 - !private ["So8NSObjectC", "round"]
 - ["So8NSObjectC", "scrollWheel"]
 - ["So8NSObjectC", "scrolled"]
+- !private ["So8NSObjectC", "standard"]
 - ["So8NSObjectC", "step"]
 - ["So8NSObjectC", "taskDesc"]
 - !private ["So8NSObjectC", "text"]
@@ -186,15 +271,23 @@ depends-member:
 - !private ["So8NSObjectC", "value"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So16NSObjectProtocolP", "Date"]
+- !private ["So16NSObjectProtocolP", "UIColor"]
+- !private ["So16NSObjectProtocolP", "UserDefaults"]
 - ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "backgroundColor"]
+- !private ["So16NSObjectProtocolP", "checkForNightMode"]
+- !private ["So16NSObjectProtocolP", "confirmButton"]
 - !private ["So16NSObjectProtocolP", "destination"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
 - !private ["So16NSObjectProtocolP", "editTask"]
+- !private ["So16NSObjectProtocolP", "gray"]
 - !private ["So16NSObjectProtocolP", "hoursIcon"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "integer"]
 - !private ["So16NSObjectProtocolP", "managedContext"]
 - !private ["So16NSObjectProtocolP", "reminderDate"]
 - !private ["So16NSObjectProtocolP", "round"]
+- !private ["So16NSObjectProtocolP", "standard"]
 - !private ["So16NSObjectProtocolP", "step"]
 - !private ["So16NSObjectProtocolP", "taskDesc"]
 - !private ["So16NSObjectProtocolP", "text"]
@@ -202,6 +295,8 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "urgency"]
 - !private ["So16NSObjectProtocolP", "value"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "gray"]
+- !private ["So14NSSecureCodingP", "init"]
 - !private ["10_45Project7NewItemC", "editTask"]
 - !private ["10_45Project7NewItemC", "managedContext"]
 - !private ["10_45Project7NewItemC", "reminderDate"]
@@ -215,13 +310,19 @@ depends-member:
 - ["s14StringProtocolP", "init"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
+- !private ["10_45Project18TimeViewControllerC", "CGFloat"]
 - ["10_45Project18TimeViewControllerC", "Date"]
 - ["10_45Project18TimeViewControllerC", "Float"]
 - ["10_45Project18TimeViewControllerC", "NSManagedObjectContext"]
 - !private ["10_45Project18TimeViewControllerC", "NewItem"]
+- ["10_45Project18TimeViewControllerC", "UIButton"]
+- !private ["10_45Project18TimeViewControllerC", "UIColor"]
 - ["10_45Project18TimeViewControllerC", "UILabel"]
 - ["10_45Project18TimeViewControllerC", "UISlider"]
 - ["10_45Project18TimeViewControllerC", "UIStoryboardSegue"]
+- !private ["10_45Project18TimeViewControllerC", "UserDefaults"]
+- ["10_45Project18TimeViewControllerC", "checkForNightMode"]
+- ["10_45Project18TimeViewControllerC", "confirmButton"]
 - ["10_45Project18TimeViewControllerC", "deinit"]
 - ["10_45Project18TimeViewControllerC", "didReceiveMemoryWarning"]
 - ["10_45Project18TimeViewControllerC", "editTask"]
@@ -238,12 +339,20 @@ depends-member:
 - ["10_45Project18TimeViewControllerC", "time"]
 - ["10_45Project18TimeViewControllerC", "urgency"]
 - ["10_45Project18TimeViewControllerC", "viewDidLoad"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "backgroundColor"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "value"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "value"]
 - ["So21UIAppearanceContainerP", "Date"]
+- !private ["So21UIAppearanceContainerP", "UIColor"]
+- !private ["So21UIAppearanceContainerP", "UserDefaults"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
+- !private ["So21UIAppearanceContainerP", "checkForNightMode"]
+- !private ["So21UIAppearanceContainerP", "confirmButton"]
 - !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
 - !private ["So21UIAppearanceContainerP", "editTask"]
 - !private ["So21UIAppearanceContainerP", "hoursIcon"]
@@ -258,8 +367,15 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "urgency"]
 - !private ["So21UIAppearanceContainerP", "value"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So8UIButtonC", "backgroundColor"]
+- !private ["So7UIColorC", "gray"]
+- !private ["So7UIColorC", "init"]
 - ["So18UIContentContainerP", "Date"]
+- !private ["So18UIContentContainerP", "UIColor"]
+- !private ["So18UIContentContainerP", "UserDefaults"]
 - ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "checkForNightMode"]
+- !private ["So18UIContentContainerP", "confirmButton"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
 - !private ["So18UIContentContainerP", "editTask"]
 - !private ["So18UIContentContainerP", "hoursIcon"]
@@ -273,13 +389,21 @@ depends-member:
 - !private ["So18UIContentContainerP", "urgency"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "backgroundColor"]
 - !private ["So9UIControlC", "value"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "value"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "value"]
 - ["So18UIFocusEnvironmentP", "Date"]
+- !private ["So18UIFocusEnvironmentP", "UIColor"]
+- !private ["So18UIFocusEnvironmentP", "UserDefaults"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
+- !private ["So18UIFocusEnvironmentP", "checkForNightMode"]
+- !private ["So18UIFocusEnvironmentP", "confirmButton"]
 - !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UIFocusEnvironmentP", "editTask"]
 - !private ["So18UIFocusEnvironmentP", "hoursIcon"]
@@ -294,11 +418,17 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "urgency"]
 - !private ["So18UIFocusEnvironmentP", "value"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "value"]
 - !private ["So7UILabelC", "text"]
 - ["So30UIPasteConfigurationSupportingP", "Date"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "UserDefaults"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "checkForNightMode"]
+- !private ["So30UIPasteConfigurationSupportingP", "confirmButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
 - !private ["So30UIPasteConfigurationSupportingP", "editTask"]
 - !private ["So30UIPasteConfigurationSupportingP", "hoursIcon"]
@@ -313,13 +443,20 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "urgency"]
 - !private ["So30UIPasteConfigurationSupportingP", "value"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "CGFloat"]
 - ["So11UIResponderC", "Date"]
 - ["So11UIResponderC", "Float"]
 - ["So11UIResponderC", "NSManagedObjectContext"]
 - !private ["So11UIResponderC", "NewItem"]
+- ["So11UIResponderC", "UIButton"]
+- !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "UISlider"]
 - ["So11UIResponderC", "UIStoryboardSegue"]
+- !private ["So11UIResponderC", "UserDefaults"]
+- !private ["So11UIResponderC", "backgroundColor"]
+- ["So11UIResponderC", "checkForNightMode"]
+- ["So11UIResponderC", "confirmButton"]
 - ["So11UIResponderC", "didReceiveMemoryWarning"]
 - ["So11UIResponderC", "editTask"]
 - ["So11UIResponderC", "hoursIcon"]
@@ -338,7 +475,12 @@ depends-member:
 - !private ["So11UIResponderC", "value"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", "Date"]
+- !private ["So30UIResponderStandardEditActionsP", "UIColor"]
+- !private ["So30UIResponderStandardEditActionsP", "UserDefaults"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
+- !private ["So30UIResponderStandardEditActionsP", "checkForNightMode"]
+- !private ["So30UIResponderStandardEditActionsP", "confirmButton"]
 - !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
 - !private ["So30UIResponderStandardEditActionsP", "editTask"]
 - !private ["So30UIResponderStandardEditActionsP", "hoursIcon"]
@@ -354,8 +496,13 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "value"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So8UISliderC", "value"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "backgroundColor"]
 - ["So16UIStateRestoringP", "Date"]
+- !private ["So16UIStateRestoringP", "UIColor"]
+- !private ["So16UIStateRestoringP", "UserDefaults"]
 - ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "checkForNightMode"]
+- !private ["So16UIStateRestoringP", "confirmButton"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
 - !private ["So16UIStateRestoringP", "editTask"]
 - !private ["So16UIStateRestoringP", "hoursIcon"]
@@ -370,7 +517,12 @@ depends-member:
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So17UIStoryboardSegueC", "destination"]
 - ["So18UITraitEnvironmentP", "Date"]
+- !private ["So18UITraitEnvironmentP", "UIColor"]
+- !private ["So18UITraitEnvironmentP", "UserDefaults"]
 - ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
+- !private ["So18UITraitEnvironmentP", "checkForNightMode"]
+- !private ["So18UITraitEnvironmentP", "confirmButton"]
 - !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
 - !private ["So18UITraitEnvironmentP", "editTask"]
 - !private ["So18UITraitEnvironmentP", "hoursIcon"]
@@ -385,16 +537,23 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "urgency"]
 - !private ["So18UITraitEnvironmentP", "value"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "value"]
+- !private ["So16UIViewControllerC", "CGFloat"]
 - ["So16UIViewControllerC", "Date"]
 - ["So16UIViewControllerC", "Float"]
 - ["So16UIViewControllerC", "NSManagedObjectContext"]
 - !private ["So16UIViewControllerC", "NewItem"]
+- ["So16UIViewControllerC", "UIButton"]
+- !private ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UILabel"]
 - ["So16UIViewControllerC", "UISlider"]
 - ["So16UIViewControllerC", "UIStoryboardSegue"]
+- !private ["So16UIViewControllerC", "UserDefaults"]
 - ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "checkForNightMode"]
+- ["So16UIViewControllerC", "confirmButton"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "editTask"]
 - ["So16UIViewControllerC", "hoursIcon"]
@@ -410,23 +569,37 @@ depends-member:
 - ["So16UIViewControllerC", "time"]
 - ["So16UIViewControllerC", "urgency"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["So12UserDefaultsC", "integer"]
+- !private ["So12UserDefaultsC", "standard"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "value"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "gray"]
+- !private ["s26_ExpressibleByColorLiteralP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UserDefaults"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "checkForNightMode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "confirmButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "editTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "gray"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hoursIcon"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "integer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "managedContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reminderDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "round"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "step"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "taskDesc"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
@@ -434,10 +607,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "urgency"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - "s23BidirectionalCollectionP"
+- !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s10CollectionP"
@@ -450,6 +625,7 @@ depends-nominal:
 - "s9DecodableP"
 - "s9EncodableP"
 - "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
@@ -457,9 +633,13 @@ depends-nominal:
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - "So8NSCodingP"
+- !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
 - !private "10_45Project7NewItemC"
 - "s26RangeReplaceableCollectionP"
 - "10Foundation20ReferenceConvertibleP"
@@ -469,9 +649,12 @@ depends-nominal:
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - "10_45Project18TimeViewControllerC"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
+- !private "So8UIButtonC"
+- !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
 - !private "So9UIControlC"
@@ -484,16 +667,20 @@ depends-nominal:
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - !private "So8UISliderC"
+- !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
 - !private "So17UIStoryboardSegueC"
 - "So18UITraitEnvironmentP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "So12UserDefaultsC"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
 - "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
@@ -526,4 +713,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "687d3b6a0da114ffeeaa3fbcd66ec8e2"
+interface-hash: "aa7a3bb43c0e3f0fe63937e9a1a3d2c0"

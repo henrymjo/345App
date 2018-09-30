@@ -76,6 +76,10 @@ class TimeViewController: UIViewController {
         newItemController?.editTask = editTask
     }
     
+    /** checks to see if app is in colour blind mode.
+        Creates a UIColour which is the same as the crayon "Sky"
+        This is the colour used for the button.
+    **/
     func checkForNightMode(){
         
         let red: CGFloat = 106.0

@@ -100,6 +100,9 @@ class ReminderViewController: UIViewController {
         return 0;
     }
     
+    /** checks to see if colour blind mode is on.
+        Creates a UIColour equal to "sky" from the crayon set.
+    **/
     func checkForNightMode(){
         
         let red: CGFloat = 106.0
