@@ -9,6 +9,12 @@
 import UIKit
 import CoreData
 
+/**
+ Subclass of UIViewController, responsible for controlling the Reminder view.
+ 
+ View allows a user to set the date that they wish to be reminded on. Currently, reminders are set to go off at 6:00am on a selected day
+ but we expect this to become customisable in future releases.
+ */
 class ReminderViewController: UIViewController {
     
 
@@ -19,6 +25,8 @@ class ReminderViewController: UIViewController {
     
     var managedContext: NSManagedObjectContext!
     var editTask = false;
+    
+    //MARK: New/Edited task's attributes
     var taskDesc = "";
     var urgency = "c";
     var time: Float = 1.0;

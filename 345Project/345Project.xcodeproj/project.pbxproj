@@ -16,7 +16,6 @@
 		4F1C37C7210482B2007A09FA /* AlertCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1C37C6210482B2007A09FA /* AlertCenter.swift */; };
 		4F201A1021350D77002BC094 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F201A0F21350D77002BC094 /* CustomCells.swift */; };
 		4F3A36B8212E5E48008999A1 /* taskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A36B7212E5E48008999A1 /* taskListController.swift */; };
-		4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60040820F46D7000A36ED9 /* TaskManager.swift */; };
 		4FAF04E621227CE50099E8AC /* NewTaskController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF04E521227CE50099E8AC /* NewTaskController.storyboard */; };
 		4FAF04EA21227F180099E8AC /* NewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF04E921227F180099E8AC /* NewItem.swift */; };
 		4FAF04EC212280200099E8AC /* UrgencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF04EB212280200099E8AC /* UrgencyController.swift */; };
@@ -58,7 +57,6 @@
 		4F1C37C6210482B2007A09FA /* AlertCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCenter.swift; sourceTree = "<group>"; };
 		4F201A0F21350D77002BC094 /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
 		4F3A36B7212E5E48008999A1 /* taskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskListController.swift; sourceTree = "<group>"; };
-		4F60040820F46D7000A36ED9 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		4FAF04E521227CE50099E8AC /* NewTaskController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewTaskController.storyboard; sourceTree = "<group>"; };
 		4FAF04E921227F180099E8AC /* NewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItem.swift; sourceTree = "<group>"; };
 		4FAF04EB212280200099E8AC /* UrgencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrgencyController.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				BAF581ED213F46E300F2A525 /* Core Data */,
 				35BBBBA920F30002004C3AF5 /* AppDelegate.swift */,
 				4FAF04E421227CC30099E8AC /* UI Redesign */,
-				4F60040820F46D7000A36ED9 /* TaskManager.swift */,
 				35BBBBB020F30004004C3AF5 /* Assets.xcassets */,
 				35BBBBB220F30004004C3AF5 /* LaunchScreen.storyboard */,
 				35BBBBB520F30004004C3AF5 /* Info.plist */,
@@ -304,7 +301,6 @@
 				BAE5B42E2146369A00A78AD7 /* ReminderViewController.swift in Sources */,
 				4FAF04EC212280200099E8AC /* UrgencyController.swift in Sources */,
 				4FAF04EA21227F180099E8AC /* NewItem.swift in Sources */,
-				4F60040920F46D7000A36ED9 /* TaskManager.swift in Sources */,
 				BAF581F2213F47AB00F2A525 /* CoreDataStack.swift in Sources */,
 				4F3A36B8212E5E48008999A1 /* taskListController.swift in Sources */,
 				35BBBBAA20F30002004C3AF5 /* AppDelegate.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-let taskManager: taskListController = taskListController()
+//let taskManager: taskListController = taskListController()
 
 
 /**
